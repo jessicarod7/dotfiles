@@ -8,10 +8,10 @@ I haven't put any work into making this easy to setup, so no guarantees are made
 
 <img alt="Screenshot of my Fedora desktop, featuring VS Code and GNOME terminal. VS Code is opened to cam-rod/wildfly-elytron, and GNOME Terminal shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/cam-rod_theme.png><br>
 
-- Editors: VS Code + Vim
-    - STM32CubeIDE for STM32 microcontrollers
-    - IntelliJ IDEA for Java
-- OS/WM: Fedora, GNOME
+- Editors: [VS Code](https://github.com/Microsoft/vscode/) + [Vim](https://github.com/vim/vim)
+    - [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) for STM32 microcontrollers
+    - [IntelliJ IDEA](https://www.jetbrains.com/idea/) for Java
+- OS/DE: [Fedora Workstation](https://getfedora.org/en/workstation/) with [GNOME](https://www.gnome.org/)
 - Theme: [Nord](https://github.com/arcticicestudio/nord)
     - [Powerline](https://github.com/powerline/powerline), [vim-airline](https://github.com/vim-airline/vim-airline)
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
