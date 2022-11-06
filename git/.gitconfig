@@ -1,0 +1,23 @@
+[user]
+	name = Cameron Rodriguez
+	email = <relevant_email@here.paste>
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGYqjhOgRxO8fExr6WjfaKt4XRfvifQWCuFBw/ggG6d7 <relevant_email@here.paste>
+[core]
+	editor = vim
+	# editor = code --wait
+	# sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
+[pull]
+	ff = only
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = "~/.ssh/allowed_signers"
+	program = "/opt/1Password/op-ssh-sign"
+[help]
+	autoCorrect = prompt
+[init]
+	defaultBranch = main
+[alias]
+	lg = log --graph --oneline --pretty=format:'%C(yellow)%h %C(magenta)[%G?]%C(auto) %d %s %C(green)(%C(cyan)%aE%C(green), %C(brightgreen)%cr%C(green))%Creset'
+	alog = log --all --graph --oneline --pretty=format:'%C(yellow)%h %C(magenta)[%G?]%C(auto) %d %s %C(green)(%C(cyan)%aE%C(green), %C(brightgreen)%cr%C(green))%Creset'
+	st = status --short

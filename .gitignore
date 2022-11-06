@@ -1,0 +1,3 @@
+# An actual .gitignore, not one of my dotfiles
+.vscode
+linux_pkgs/installbase.txt
