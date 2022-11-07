@@ -9,6 +9,7 @@ alias lso='ls -hal --time-style long-iso'
 
 export EDITOR="/usr/bin/vim -e"
 export VISUAL=/usr/bin/vim
+export TERM=xterm-kitty
 
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java

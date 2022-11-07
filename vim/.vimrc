@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
+Plug 'fladson/vim-kitty'
 
 call plug#end()
 
