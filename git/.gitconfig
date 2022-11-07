@@ -1,7 +1,7 @@
 [user]
 	name = Cameron Rodriguez
 	email = <relevant_email@here.paste>
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGYqjhOgRxO8fExr6WjfaKt4XRfvifQWCuFBw/ggG6d7 <relevant_email@here.paste>
+	signingkey = ssh-ed25519 <signing key> <relevant_email@here.paste>
 [core]
 	editor = vim
 	# editor = code --wait

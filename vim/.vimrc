@@ -5,5 +5,6 @@ Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
+syntax on
 colorscheme nord
 let g:airline_powerline_fonts = 1
