@@ -19,10 +19,10 @@ alias idea="idea.sh"
 export PATH="$PATH:/opt/gcc-arm-<current_version>-x86_64-arm-none-eabi/bin"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib" # For pkgconf-based systems
 
+### ...end of file ###
+
 # Exit if not an interactive shell
 [ -z "$PS1" ] && return
-
-### ...end of file ###
 
 export POWERLINE=~/.config/powerline
 if [ -f `which powerline-daemon` ]; then
