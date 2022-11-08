@@ -13,14 +13,17 @@ sudo dnf install code
 # Environment setup
 sudo dnf install kitty fira-code-fonts neofetch gh dconf-editor
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
-gsettings set org.gtk.gtk4.settings.file-chooser show-hidden true
+gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
-gsettings set org.gnome.settings.default-applications.terminal exec kitty
+gsettings set org.gnome.desktop.default-applications.terminal exec kitty
 mkdir -p ~/.config/kitty/kitty.d
 curl -o ~/.config/kitty/kitty.d/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/master/nord.conf
-echo -e '\n\nglobinclude kitty.d/**/.conf' >> ~/.config/kitty/kitty.conf
+cat <<EOF > ~/.config/kitty/kitty.conf
+globinclude kitty.d/**/*.conf
+EOF
 
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 
 # Manually installed to /opt: STM32CubeIDE, arm-none-eabi
+
