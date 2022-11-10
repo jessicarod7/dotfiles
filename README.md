@@ -12,6 +12,7 @@ I haven't put any work into making this easy to setup, so no guarantees are made
     - [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) for STM32 microcontrollers
     - [IntelliJ IDEA](https://www.jetbrains.com/idea/) for Java
 - OS/DE: [Fedora Workstation](https://getfedora.org/en/workstation/) with [GNOME](https://www.gnome.org/)
+- Terminal: [kitty](https://github.com/kovidgoyal/kitty)
 - Theme: [Nord](https://github.com/arcticicestudio/nord)
     - [Powerline](https://github.com/powerline/powerline), [vim-airline](https://github.com/vim-airline/vim-airline)
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
