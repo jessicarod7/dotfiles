@@ -1,0 +1,90 @@
+# ExpressVPN Fedora amd64 Update Script v1.0
+# (c) 2022, rn10950
+# Modified-By: Cameron Rodriguez (GitHub: @cam-rod)
+# Original source: https://pastebin.com/6GqM8W8E via https://reddit.com/comments/us7j1y/_/ion19vf
+#
+# This script is provided as a convenience, to address the lack
+# of an official update script. I am not affiliated with
+# ExpressVPN in any way.
+#
+# It may be freely distributed and improved, use at your own risk.
+# Do not run this script if you do not understand what it does.
+# 
+# dependencies:
+# - BeautifulSoup (pip3 install beautifulsoup4)
+# - packaging (included with setuptools, pip3 install packaging)
+
+
+from operator import eq
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+from packaging.version import Version
+import subprocess
+import os
+import sys
+
+def checkVersion():
+	try:
+		versionS = subprocess.check_output(['expressvpn', '--version'])
+		versionL = versionS.split()
+		return Version(versionL[2].decode("utf-8"))
+	except:
+		print('\nExpressVPN is not installed. Please install from expressvpn.com. \n')
+		quit()
+
+def downloadAndVerifyUpgrade(rpmURL: str, rpmSigURL: str, newVersion: Version) -> str:
+	rpmFile = '/tmp/expressvpn-' + str(newVersion) + '.rpm'
+	rpmStream = urlopen(rpmURL)
+	with open(rpmFile, 'b+w') as rpmFileStream:
+		rpmFileStream.write(rpmStream.read())
+
+	rpmSigFile = rpmFile + '.asc'
+	sigStream = urlopen(rpmSigURL)
+	with open(rpmSigFile, 'b+w') as sigFileStream:
+		sigFileStream.write(sigStream.read())
+
+	# Verify
+	if '--no-gpg-check' not in ''.join(sys.argv):
+		if (subprocess.call(["gpg", "--verify", rpmSigFile, rpmFile], stdout=subprocess.DEVNULL) != 0):
+			print("\nERROR: Package signature could not be verified. Please check that the ExpressVPN PGP key is added to root.\n", file=sys.stderr)
+			print("Alternatively, run with '--no-gpg-check' to suppress this check. Cancelling upgrade.\n", file=sys.stderr)
+			print(rpmSigFile)
+			sys.exit(2)
+		else:
+			print("Package signature verified.\n")
+
+	return rpmFile
+
+if __name__ == "__main__":
+	url = "https://www.expressvpn.com/latest#linux?utm_source=linux_app"
+	page = urlopen(url)
+	soup = BeautifulSoup(page, "html.parser")
+	linkTag = soup.find_all("option", text = "Fedora 64-bit")
+
+	tag = linkTag[0]
+	rpmURL = tag['value']
+	newVersion = Version(tag['data-version'])
+	rpmSigURL = rpmURL + '.asc'
+
+	currVersion = checkVersion()
+
+	if currVersion < newVersion:
+		while True:
+			print("\nThere is an upgrade available for ExpressVPN (" + str(currVersion) + " -> " + str(newVersion) + ").\n")
+			p = input('Install? [y/N] > ')
+			if p.lower() == 'y':
+				print('\nUpgrading ExpressVPN ...\n')
+
+				rpmFile = downloadAndVerifyUpgrade(rpmURL, rpmSigURL, newVersion)
+
+				os.system('sudo dnf install ' + rpmFile)
+				sys.exit()
+			else:
+				print("\nUpgrade cancelled.\n", file=sys.stderr)
+				sys.exit(1)
+
+	elif currVersion == newVersion:
+		print('\nExpressVPN is fully upgraded to version ' + str(currVersion) + '.\n')
+	else:
+		print("ERROR: Latest version (" + str(newVersion) + ") is lower than installed version (" + str(currVersion) + "). Cancelling upgrade.\n", file=sys.stderr)
+		sys.exit(3)
