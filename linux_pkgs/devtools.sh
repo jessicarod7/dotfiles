@@ -24,6 +24,13 @@ sudo sudo sh -c 'echo -e "[1password-beta]\nname=1Password Beta Channel\nbaseurl
 sudo dnf check-update
 sudo dnf install 1password 1password-cli
 
+# NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022
+unset distribution
+sudo dnf check-update
+sudo dnf install nvidia-container-toolkit
+sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
+
 # Environment setup
 sudo dnf install vim-enhanced fira-code-fonts screen kitty neofetch gh dconf-editor
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
