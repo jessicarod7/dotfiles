@@ -5,7 +5,7 @@
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
 source <(op completion bash)
 alias chrome=google-chrome-stable
-alias lso='ls -lash --time-style long-iso'
+alias lso='ls -lash --time-style=long-iso'
 
 export EDITOR="/usr/bin/vim -e"
 export VISUAL=/usr/bin/vim
