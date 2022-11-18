@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fladson/vim-kitty'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
