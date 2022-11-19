@@ -8,14 +8,14 @@ alias chrome=google-chrome-stable
 alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 
-export EDITOR="/usr/bin/vim -e"
+export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
 export TERM=xterm-kitty
 
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:/opt/idea/bin"
-alias idea="idea.sh"
+alias idea='idea.sh'
 
 # Build-specific modifications
 export PATH="$PATH:/opt/gcc-arm-<current_version>-x86_64-arm-none-eabi/bin"

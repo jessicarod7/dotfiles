@@ -4,6 +4,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fladson/vim-kitty'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 
 call plug#end()
 
