@@ -2,7 +2,7 @@
 # Setting up GNOME Terminal for Nord theme
 
 cd ~/Downloads
-git clone github:arcticicestudio/nord-gnome-terminal.git
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
 pushd nord-gnome-terminal/src
 ./nord.sh
 popd
