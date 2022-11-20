@@ -1,12 +1,13 @@
 #!/bin/bash
 # Setting up GNOME Terminal for Nord theme
 
-cd ~/Downloads
+pushd ~/Downloads
 git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
 pushd nord-gnome-terminal/src
 ./nord.sh
 popd
 rm -rf ./nord-gnome-terminal
+popd
 
 ### Manually change default theme ###
 
