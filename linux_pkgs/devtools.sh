@@ -33,6 +33,8 @@ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-r
 
 # Environment setup
 sudo dnf install vim-enhanced fira-code-fonts screen kitty neofetch gh dconf-editor
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
