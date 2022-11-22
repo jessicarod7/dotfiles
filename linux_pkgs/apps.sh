@@ -4,6 +4,13 @@
 sudo dnf install calibre dconf-editor duplicity ffmpeg gnome-extensions-app openrgb steam thunderbird \
     virt-manager zoom
 
+# gsettings modifications for RK87 keyboard and dev tool shortcuts
+gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
+gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['AudioStop']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
+
 # Google Chrome
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf check-update
