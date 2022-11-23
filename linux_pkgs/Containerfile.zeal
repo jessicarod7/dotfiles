@@ -1,0 +1,18 @@
+FROM fedora:latest
+ARG COMMIT=7ea03e4bb9754020e902a2989f56f4bc42b85c82
+RUN sudo dnf install -y \
+  make cmake extra-cmake-modules gcc-c++ \
+  desktop-file-utils libarchive-devel \
+  qt5-qtbase qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtx11extras-devel \
+  sqlite-devel xcb-util-keysyms-devel \
+  hicolor-icon-theme git
+RUN git clone https://github.com/zealdocs/zeal.git && mkdir /zeal/build
+WORKDIR /zeal/build
+RUN git checkout "$COMMIT" && cmake ../ && make && make install
+RUN mkdir -p /export/bin /export/share/icons/hicolor/{16x16,32x32,64x64,128x128}/apps /export/share/{metainfo,applications}
+RUN cp /usr/bin/zeal /export/bin/
+RUN cp /usr/share/metainfo/org.zealdocs.zeal.appdata.xml /export/share/metainfo/
+RUN cp /usr/share/applications/org.zealdocs.zeal.desktop /export/share/applications/
+RUN for SIZE in '16x16' '32x32' '64x64' '128x128'; do cp /usr/share/icons/hicolor/$SIZE/apps/zeal.png /export/share/icons/hicolor/$SIZE/apps/; done
+WORKDIR /export
+CMD ["/bin/bash"]
