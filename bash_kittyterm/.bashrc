@@ -13,7 +13,7 @@ export VISUAL=/usr/bin/vim
 
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java
-export PATH="$PATH:/opt/idea/bin"
+export PATH="$PATH:/opt/idea/bin:/opt/zeal/bin"
 alias idea='idea.sh'
 
 # Build-specific modifications

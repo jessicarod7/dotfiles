@@ -6,3 +6,5 @@ sudo chown -R :camrod /opt/zeal
 sudo chmod -R g+w /opt/zeal
 podman stop zeal-build && podman rm zeal-build
 
+mkdir /opt/zeal/feed_srcs
+ln -s /opt/zeal/share/applications/zeal.desktop ~/.local/share/applications/org.zeal.zeal.desktop
