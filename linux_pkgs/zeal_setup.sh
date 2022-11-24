@@ -1,5 +1,5 @@
 #!/bin/bash
-podman build -t --build-arg VERSION=$1 zeal-builder -f Containerfile.zeal .
+podman build -t --build-arg VERSION=$1 zeal-builder -f Containerfile.zeal ../containers
 podman run -d -n zeal-build zeal-builder:latest
 sudo podman cp zeal-build:/export /opt/zeal
 sudo chown -R :camrod /opt/zeal
