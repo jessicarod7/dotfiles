@@ -2,7 +2,7 @@
 if [ -z "$1" ]; then
     podman build -t zeal-builder -f Containerfile.zeal ../containers
 else
-    podman build --build-arg VERSION=$1 -t zeal-builder -f Containerfile.zeal ../containers
+    podman build --build-arg COMMIT=$1 -t zeal-builder -f Containerfile.zeal ../containers
 fi
 podman run -dt --name zeal-build zeal-builder:latest
 sudo mkdir /opt/zeal
