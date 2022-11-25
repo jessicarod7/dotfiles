@@ -14,7 +14,7 @@ RUN cp /usr/bin/zeal /export/bin/
 RUN cp /usr/share/metainfo/org.zealdocs.zeal.appdata.xml /export/share/metainfo/
 WORKDIR /export/share/applications/
 RUN cp /usr/share/applications/org.zealdocs.zeal.desktop .
-RUN perl -ni.bakicon -e 's/Icon=zeal/Icon=\/opt\/zeal\/share\/icons\/hicolor\/64x64\/apps\/zeal.png' ./org.zealdocs.zeal.desktop
+RUN perl -ni.bakicon -e 's/Icon=zeal/Icon=\/opt\/zeal\/share\/icons\/hicolor\/64x64\/apps\/zeal.png/g' ./org.zealdocs.zeal.desktop
 RUN perl -ni.bakwm -e 's/StartupWMClass=Zeal/StartupWMClass=org.zealdocs.zeal/g' ./org.zealdocs.zeal.desktop
 RUN for SIZE in '16x16' '24x24' '32x32' '64x64' '128x128'; do cp /usr/share/icons/hicolor/$SIZE/apps/zeal.png /export/share/icons/hicolor/$SIZE/apps/; done
 WORKDIR /export

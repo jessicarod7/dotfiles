@@ -1,10 +1,18 @@
 #!/bin/bash
-podman build -t --build-arg VERSION=$1 zeal-builder -f Containerfile.zeal ../containers
-podman run -d -n zeal-build zeal-builder:latest
-sudo podman cp zeal-build:/export /opt/zeal
-sudo chown -R :camrod /opt/zeal
-sudo chmod -R g+w /opt/zeal
+if [ -z "$1" ]; then
+    podman build -t zeal-builder -f Containerfile.zeal ../containers
+else
+    podman build --build-arg VERSION=$1 -t zeal-builder -f Containerfile.zeal ../containers
+fi
+podman run -dt --name zeal-build zeal-builder:latest
+sudo mkdir /opt/zeal
+sudo chown -R camrod:camrod /opt/zeal
+sudo chmod -R ug+w /opt/zeal
+podman cp zeal-build:/export /opt/zeal
 podman stop zeal-build && podman rm zeal-build
 
+mv /opt/zeal/export/* /opt/zeal && rmdir /opt/zeal/export
 mkdir /opt/zeal/feed_srcs
-ln -s /opt/zeal/share/applications/zeal.desktop ~/.local/share/applications/org.zeal.zeal.desktop
+ln -s /opt/zeal/share/applications/org.zealdocs.zeal.desktop ~/.local/share/applications/org.zealdocs.zeal.desktop
+sudo dnf install qt5-qtwebengine
+
