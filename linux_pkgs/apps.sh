@@ -33,6 +33,7 @@ sudo flatpak install \
     com.obsproject.Studio \
     com.slack.Slack \
     com.spotify.Client \
+    io.github.Qalculate \
     io.github.trigg.discover_overlay \
     md.obsidian.Obsidian \
     nl.hjdskes.gcolor3 \
