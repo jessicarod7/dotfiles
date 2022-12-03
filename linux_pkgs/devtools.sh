@@ -6,11 +6,11 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf install fedora-workstation-repositories
 
 # Java, C/C++, NodeJS, Perl
-sudo dnf install java-latest-openjdk-devel cmake meson binutils libtool glibc-devel{.x86_64,.i686} \
-    gcc-c++{.x86_64,.i686} clang nodejs npm perl
+sudo dnf install java-latest-openjdk-devel cmake meson binutils libtool glibc-devel \
+    gcc-c++ clang nodejs npm perl
 
 # Useful Python packages
-sudo dnf install poetry python3-{requests,beautifulsoup4}
+sudo dnf install poetry python3-{requests,beautifulsoup4,gobject}
 
 # VS Code https://code.visualstudio.com/docs/setup/linux
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
