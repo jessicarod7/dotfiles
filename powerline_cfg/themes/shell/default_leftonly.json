@@ -1,0 +1,10 @@
+{
+	"segments": {
+		"left": [
+			{
+				"function": "powerline.segments.shell.cwd",
+				"args": {"dir_shorten_len": 20},
+				"priority": 9
+			}]
+	}
+}

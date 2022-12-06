@@ -26,12 +26,11 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib" # For pkgconf-based sys
 # Exit if not an interactive shell
 [ -z "$PS1" ] && return
 
-export POWERLINE=~/.config/powerline
 if [ -f `which powerline-daemon` ]; then
 	powerline-daemon -q
 	POWERLINE_BASH_CONTINUATION=1
 	POWERLINE_BASH_SELECT=1
-	. /usr/share/powerline/bash/powerline.sh
+	. ~/.local/lib/python3.11/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
 neofetch  --title_fqdn on --distro_shorthand on --refresh_rate on --gtk2 off --gtk3 off --memory_percent on # --gpu_type dedicated

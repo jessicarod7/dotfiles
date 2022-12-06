@@ -35,11 +35,14 @@ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-r
 sudo dnf gh dconf-editor screen podman buildah skopeo
 
 # Environment setup
-sudo dnf install vim-enhanced fira-code-fonts kitty neofetch
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
+sudo dnf install vim-enhanced fira-code-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
+
+cp -r ../powerline_cfg ~/.config/powerline
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 gsettings set org.gnome.desktop.default-applications.terminal exec kitty
 mkdir -p ~/.config/kitty/kitty.d
