@@ -41,6 +41,8 @@ sudo flatpak install \
     org.signal.Signal \
     tech.feliciano.pocket-casts
 
+sudo flatpak override --env=TERM=xterm-color --env=LC_MONETARY=en_CA.UTF-8 io.github.Qalculate
+
 # Snaps
 sudo snap install authy kochmorse
 
