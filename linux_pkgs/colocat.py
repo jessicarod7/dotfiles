@@ -1,0 +1,39 @@
+# vim: set expandtab:
+from argparse import ArgumentParser, Namespace
+from pathlib import Path
+import subprocess
+import sys
+
+TMP_FILE = 'colocat.typescript~'
+
+def load_args() -> Namespace:
+    parser: ArgumentParser = ArgumentParser(prog="colocat",
+                                              description="cat with support for colors, using script as a backend",
+                                              epilog="Inspired by geekQ, https://stackoverflow.com/a/42621724/19546298")
+    parser.add_argument("-c", "--command", help="the command to run",
+                        action="store")
+    parser.add_argument("-f", "--file", help="the file to print from",
+                        action="store")
+    args: Namespace = parser.parse_args()
+    if (args.command or args.file):
+        return args
+    else:
+        parser.error("must use one of -c or -f")
+
+def main() -> None:
+    args = load_args()
+    script_cmd: list[str] = ["script", "-q", "-f", "-e", "-O", TMP_FILE]
+    if args.command:
+        script_cmd.extend(["-c", args.command])
+    if args.file:
+        script_cmd.append(args.file)
+
+    code = 'unset'
+    try:
+        code = subprocess.call(script_cmd, stdout=sys.stdout, stderr=sys.stderr)
+    finally:
+        Path(TMP_FILE).unlink(missing_ok=True)
+        sys.exit(code if code != 'unset' else 1)
+
+if __name__ == "__main__":
+    main()
