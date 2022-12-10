@@ -7,7 +7,6 @@ source <(op completion bash)
 alias chrome=google-chrome-stable
 alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
-# Usage: colocat [-c command] file
 alias colocat='python3 ~/scripts/colocat.py'
 alias qalc='flatpak run --command=qalc io.github.Qalculate'
 
