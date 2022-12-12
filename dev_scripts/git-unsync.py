@@ -1,0 +1,42 @@
+from argparse import ArgumentParser, Namespace
+import subprocess as sp
+import sys
+
+def error_out(output: sp.CompletedProcess):
+    print(output.stderr, file=sys.stderr)
+    sys.exit(output.returncode)
+
+def run_cmd(cmd: list[str]) -> sp.CompletedProcess:
+    output: sp.CompletedProcess = sp.run(cmd, capture_output=True, encoding='utf-8')
+
+    if (output.returncode != 0):
+        error_out(output)
+    return output
+
+def check_removed_branches(args: Namespace):
+    output: sp.CompletedProcess = run_cmd(["git", "fetch", args.remote])
+
+    if (args.prune):
+        run_cmd(["git", "remote", "prune", args.remote])
+
+    output = run_cmd(["git", "branch", "--remote", "--list", args.remote+'/*'])
+    remote_branches: list[str] = [branch.lstrip().removeprefix('origin/') for branch
+                                  in output.stdout.splitlines()]
+    output = run_cmd(["git", "branch"])
+    local_branches: list[str] = [branch.removeprefix('*').lstrip() for branch
+                                 in output.stdout.splitlines()]
+
+    print("\033[1mUnsynced/merged branches:\033[0m")
+    for branch in local_branches:
+        if branch not in remote_branches:
+            print(f"    \033[32m{branch}\033[0m")
+
+if __name__ == "__main__":
+    parser = ArgumentParser(prog='git-unsync', description="A script to quickly show branches not synced with a Git remote")
+    parser.add_argument("-r", "--remote", help="Specify a remote to check (defaults to origin)",
+                        default="origin")
+    parser.add_argument("-np", "--no-prune", help="Do not prune branch before checking",
+                        dest='prune', action='store_false', default=True)
+    args: Namespace = parser.parse_args()
+
+    check_removed_branches(args)

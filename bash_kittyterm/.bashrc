@@ -7,8 +7,11 @@ source <(op completion bash)
 alias chrome=google-chrome-stable
 alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
-alias colocat='python3 ~/scripts/colocat.py'
 alias qalc='flatpak run --command=qalc io.github.Qalculate'
+
+# Scripts
+alias colocat='python3 ~/scripts/colocat.py'
+alias git-unsync='python3 ~/scripts/git-unsync.py'
 
 export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
