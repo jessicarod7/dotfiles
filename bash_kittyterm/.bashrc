@@ -11,6 +11,7 @@ alias qalc='flatpak run --command=qalc io.github.Qalculate'
 
 # Scripts
 alias colocat='python3 ~/scripts/colocat.py'
+alias colodiff='python3 ~/scripts/colodiff.py'
 alias git-unsync='python3 ~/scripts/git-unsync.py'
 
 export EDITOR='/usr/bin/vim -e'
