@@ -19,3 +19,4 @@ xmap s <Nop>
 
 " Python
 autocmd FileType python setlocal shiftwidth=4 expandtab
+
