@@ -1,7 +1,7 @@
 #!/bin/bash
 # Other apps I use, run from this directory
 
-sudo dnf install calibre dconf-editor duplicity ffmpeg gnome-extensions-app openrgb steam virt-manager zoom
+sudo dnf install dconf-editor duplicity ffmpeg gnome-extensions-app openrgb steam virt-manager zoom
 
 # gsettings modifications for RK87 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
@@ -27,6 +27,7 @@ sudo systemctl start vnstat
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
     cc.arduino.IDE2 \
+    com.calibre_ebook.calibre \
     com.discordapp.Discord \
     com.github.tchx84.Flatseal \
     com.obsproject.Studio \
