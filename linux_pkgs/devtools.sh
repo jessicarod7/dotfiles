@@ -33,6 +33,7 @@ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-r
 
 # Other tools
 sudo dnf gh dconf-editor screen podman buildah skopeo
+flatpak install net.werwolv.ImHex
 
 # Environment setup
 pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
