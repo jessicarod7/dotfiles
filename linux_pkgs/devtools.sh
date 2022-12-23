@@ -32,8 +32,8 @@ sudo dnf install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
 # Other tools
-sudo dnf gh dconf-editor screen podman buildah skopeo
-flatpak install net.werwolv.ImHex
+sudo dnf install fakeroot gh dconf-editor screen podman podman compose buildah skopeo
+sudo flatpak install net.werwolv.ImHex
 
 # Environment setup
 pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
