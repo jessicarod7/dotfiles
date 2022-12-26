@@ -33,17 +33,20 @@ sudo flatpak install \
     com.obsproject.Studio \
     com.slack.Slack \
     com.spotify.Client \
-    com.ulduzsoft.Birdtray \
     io.github.Qalculate \
     io.github.trigg.discover_overlay \
     md.obsidian.Obsidian \
     nl.hjdskes.gcolor3 \
     org.gimp.GIMP{,.Plugin.{BIMP,Fourier,Lensfun,LiquidRescale,Resynthesizer}} \
-    org.mozilla.Thunderbird \
+    org.gnome.Evolution \
     org.signal.Signal \
     tech.feliciano.pocket-casts
 
 sudo flatpak override --env=TERM=xterm-256color --env=LC_MONETARY=en_CA.UTF-8 io.github.Qalculate
+
+# Setup Evolution toolbar
+mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
+cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
 # Snaps
 sudo snap install authy kochmorse
