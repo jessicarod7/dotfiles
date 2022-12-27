@@ -40,6 +40,7 @@ sudo flatpak install \
     nl.hjdskes.gcolor3 \
     org.gimp.GIMP{,.Plugin.{BIMP,Fourier,Lensfun,LiquidRescale,Resynthesizer}} \
     org.gnome.Evolution \
+    org.prismlauncher.PrismLauncher \
     org.signal.Signal \
     tech.feliciano.pocket-casts
 
@@ -48,8 +49,5 @@ sudo flatpak override --env=TERM=xterm-256color --env=LC_MONETARY=en_CA.UTF-8 io
 # Setup Evolution toolbar
 mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
 cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
-
-# Snaps
-sudo snap install kochmorse
 
 # Manually installed as needed: MultiMC, DaVinci Resolve
