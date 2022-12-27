@@ -27,6 +27,7 @@ sudo systemctl start vnstat
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
     cc.arduino.IDE2 \
+    com.authy.Authy \
     com.calibre_ebook.calibre \
     com.discordapp.Discord \
     com.github.tchx84.Flatseal \
@@ -49,6 +50,6 @@ mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
 cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
 # Snaps
-sudo snap install authy kochmorse
+sudo snap install kochmorse
 
 # Manually installed as needed: MultiMC, DaVinci Resolve
