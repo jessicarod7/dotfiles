@@ -55,8 +55,10 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
+mkdir ~/.config/procps
 cp ../dev_scripts/colocat.py ~/scripts
 cp ../dev_scripts/colodiff.py ~/scripts
 cp ../dev_scripts/git-unsync.py ~/scripts
+cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 
 # Manually installed to /opt as needed: IntelliJ Community Edition, STM32CubeIDE, arm-none-eabi
