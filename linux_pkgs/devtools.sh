@@ -44,7 +44,7 @@ sudo dnf -y install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
 # Other tools
-sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman compose buildah skopeo
+sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo
 sudo flatpak install --noninteractive net.werwolv.ImHex
 
 # Environment setup
