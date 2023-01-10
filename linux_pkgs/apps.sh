@@ -6,7 +6,18 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity ffmpeg gnome-extensions-app openrgb steam virt-manager zoom
+sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom
+
+# GNOME Extensions
+sudo flatpak install com.mattjakeman.ExtensionManager
+# Extensions:
+# - appindicatorsupport@rgcjonas.gmail.com
+# - clipboard-history@alexsaveau.dev
+# - expandable-notifications@kaan.g.inam.org
+# - improvedosk@nick-shmyrev.dev (see nick-shmyrev/improved-osk-gnome-ext#30)
+# - NotificationCounter@coolllsk
+# - openweather-extension@jenslody.de
+# - sound-output-device-chooser@kgshank.net (currently unsupported, see kgshank/gse-sound-output-chooser#258)
 
 # gsettings modifications for RK87 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
@@ -56,4 +67,4 @@ cp ./pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
 mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
 cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
-# Manually installed as needed: MultiMC, DaVinci Resolve
+# Manually installed as needed: DaVinci Resolve
