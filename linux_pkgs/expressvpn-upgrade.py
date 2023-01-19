@@ -46,14 +46,16 @@ def downloadAndVerifyRPM(args: Namespace, newVersion: Version, rpmURL: str, rpmS
 		sigFileStream.write(sigStream.read())
 
 	# Verify
-	if not args.no_gpg_check:
+	if args.no_gpg_check:
+		print("Package signature check skipped.")
+	else:
 		if (subprocess.call(["gpg", "--verify", rpmSigFile, rpmFile], stdout=subprocess.DEVNULL) != 0):
-			print("ERROR: Package signature could not be verified. Please check that the ExpressVPN PGP key is added to root.\n", file=sys.stderr)
-			print("Alternatively, run with '--no-gpg-check' to suppress this check. Cancelling upgrade.\n", file=sys.stderr)
+			print("ERROR: Package signature could not be verified. Please check that the ExpressVPN PGP key is added to root.", file=sys.stderr)
+			print("Alternatively, run with '--no-gpg-check' to suppress this check. Cancelling upgrade.", file=sys.stderr)
 			print(rpmSigFile)
 			sys.exit(2)
 		else:
-			print("Package signature verified.\n")
+			print("Package signature verified.")
 
 	return rpmFile
 
@@ -65,10 +67,10 @@ def upgrade(args: Namespace, newVersion: Version, rpmURL: str, rpmSigURL: str) -
 			print("There is an upgrade available for ExpressVPN (" + str(currVersion) + " -> " + str(newVersion) + ").\n")
 			p = input("Install? [y/N] ")
 			if p.lower() == 'y':
-				print("\nUpgrading ExpressVPN...\n")
+				print("\nUpgrading ExpressVPN...")
 				rpmFile = downloadAndVerifyRPM(args, newVersion, rpmURL, rpmSigURL)
 
-				subprocess.call("sudo dnf install " + rpmFile)
+				subprocess.call(["sudo", "dnf", "install", rpmFile])
 				sys.exit()
 			else:
 				print("\nUpgrade cancelled.\n", file=sys.stderr)
@@ -90,7 +92,7 @@ def install(args: Namespace, newVersion: Version, rpmURL: str, rpmSigURL: str) -
 		print("\nInstalling ExpressVPN...")
 		rpmFile = downloadAndVerifyRPM(args, newVersion, rpmURL, rpmSigURL)
 		
-		subprocess.call("sudo dnf install " + rpmFile)
+		subprocess.call(["sudo", "dnf", "install", rpmFile])
 		sys.exit()
 	else:
 		print("\nInstallation cancelled.\n", file=sys.stderr)
@@ -101,7 +103,7 @@ if __name__ == "__main__":
 	parser.add_argument("-i", "--install", help="Install the latest version of ExpressVPN on a device that doesn't already have it",
 						action="store_true")
 	parser.add_argument("-nogpg", "--no-gpg-check", help="Do not check if the signature of the downloaded package matches the ExpressVPN " + \
-		  "release key (see https://www.expressvpn.com/support/vpn-setup/pgp-for-linux/)", action='store_false')
+		  "release key (see https://www.expressvpn.com/support/vpn-setup/pgp-for-linux/)", action='store_true')
 	args: Namespace = parser.parse_args()
 
 
