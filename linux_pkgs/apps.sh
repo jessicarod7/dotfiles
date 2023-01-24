@@ -59,9 +59,9 @@ sudo flatpak override --env=TERM=xterm-256color --env=LC_MONETARY=en_CA.UTF-8 io
 
 # Cargo (Rust)
 yes | cargo install pastel
-sudo appstreamcli put ./pastel.metainfo.xml
-cp ./pastel.desktop ~/.local/share/applications/pastel.desktop
-cp ./pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
+sudo appstreamcli put pastel/pastel.metainfo.xml
+cp pastel/pastel.desktop ~/.local/share/applications/pastel.desktop
+cp pastel/pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
 
 # Setup Evolution toolbar
 mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui

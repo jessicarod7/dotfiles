@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=YubiKey Manager
+Comment=Configure your YubiKeys
+Icon=ykman
+Exec=yubikey-manager
+Categories=Security
+StartupWMClass=YubiKey Manager
