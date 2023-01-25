@@ -45,12 +45,12 @@ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-r
 
 # YubiKey Manager, Personalization Tool, Authenticator, PAM
 sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg
-mkdir -p ~/.local/bin/yubikey-manager-appimage && desktop-file-install yubikey/yubikey-manager.desktop && install -D yubikey/ykman.svg ~/.local/share/icons/hicolor/scalable/apps/ykman.svg
+mkdir -p ~/.local/bin/yubikey-manager-appimage && install -D yubikey/yubikey-manager.desktop ~/.local/share/applications/ && install -D yubikey/ykman.svg ~/.local/share/icons/hicolor/scalable/apps/ykman.svg
 wget -P ~/.local/bin/yubikey-manager-appimage https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage && chmod -R +x ~/.local/bin/yubikey-manager-appimage
-ln -s $(ls ~/.local/bin/yubikey-manager-appimage/) ~/.local/bin/yubikey-manager
-wget -P https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz && tar -C -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
-mv yubico-authenticator-latest-linux/ ~/.config && ln -s ~/.config/yubico-authenticator-latest-linux/ ~/.config/yubiauth
-chmod +x ~/.config/yubico-authenticator-latest-linux/desktop_integration.sh && . ~/.config/yubico-authenticator-latest-linux/desktop_integration.sh
+ln -s ~/.local/bin/yubikey-manager-appimage/yubikey-manager-qt-latest-linux.AppImage ~/.local/bin/yubikey-manager
+wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
+mv $(find . -maxdepth 1 -regex ".*yubico.*") ~/.config && ln -s $(realpath $(find ~/.config -maxdepth 1 -regex ".*yubico-auth.*")) ~/.config/yubiauth
+chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
 sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo
