@@ -2,6 +2,5 @@ Host github.com github
 	User git
 	HostName github.com
 	IdentityFile ~/.ssh/<keyfile>.pub
-	IdentityAgent ~/.1password/agent.sock
 	IdentitiesOnly yes
 

@@ -8,6 +8,10 @@ alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias qalc='flatpak run --command=qalc io.github.Qalculate'
 
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # Scripts
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
 alias colocat="python3 $HOME/scripts/colocat.py"

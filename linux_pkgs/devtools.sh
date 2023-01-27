@@ -44,7 +44,7 @@ sudo dnf -y install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
 # YubiKey Manager, Personalization Tool, Authenticator, PAM
-sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg
+sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg yubikey-manager
 mkdir -p ~/.local/bin/yubikey-manager-appimage && install -D yubikey/yubikey-manager.desktop ~/.local/share/applications/ && install -D yubikey/ykman.svg ~/.local/share/icons/hicolor/scalable/apps/ykman.svg
 wget -P ~/.local/bin/yubikey-manager-appimage https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage && chmod -R +x ~/.local/bin/yubikey-manager-appimage
 ln -s ~/.local/bin/yubikey-manager-appimage/yubikey-manager-qt-latest-linux.AppImage ~/.local/bin/yubikey-manager
