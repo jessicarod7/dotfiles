@@ -8,9 +8,10 @@ alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias qalc='flatpak run --command=qalc io.github.Qalculate'
 
-export GPG_TTY="$(tty)"
+export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+echo UPDATESTARTUPTTY | gpg-connect-agent >/dev/null
 
 # Scripts
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
