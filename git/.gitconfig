@@ -1,18 +1,14 @@
 [user]
 	name = Cameron Rodriguez
 	email = <relevant_email@here.paste>
-	signingkey = ssh-ed25519 <signing key> <relevant_email@here.paste>
+	signingkey = <subkey>!
 [core]
 	editor = vim
 	# editor = code --wait
-	# sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
 [pull]
 	ff = only
-[gpg]
-	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = "~/.ssh/allowed_signers"
-	program = "/opt/1Password/op-ssh-sign"
 [help]
 	autoCorrect = prompt
 [init]
