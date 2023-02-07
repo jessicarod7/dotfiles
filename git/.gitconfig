@@ -5,6 +5,7 @@
 [core]
 	editor = vim
 	# editor = code --wait
+	# sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
 [pull]
 	ff = only
 [gpg]
