@@ -4,6 +4,12 @@ Host github.com github
 	IdentityFile ~/.ssh/<keyfile>.pub
 	IdentitiesOnly yes
 
+Host envs
+    HostName envs.net
+    User camrod
+    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentitiesOnly yes
+
 Host ug*
 	HostName %h.eecg.utoronto.ca
 	User <UTORid>

@@ -11,9 +11,9 @@ sudo dnf -y upgrade
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install fedora-workstation-repositories
 
-# Java, C/C++, NodeJS, Perl, Rust
-sudo dnf -y install java-latest-openjdk-devel cmake meson binutils libtool glibc-devel \
-    gcc-c++ clang nodejs npm perl
+# Java, C/C++, NodeJS, Perl, Python, Rust
+sudo dnf -y install java-latest-openjdk-devel cmake meson binutils libtool gcc \
+    gcc-c++ clang npm perl-devel python3-devel
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 
 # Useful Python packages
