@@ -4,3 +4,11 @@ Host github.com github
 	IdentityFile ~/.ssh/<keyfile>.pub
 	IdentitiesOnly yes
 
+Host ug*
+	HostName %h.eecg.utoronto.ca
+	User <UTORid>
+	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentitiesOnly yes
+
+Host ug*vnc
+	LocalForward 5904 localhost:5904
