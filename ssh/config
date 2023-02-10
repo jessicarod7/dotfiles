@@ -9,6 +9,8 @@ Host envs
 	User camrod
 	IdentityFile ~/.ssh/<keyfile>.pub
 	IdentitiesOnly yes
+	RemoteFoward /run/user/<remote_uid>/gnupg/S.gpg-agent /run/user/<local_uid>/gnupg/S.gpg-agent.extra
+	RemoteFoward /run/user/<remote_uid>/gnupg/S.gpg-agent.ssh /run/user/<local_uid>/gnupg/S.gpg-agent.ssh
 
 Host ug*
 	HostName %h.eecg.utoronto.ca

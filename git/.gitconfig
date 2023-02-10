@@ -1,7 +1,7 @@
 [user]
 	name = Cameron Rodriguez
 	email = <relevant_email@here.paste>
-	signingkey = <subkey>!
+	signingKey = <subkey>!
 [core]
 	editor = vim
 	# editor = code --wait

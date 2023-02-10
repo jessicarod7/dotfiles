@@ -62,7 +62,6 @@ sudo dnf -y install vim-enhanced fira-code-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
-cp -r ../powerline_cfg ~/.config/powerline
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -77,10 +76,7 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../scripts/colocat.py ~/scripts
-cp ../scripts/colodiff.py ~/scripts
-cp ../scripts/git-unsync.py ~/scripts
-cp ../scripts/pgpcard-reload ~/scripts
+cp ../scripts/colocat.py ../scripts/colodiff.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 
 # Manually installed to /opt as needed: IntelliJ Community Edition, STM32CubeIDE, arm-none-eabi
