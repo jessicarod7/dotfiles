@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<QALCULATE version="4.5.1">
+  <category>
+    <title>Custom</title>
+    <function>
+      <title>Retention period on envs.sh</title>
+      <names>r:envs</names>
+      <description>Only valid for files smaller than 512 MiB.</description>
+      <expression>30 d + (-365+30)(\x \Y{MiB} / 512 MiB  - 1)^3 d</expression>
+      <argument type="number" index="1">
+        <title>size</title>
+        <min include_equals="false">0</min>
+      </argument>
+      <argument type="free" index="2">
+        <title>unit</title>
+      </argument>
+    </function>
+  </category>
+</QALCULATE>
