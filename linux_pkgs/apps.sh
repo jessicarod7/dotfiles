@@ -40,6 +40,7 @@ sudo systemctl start vnstat
 sudo flatpak install --noninteractive \
     cc.arduino.IDE2 \
     com.authy.Authy \
+    com.belmoussaoui.Decoder \
     com.calibre_ebook.calibre \
     com.discordapp.Discord \
     com.github.liferooter.textpieces \
