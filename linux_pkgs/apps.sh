@@ -42,6 +42,8 @@ sudo flatpak install --noninteractive \
     com.authy.Authy \
     com.calibre_ebook.calibre \
     com.discordapp.Discord \
+    com.github.liferooter.textpieces \
+    com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
     com.obsproject.Studio \
     com.slack.Slack \
