@@ -17,6 +17,7 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # - improvedosk@nick-shmyrev.dev (see nick-shmyrev/improved-osk-gnome-ext#30)
 # - NotificationCounter@coolllsk
 # - openweather-extension@jenslody.de
+# - simple-timer@majortomvr.github.com
 # - sound-output-device-chooser@kgshank.net (currently unsupported, see kgshank/gse-sound-output-chooser#258)
 
 # gsettings modifications for RK87 keyboard and dev tool shortcuts
