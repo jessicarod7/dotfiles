@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+# Compare with remote file
+# Diff with raw text from a URL
+# arg[1]: rawtext URL
+
+from urllib import request, response
+from typing import Iterator
+import subprocess
+import sys
+from difflib import unified_diff
+
+remote_file: response.addinfourl = request.urlopen(sys.argv[1])
+if remote_file.status != 200:
+    sys.exit(remote_file.status)
+
+diff_iterator: Iterator[str] = unified_diff(sys.stdin.readlines(), [remote_line.decode('utf-8') for remote_line in remote_file.readlines()])
+
+# Name the files
+diff = list(diff_iterator)
+diff[0] = diff[0][:-1] + "<local_working_file>" + diff[0][-1:]
+diff[1] = diff[1][:-1] + sys.argv[1] + diff[1][-1:]
+
+sys.stdout.writelines(diff)
