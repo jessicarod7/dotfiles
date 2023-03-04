@@ -110,7 +110,7 @@ if __name__ == "__main__":
 	url: str = "https://www.expressvpn.com/latest#linux?utm_source=linux_app"
 	page = urlopen(url)
 	soup = BeautifulSoup(page, "html.parser")
-	linkTag = soup.find_all("option", text = "Fedora 64-bit")
+	linkTag = soup.find_all("option", string="Fedora 64-bit")
 
 	tag = linkTag[0]
 	rpmURL = tag['value']
