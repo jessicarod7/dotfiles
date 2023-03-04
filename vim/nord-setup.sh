@@ -1,5 +1,6 @@
 #!/bin/bash
 # Setting up GNOME Terminal for Nord theme
+# On Windows, use https://github.com/thismat/nord-windows-terminal
 
 pushd ~/Downloads
 git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
