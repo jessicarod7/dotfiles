@@ -44,6 +44,7 @@ sudo flatpak install --noninteractive \
     com.belmoussaoui.Decoder \
     com.calibre_ebook.calibre \
     com.discordapp.Discord \
+    com.github.finefindus.eyedropper \
     com.github.liferooter.textpieces \
     com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
@@ -61,7 +62,7 @@ sudo flatpak install --noninteractive \
 
 sudo flatpak override --env=TERM=xterm-256color --env=LC_MONETARY=en_CA.UTF-8 io.github.Qalculate
 
-# Cargo (Rust)
+# Pastel (with desktop color picker)
 yes | cargo install pastel
 sudo appstreamcli put pastel/pastel.metainfo.xml
 cp pastel/pastel.desktop ~/.local/share/applications/pastel.desktop
