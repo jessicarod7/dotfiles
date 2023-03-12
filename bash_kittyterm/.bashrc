@@ -14,11 +14,6 @@ alias colodiff="python3 $HOME/scripts/colodiff.py"
 alias git-unsync="python3 $HOME/scripts/git-unsync.py"
 alias ynab-csv="python3 $HOME/scripts/ynab-csv.py"
 
-export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --reload gpg-agent
-gpg-connect-agent 'updatestartuptty' /bye >/dev/null # Don't call on remote SSH servers
-
 export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
 export KITTY_CUSTOM="$HOME/.config/kitty/kitty.d"
