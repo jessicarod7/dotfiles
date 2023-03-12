@@ -23,6 +23,10 @@ export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:/opt/idea/bin:/opt/zeal/bin"
 alias idea='idea.sh'
 
+# Ruby Gems
+export GEM_HOME="$HOME/gems"
+export PATH="$PATH:$HOME/gems/bin"
+
 # Build-specific modifications
 export PATH="$PATH:/opt/gcc-arm-<current_version>-x86_64-arm-none-eabi/bin"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib" # For pkgconf-based systems
