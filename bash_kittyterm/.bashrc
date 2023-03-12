@@ -18,6 +18,11 @@ export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
 export KITTY_CUSTOM="$HOME/.config/kitty/kitty.d"
 
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+gpgconf --launch gpg-agent
+gpg-connect-agent 'updatestartuptty' /bye >/dev/null
+
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:/opt/idea/bin:/opt/zeal/bin"
