@@ -19,6 +19,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 # Useful Python packages
 sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
 
+# Typescript compiler
+sudo npm install -g typescript
+
 # Google Chrome
 sudo dnf -y config-manager --set-enabled google-chrome
 sudo dnf -y check-update
