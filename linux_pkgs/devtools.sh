@@ -56,7 +56,7 @@ mv $(find . -maxdepth 1 -regex ".*yubico.*") ~/.config && ln -s $(realpath $(fin
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
-sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo
+sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo nmap
 sudo flatpak install --noninteractive net.werwolv.ImHex
 
 # Environment setup
