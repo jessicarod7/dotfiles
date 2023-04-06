@@ -59,6 +59,12 @@ chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiaut
 sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo nmap xeyes
 sudo flatpak install --noninteractive net.werwolv.ImHex
 
+git clone https://github.com/arzzen/git-quick-stats.git
+pushd git-quick-stats
+sudo make install
+popd
+rm -rf git-quick-stats
+
 # Environment setup
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
 sudo dnf -y install vim-enhanced fira-code-fonts kitty neofetch powerline-fonts
