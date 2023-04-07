@@ -1,5 +1,5 @@
 FROM fedora:latest
-ARG COMMIT=7ea03e4bb9754020e902a2989f56f4bc42b85c82
+ARG COMMIT=911c5e8adc5018fbe4dddbf6e76f09fcd60ae921
 RUN sudo dnf install -y \
   make cmake extra-cmake-modules gcc-c++ \
   desktop-file-utils libarchive-devel \
