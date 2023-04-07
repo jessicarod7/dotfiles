@@ -25,7 +25,7 @@ gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java
-export PATH="$PATH:/opt/idea/bin:/opt/zeal/bin"
+export PATH="$PATH:/opt/jetbrains/bin:/opt/jetbrains/scripts:/opt/zeal/bin"
 alias idea='idea.sh'
 
 # Ruby Gems

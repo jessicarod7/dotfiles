@@ -1,3 +1,11 @@
 # An actual .gitignore, not one of my dotfiles
-.vscode
+**/.idea
+**/.vscode
 linux_pkgs/installbase.txt
+
+# Rust
+scripts/**/debug/
+scripts/**/target/
+scripts/**/Cargo.lock
+scripts/**/*.rs.bk
+scripts/**/*.pdb
