@@ -11,16 +11,23 @@ sudo dnf -y upgrade
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install fedora-workstation-repositories
 
-# Java, C/C++, NodeJS, Perl, Python, Rust, Ruby (Jekyll), PHP
+# Java, C/C++, NodeJS, Perl, Python, Rust, Ruby (Jekyll), PHP, Golang
 sudo dnf -y install java-latest-openjdk-devel cmake meson binutils libtool gcc \
-    gcc-c++ clang npm perl-devel python3-devel ruby-devel openssl-devel composer
+    gcc-c++ clang npm perl-devel python3-devel ruby-devel openssl-devel composer \
+    golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+
+# Container stuff
+sudo dnf -y install podman podman-compose buildah skopeo
 
 # Useful Python packages
 sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
 
 # Typescript compiler
 sudo npm install -g typescript
+
+# sendgmail
+go install github.com/google/gmail-oauth2-tools/go/sendgmail@latest
 
 # Google Chrome
 sudo dnf -y config-manager --set-enabled google-chrome
@@ -36,8 +43,8 @@ sudo dnf -y install code
 # 1Password Beta https://support.1password.com/betas
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 sudo sh -c 'echo -e "[1password-beta]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password-beta.repo'
-sudo dnf check-update
-sudo dnf install 1password 1password-cli
+sudo dnf -y check-update
+sudo dnf -y install 1password 1password-cli
 
 # NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022
@@ -56,8 +63,9 @@ mv $(find . -maxdepth 1 -regex ".*yubico.*") ~/.config && ln -s $(realpath $(fin
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
-sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen podman podman-compose buildah skopeo nmap xeyes
+sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen nmap xeyes
 sudo flatpak install --noninteractive net.werwolv.ImHex
+cargo install cargo-whatfeatures
 
 git clone https://github.com/arzzen/git-quick-stats.git
 pushd git-quick-stats
