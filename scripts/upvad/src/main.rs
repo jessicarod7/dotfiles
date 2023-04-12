@@ -1,18 +1,20 @@
 use std::io::stdin;
 use std::path::Path;
 use std::process::{Command, exit, ExitStatus};
+use std::str::from_utf8;
 
 use clap::{arg, Parser};
 use hyper::{Body, Client, Uri};
 use hyper::client::HttpConnector;
 use hyper_rustls::{HttpsConnector, HttpsConnectorBuilder};
+use itertools::Itertools;
 use regex::Regex;
 use versions::Version;
 
 #[derive(Parser)]
 #[command(author, version, about)]
 struct UpvadOpts {
-    /// View the version of Mullvad VPN to be installed. Testing only, use `mullvad version` instead.
+    /// Do not install; view the current and newest versions of Mullvad.
     #[arg(short,long)]
     check: bool,
 
@@ -33,10 +35,29 @@ fn main() {
 
     let client = Client::builder().build(https);
     let opts = UpvadOpts::parse();
+    let vmatch = Regex::new(r"\d{4}\.\d").unwrap();
+    let parse_msg = || { eprintln!("Unable to parse version string from `mullvad version`. Will not check against current version."); };
 
-    let (latest_url, new_ver) = get_version(&client);
+    let (latest_url, new_ver) = get_version(&client, &vmatch);
 
-    println!("Newest version is {new_ver}");
+    let mull_ver_cmd = Command::new("mullvad").arg("version").output().expect("Unable to check installed Mullvad version");
+    stat_check("mullvad", mull_ver_cmd.status);
+
+    if let Ok(mull_ver) = from_utf8(&mull_ver_cmd.stdout) {
+        if let Some((curr_ver_ln, _, rec_update_ln)) = mull_ver.lines().take(3).collect_tuple() {
+            let curr_str = vmatch.find(curr_ver_ln);
+            if let Some(curr_ver) = curr_str {
+                if !print_upgrades(&Version::new(curr_ver.as_str()).unwrap(), &new_ver,   rec_update_ln, opts.check) {
+                    exit(0);
+                }
+            }
+        } else {
+            parse_msg();
+        }
+    } else {
+        eprintln!("Mullvad version string could not be converted to string. Will not check against current version.");
+    }
+
 
     if !&opts.check {
         if !&opts.yes {
@@ -70,7 +91,7 @@ fn main() {
 }
 
 #[tokio::main(flavor = "current_thread")]
-async fn get_version(client: &Client<HttpsConnector<HttpConnector>, Body>) -> (String, Version) {
+async fn get_version(client: &Client<HttpsConnector<HttpConnector>, Body>, vmatch: &Regex) -> (String, Version) {
     let mut latest_url = String::from(BASE_URL) + DEFAULT_PATH;
 
     for _ in 0..8 {
@@ -82,7 +103,7 @@ async fn get_version(client: &Client<HttpsConnector<HttpConnector>, Body>) -> (S
             let resp_url: &str = resp.headers().get("location").unwrap()
                 .to_str().unwrap();
 
-            if let Some(ver) = Regex::new(r"\d{4}\.\d").unwrap().find(resp_url) {
+            if let Some(ver) = vmatch.find(resp_url) {
                 return (String::from(resp_url), Version::new(ver.as_str()).unwrap())
             } else {
                 // Follow new link
@@ -117,5 +138,26 @@ fn stat_check(command: &str, st: ExitStatus) {
     if !st.success() {
         eprintln!("Command {command} exited with status code {}", st.code().unwrap());
         exit(st.code().unwrap());
+    }
+}
+
+
+/// Reports if there is an available update. Returns if an upgrade should be offered.
+fn print_upgrades(curr_ver: &Version, new_ver: &Version, rec_update: &str, check: bool) -> bool {
+    let update_recommended = !rec_update.contains("none");
+
+    println!("Current version is {curr_ver}");
+    if new_ver > curr_ver {
+        println!("There is an {} update to {new_ver} available", if update_recommended {"recommended"} else {"optional"});
+        true
+    } else if curr_ver > new_ver {
+        println!("However, the newest listed version is {new_ver}{} -- you should check https://mullvad.net and see if a downgrade is needed.", if update_recommended {" (with an \"update\" recommended)"} else {""});
+        return false
+    } else if update_recommended {
+        println!("This is the newest version, however the VPN is recommending an upgrade anyways -- you should check https://mullvad.net for details");
+        false
+    } else {
+        println!("This is the newest available version{}", if !check {", upgrade will be cancelled"} else {""});
+        false
     }
 }
