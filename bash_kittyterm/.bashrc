@@ -17,6 +17,7 @@ alias ynab-csv="python3 $HOME/scripts/ynab-csv.py"
 export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
 export KITTY_CUSTOM="$HOME/.config/kitty/kitty.d"
+alias curln="curl -w '\n'"
 
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
@@ -26,14 +27,12 @@ gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 # Add Java home, IntelliJ to PATH
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:/opt/jetbrains/bin:/opt/jetbrains/scripts:/opt/zeal/bin"
-alias idea='idea.sh'
 
 # Ruby Gems
 export GEM_HOME="$HOME/gems"
 export PATH="$PATH:$HOME/gems/bin"
 
 # Build-specific modifications
-export PATH="$PATH:/opt/gcc-arm-<current_version>-x86_64-arm-none-eabi/bin"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib" # For pkgconf-based systems
 
 ### ...end of file ###
