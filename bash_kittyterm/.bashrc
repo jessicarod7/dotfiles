@@ -48,5 +48,5 @@ if [ -f `which powerline-daemon` ]; then
 fi
 
 neofetch  --title_fqdn on --distro_shorthand on --refresh_rate on --gtk2 off --gtk3 off --memory_percent on # --gpu_type dedicated
-eval "$(gh completion -s bash)"
+. "$HOME/.cargo/env"
 
