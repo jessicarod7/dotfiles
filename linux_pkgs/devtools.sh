@@ -26,6 +26,9 @@ sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
 # Typescript compiler
 sudo npm install -g typescript
 
+# Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
+(cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
+
 # sendgmail
 go install github.com/google/gmail-oauth2-tools/go/sendgmail@latest
 
