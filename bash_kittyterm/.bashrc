@@ -26,16 +26,21 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 gpgconf --launch gpg-agent
 gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 
-# Ruby Gems, Java home, and the PATH
-export GEM_HOME="$HOME/gems"
+# Java home and the PATH
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:/opt/jetbrains/scripts:/opt/zeal/bin"
-export PATH="$PATH:$HOME/gems/bin"
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:/opt/jetbrains/scripts"
 export PATH="$PATH:/opt/zeal/bin"
-. "$HOME/.cargo/env"
 
+# XDG base directories
+# .m2 is a symlink to $XDG_DATA_HOME/maven - what could possibly go wrong?
+export GRADLE_USER_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/gradle"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+. "$CARGO_HOME/env"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export PATH="$PATH:$GOPATH/bin"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 
 ### [ ... ]
 

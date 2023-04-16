@@ -12,7 +12,7 @@ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 sudo dnf -y install fedora-workstation-repositories
 
 # "Languages" - Java, C/C++, NodeJS, Perl, Python, Ruby, PHP, OpenSSL, Golang, Rust
-sudo dnf -y install java-latest-openjdk-devel cmake meson binutils libtool gcc \
+sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
     gcc-c++ clang npm perl-devel python3-devel ruby-devel openssl-devel composer \
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
