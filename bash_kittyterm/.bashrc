@@ -28,7 +28,7 @@ gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 
 # Java home and the PATH
 export JAVA_HOME=/usr/lib/jvm/java
-export PATH="$PATH:/opt/jetbrains/scripts:/opt/zeal/bin"
+export PATH="$PATH:/opt/jetbrains/scripts"
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:/opt/jetbrains/scripts"
 export PATH="$PATH:/opt/zeal/bin"
@@ -48,6 +48,7 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 [ -z "$PS1" ] && return
 
 # Powerline
+export POWERLINE=~/.config/powerline
 if [ -f `which powerline-daemon` ]; then
 	powerline-daemon -q
 	POWERLINE_BASH_CONTINUATION=1
