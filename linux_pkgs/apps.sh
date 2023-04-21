@@ -6,7 +6,8 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom
+sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom pandoc
+pip install trash-cli 'trash-cli[completion]'
 
 # GNOME Extensions
 sudo flatpak install com.mattjakeman.ExtensionManager
