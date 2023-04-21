@@ -4,18 +4,14 @@
 # Diff with raw text from a file
 # arg[1]: abs. filepath
 
-from urllib import request, response
-from typing import Iterator
-import subprocess
 import sys
 from difflib import unified_diff
+from pathlib import Path
+from typing import Iterator
 
 with open(sys.argv[1], 'r') as local:
-    diff_iterator: Iterator[str] = unified_diff(sys.stdin.readlines(), local.readlines())
+    diff_iterator: Iterator[str] = unified_diff(sys.stdin.read().splitlines(), local.read().splitlines(),
+                                                fromfile="<local_working_file>",
+                                                tofile=str(Path(sys.argv[1]).absolute()))
 
-# Name the files
-diff = list(diff_iterator)
-diff[0] = diff[0][:-1] + "<local_working_file>" + diff[0][-1:]
-diff[1] = diff[1][:-1] + sys.argv[1] + diff[1][-1:]
-
-sys.stdout.writelines(diff)
+    print('\n'.join(diff_iterator))

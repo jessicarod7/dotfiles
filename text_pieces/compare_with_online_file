@@ -4,21 +4,24 @@
 # Diff with raw text from a URL
 # arg[1]: rawtext URL
 
-from urllib import request, response
-from typing import Iterator
-import subprocess
 import sys
 from difflib import unified_diff
+from typing import Iterator
 
-remote_file: response.addinfourl = request.urlopen(sys.argv[1])
-if remote_file.status != 200:
-    sys.exit(remote_file.status)
+import requests
 
-diff_iterator: Iterator[str] = unified_diff(sys.stdin.readlines(), [remote_line.decode('utf-8') for remote_line in remote_file.readlines()])
+remote_url: str = sys.argv[1]
 
-# Name the files
-diff = list(diff_iterator)
-diff[0] = diff[0][:-1] + "<local_working_file>" + diff[0][-1:]
-diff[1] = diff[1][:-1] + sys.argv[1] + diff[1][-1:]
+remote_file: requests.Response = requests.get(remote_url)
+if remote_file.status_code != 200:
+    sys.exit(remote_file.status_code)
 
-sys.stdout.writelines(diff)
+# Redirect title
+if len(remote_file.history) > 0:
+    remote_url = remote_file.url + f" (redirected from {remote_url})"
+
+diff_iterator: Iterator[str] = unified_diff(sys.stdin.read().splitlines(),
+                                            remote_file.text.splitlines(),
+                                            fromfile="<local_working_file>", tofile=remote_url)
+
+print('\n'.join(diff_iterator))
