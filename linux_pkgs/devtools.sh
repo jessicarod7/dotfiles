@@ -96,7 +96,7 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../scripts/colocat.py ../scripts/colodiff.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
+cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/colodiff.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 
 # Manually installed to /opt as needed: JetBrains Toolbox & Co.

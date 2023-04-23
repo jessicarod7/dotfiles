@@ -3,6 +3,8 @@
 ### [ ... ]
 
 # General aliases
+. $HOME/scripts/xdg-base-setup.sh
+
 alias chrome=google-chrome-stable
 alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
@@ -18,7 +20,7 @@ alias ynab-csv="python3 $HOME/scripts/ynab-csv.py"
 # Editors and terminal emulators
 export EDITOR='/usr/bin/vim -e'
 export VISUAL=/usr/bin/vim
-export KITTY_CUSTOM="${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty.d"
+export KITTY_CUSTOM="$XDG_CONFIG_HOME/kitty/kitty.d"
 
 # YubiFriends(TM)
 export GPG_TTY=$(tty)
@@ -35,10 +37,10 @@ export PATH="$PATH:/opt/zeal/bin"
 
 # XDG base directories
 # .m2 is a symlink to $XDG_DATA_HOME/maven - what could possibly go wrong?
-export GRADLE_USER_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/gradle"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 . "$CARGO_HOME/env"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 ### [ ... ]
