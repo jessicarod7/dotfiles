@@ -21,3 +21,4 @@
 	alog = log --all --graph --oneline --pretty=format:'%C(yellow)%h %C(magenta)[%G?]%C(auto) %d %s %C(green)(%C(cyan)%aE%C(green), %C(brightgreen)%cr%C(green))%Creset'
 	st = status --short
 	rbcont = "-c core.editor=true rebase --continue"
+	recom = commit --amend --no-edit
