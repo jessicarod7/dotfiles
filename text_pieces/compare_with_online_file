@@ -20,8 +20,8 @@ if remote_file.status_code != 200:
 if len(remote_file.history) > 0:
     remote_url = remote_file.url + f" (redirected from {remote_url})"
 
-diff_iterator: Iterator[str] = unified_diff(sys.stdin.read().splitlines(),
-                                            remote_file.text.splitlines(),
+diff_iterator: Iterator[str] = unified_diff(sys.stdin.readlines(),
+                                            remote_file.text.splitlines(keepends=True),
                                             fromfile="<local_working_file>", tofile=remote_url)
 
-print('\n'.join(diff_iterator))
+print(''.join(diff_iterator))

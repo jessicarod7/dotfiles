@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Iterator
 
 with open(sys.argv[1], 'r') as local:
-    diff_iterator: Iterator[str] = unified_diff(sys.stdin.read().splitlines(), local.read().splitlines(),
+    diff_iterator: Iterator[str] = unified_diff(sys.stdin.readlines(), local.readlines(),
                                                 fromfile="<local_working_file>",
                                                 tofile=str(Path(sys.argv[1]).absolute()))
 
-    print('\n'.join(diff_iterator))
+    print(''.join(diff_iterator))
