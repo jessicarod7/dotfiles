@@ -57,6 +57,7 @@ sudo flatpak install --noninteractive \
     io.github.trigg.discover_overlay \
     md.obsidian.Obsidian \
     org.gimp.GIMP{,.Plugin.{BIMP,Fourier,Lensfun,LiquidRescale,Resynthesizer}} \
+    org.gnome.design.IconLibrary \
     org.gnome.Evolution \
     org.prismlauncher.PrismLauncher \
     org.signal.Signal \
