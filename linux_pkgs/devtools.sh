@@ -11,11 +11,15 @@ sudo dnf -y upgrade
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install fedora-workstation-repositories
 
-# "Languages" - Java, C/C++, NodeJS, Perl, Python, Ruby, PHP, OpenSSL, Golang, Rust
+# "Languages" - Java, C/C++, NodeJS, Perl, Python, PHP, OpenSSL, Golang, Rust
 sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
-    gcc-c++ clang npm perl-devel python3-devel ruby-devel openssl-devel composer \
+    gcc-c++ clang npm perl-devel python3-devel openssl-devel composer \
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+
+# The most sane way to setup Ruby on Fedora
+sudo dnf install -y gcc rust patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 
 # Container stuff
 sudo dnf -y install podman podman-compose buildah skopeo
