@@ -40,9 +40,6 @@ export PATH="$PATH:/opt/zeal/bin"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 . "$CARGO_HOME/env"
-export GEM_HOME="$XDG_DATA_HOME/gem/ruby/gems"
-export BUNDLE_USER_HOME="$XDG_DATA_HOME/bundle"
-export RBENV_ROOT="$XDG_DATA_HOME"/rbenv
 export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
