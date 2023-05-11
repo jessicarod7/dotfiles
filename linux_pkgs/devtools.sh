@@ -17,8 +17,8 @@ sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 
-# The most sane way to setup Ruby on Fedora
-sudo dnf install -y gcc rust patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
+# The most sane way to setup Ruby on Fedora (removed rust due to user installation)
+sudo dnf install -y gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 
 # Container stuff

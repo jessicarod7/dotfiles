@@ -1,0 +1,12 @@
+[Unit]
+Description=Check rbenv weekly
+After=network.target
+Wants=local_updchk@rbenv-chk.timer
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c 'curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash'
+# Configures under what conditions the unit will be restarted.
+Restart=on-failure
+RestartSec=30
