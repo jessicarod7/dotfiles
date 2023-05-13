@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 match args.bank:
     case 'e': # Columns are Date,Description,Transfer,Balance
-        with open(args.file, newline='') as raw_csvfile:
+        with open(args.file, mode='r', newline='', encoding='utf-8-sig') as raw_csvfile:
             csvfile = csv.DictReader(raw_csvfile)
 
             with open(Path(args.file).with_suffix('').__str__() +"_mapped.csv", \
@@ -39,7 +39,7 @@ match args.bank:
 
                     newfile.writerow({"Date": new_date, "Payee": payee, "Memo": row["Description"], "Amount": amount})
     case 'ecard': # Columns are Date,Description,Amount
-        with open(args.file, newline='') as raw_csvfile:
+        with open(args.file, mode='r', newline='', encoding='utf-8-sig') as raw_csvfile:
             csvfile = csv.DictReader(raw_csvfile)
 
             with open(Path(args.file).with_suffix('').__str__() +"_mapped.csv", \
