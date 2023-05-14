@@ -30,6 +30,9 @@ sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
 # Typescript compiler
 sudo npm install -g typescript
 
+# Databases
+sudo dnf -y install mariadb-server sqlite2
+
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
 (cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
 
