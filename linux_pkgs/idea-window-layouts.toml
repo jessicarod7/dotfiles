@@ -1,0 +1,144 @@
+# Configured at $XDG_CONFIG_HOME/JetBrains/IdeVersion.Major/options/window.layouts.xml
+[defaults]
+
+    [defaults.project]
+    order = 0
+    side_weight= 0.539
+    is_active_on_start = true
+
+    [defaults.commit]
+    order = 1
+
+    [defaults.structure]
+    order = 2
+    side_weight = 0.461
+    is_active_on_start = true
+    is_split = true # bottom half
+
+    [defaults.version_control]
+    order = 0
+    anchor = "BOTTOM"
+    is_split = true # right side
+
+    [defaults.terminal]
+    order = 1
+    anchor = "BOTTOM"
+    side_weight = 0.49958265
+
+    [defaults.build]
+    order = 2
+    anchor = "BOTTOM"
+
+    [defaults.problems]
+    order = 3
+    anchor = "BOTTOM"
+
+    [defaults.problems_view]
+    order = 4
+    anchor = "BOTTOM"
+
+    [defaults.debug]
+    order = 6
+    anchor = "BOTTOM"
+    side_weight = 0.50041735
+
+    [defaults.services]
+    order = 7
+    anchor = "BOTTOM"
+
+    [defaults.run]
+    order = 7
+    anchor = "BOTTOM"
+
+    [defaults.notifications]
+    order = 0
+    anchor = "RIGHT"
+    contentUiType = "COMBO"
+
+    [defaults.database]
+    order = 1
+    anchor = "RIGHT"
+
+    [defaults.gradle]
+    order = 2
+    anchor = "RIGHT"
+
+    [defaults.maven]
+    order = 3
+    anchor = "RIGHT"
+
+    [defaults.web_inspector]
+    order = 4
+    anchor = "RIGHT"
+
+    [defaults.hierarchy]
+    order = 5
+    anchor = "RIGHT"
+
+    [defaults.bookmarks]
+    order = 6
+    anchor = "RIGHT"
+    is_split = true # bottom half
+
+    [defaults.todo]
+    order = 7
+    anchor = "RIGHT"
+    is_split = true # bottom half
+
+    # Hidden
+    [defaults.space_code_reviews]
+    is_show_stripe_button = false
+
+    [defaults.learn]
+    is_show_stripe_button = false
+
+    [defaults.find]
+    anchor = "BOTTOM"
+    is_show_stripe_button = false
+
+    [defaults.dependency_checker]
+    anchor = "BOTTOM"
+    is_show_stripe_button = false
+
+    [defaults.dependencies]
+    order = 5
+    anchor = "BOTTOM"
+    is_show_stripe_button = false
+
+    [defaults.python_packages]
+    order = 8
+    anchor = "BOTTOM"
+    is_show_stripe_button = false
+
+    [defaults.pull_requests]
+    order = 5
+    anchor = "RIGHT"
+    is_show_stripe_button = false
+
+[coder_widescreen]
+
+    [coder_widescreen.unified_weights]
+    left = 0.16425781
+    bottom = 0.29139316
+    right = 0.14980468
+
+[split-coder_widescreen]
+
+    [split-coder_widescreen.unified_weights]
+    left = 0.22148436
+    bottom = 0.230124
+    right = 0.18398437
+
+[coder_laptop]
+
+    [coder_laptop.unified_weights]
+    left = 0.19184028
+    bottom = 0.26953512
+    right = 0.26880786
+
+[split-coder_laptop]
+
+    [split-coder_laptop.unified_weights]
+    left = 0.27447745
+    bottom = 0.24975272
+    right = 0.2689769
