@@ -3,7 +3,7 @@
 
     [defaults.project]
     order = 0
-    side_weight= 0.539
+    side_weight= 0.5392006
     is_active_on_start = true
 
     [defaults.commit]
@@ -11,7 +11,7 @@
 
     [defaults.structure]
     order = 2
-    side_weight = 0.461
+    side_weight = 0.4607994
     is_active_on_start = true
     is_split = true # bottom half
 

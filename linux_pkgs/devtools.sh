@@ -77,12 +77,6 @@ sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen nmap xeyes r
 sudo flatpak install --noninteractive net.werwolv.ImHex
 cargo install cargo-whatfeatures
 
-git clone https://github.com/arzzen/git-quick-stats.git
-pushd git-quick-stats
-sudo make install
-popd
-rm -rf git-quick-stats
-
 # Environment setup
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
 sudo dnf -y install vim-enhanced fira-code-fonts kitty neofetch powerline-fonts
