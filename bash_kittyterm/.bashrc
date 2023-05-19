@@ -42,6 +42,7 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 . "$CARGO_HOME/env"
 export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgreprc"
 
 ### [ ... ]
 
