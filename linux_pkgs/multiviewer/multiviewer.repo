@@ -1,0 +1,5 @@
+[multiviewer-f1]
+name="MultiViewer for F1"
+baseurl=/home/<USER>/.local/share/localrepos/multiviewer/$basearch
+gpgcheck=0
+enabled=1

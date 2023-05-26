@@ -1,0 +1,13 @@
+[Unit]
+Description=Triggers weekly Multiviewer update checks
+After=network.target
+
+[Timer]
+OnCalendar=15:00
+OnStartupSec=20s
+AccuracySec=5s
+RandomizedDelaySec=5s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

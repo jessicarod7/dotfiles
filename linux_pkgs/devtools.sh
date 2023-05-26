@@ -8,7 +8,7 @@ fi
 # RPM Fusion, other nonfree libraries, and first updates
 sudo dnf -y check-update
 sudo dnf -y upgrade
-sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 sudo dnf -y install fedora-workstation-repositories
 
 # "Languages" - Java, C/C++, NodeJS, Perl, Python, PHP, OpenSSL, Golang, Rust
@@ -29,6 +29,7 @@ sudo dnf -y install podman podman-compose buildah skopeo
 
 # Useful Python packages
 sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
+pip install --no-input black 'black[d]'
 
 # Typescript compiler
 sudo npm install -g typescript
@@ -72,11 +73,11 @@ mkdir -p ~/.local/bin/yubikey-manager-appimage && install -D yubikey/yubikey-man
 wget -P ~/.local/bin/yubikey-manager-appimage https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage && chmod -R +x ~/.local/bin/yubikey-manager-appimage
 ln -s ~/.local/bin/yubikey-manager-appimage/yubikey-manager-qt-latest-linux.AppImage ~/.local/bin/yubikey-manager
 wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
-mv $(find . -maxdepth 1 -regex ".*yubico.*") ~/.config && ln -s $(realpath $(find ~/.config -maxdepth 1 -regex ".*yubico-auth.*")) ~/.config/yubiauth
+mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(find ~/.config -maxdepth 1 -regex '.*yubico-auth.*')") ~/.config/yubiauth
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
-sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff
+sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim
 cargo install cargo-whatfeatures
 
 # Environment setup

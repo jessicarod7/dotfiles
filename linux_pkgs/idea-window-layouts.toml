@@ -5,14 +5,16 @@
     order = 0
     side_weight= 0.5392006
     is_active_on_start = true
+    is_visible = true
 
     [defaults.commit]
     order = 1
 
     [defaults.structure]
-    order = 2
+    order = 2 # May be incorrect, seems standard to include a gap of one between splits
     side_weight = 0.4607994
     is_active_on_start = true
+    is_visible = true
     is_split = true # bottom half
 
     [defaults.version_control]
@@ -24,6 +26,7 @@
     order = 1
     anchor = "BOTTOM"
     side_weight = 0.49958265
+    is_split = true
 
     [defaults.build]
     order = 2
@@ -37,16 +40,20 @@
     order = 4
     anchor = "BOTTOM"
 
+    [defaults.python_console]
+    order = 4
+    anchor = "BOTTOM"
+
     [defaults.debug]
-    order = 6
+    order = 5 # Counter may cap at 8
     anchor = "BOTTOM"
     side_weight = 0.50041735
 
-    [defaults.services]
-    order = 7
+    [defaults.run]
+    order = 6
     anchor = "BOTTOM"
 
-    [defaults.run]
+    [defaults.services]
     order = 7
     anchor = "BOTTOM"
 
@@ -69,6 +76,10 @@
 
     [defaults.web_inspector]
     order = 4
+    anchor = "RIGHT"
+
+    [defaults.sciview]
+    order = 5 # only applies to PyCharm, other options have to be dropped
     anchor = "RIGHT"
 
     [defaults.hierarchy]

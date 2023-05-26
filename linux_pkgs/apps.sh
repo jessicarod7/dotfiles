@@ -75,4 +75,25 @@ cp pastel/pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
 mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
 cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
+
+# Systemd updaters
+cp ../systemd/* multiviewer/multiviewer-repo.service multiviewer/multiviewer-repo.timer "$XDG_CONFIG_HOME/systemd/user/"
+sed -i "s/<USER>/$USER/" "$XDG_CONFIG_HOME/systemd/user/*.service"
+systemctl --user daemon-reload
+systemctl --user enable --now \
+  local_updchk@rustup.timer
+  local_updchk@rbenv.timer
+  local_updchk@vimplug.timer
+  local_updchk@pastel-chk.timer
+  local_updchk@cargo-whatfeatures.timer
+
+# Multiviewer
+mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
+cp multiviewer/multiviewer-repo.py ~/scripts
+systemctl --user enable --now multiviewer-repo.timer
+sudo cp multiviewer/multiviewer.repo /etc/yum.repos.d/
+sudo sed -i "s/<USER>/$USER/" /etc/yum.repos.d/multiviewer.repo
+printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
+
+
 # Manually installed as needed: DaVinci Resolve

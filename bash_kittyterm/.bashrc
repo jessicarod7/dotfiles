@@ -9,6 +9,7 @@ alias chrome=google-chrome-stable
 alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias curln="curl -w '\n'"
+alias skim="sk -m"
 
 # Scripts
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
