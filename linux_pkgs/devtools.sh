@@ -17,8 +17,11 @@ sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 
+# Flatpaks, RPMs, and app packaging
+sudo dnf -y install fakeroot flatpak-builder createrepo
+
 # The most sane way to setup Ruby on Fedora (removed rust due to user installation)
-sudo dnf install -y gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
+sudo dnf -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 
 # Container stuff
@@ -73,8 +76,7 @@ mv $(find . -maxdepth 1 -regex ".*yubico.*") ~/.config && ln -s $(realpath $(fin
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
-sudo dnf -y install fakeroot flatpak-builder gh dconf-editor screen nmap xeyes ripgrep fd-find
-sudo flatpak install --noninteractive net.werwolv.ImHex
+sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff
 cargo install cargo-whatfeatures
 
 # Environment setup
@@ -97,7 +99,7 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/colodiff.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
+cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 
 # Manually installed to /opt as needed: JetBrains Toolbox & Co.

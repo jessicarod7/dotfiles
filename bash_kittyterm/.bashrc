@@ -13,7 +13,6 @@ alias curln="curl -w '\n'"
 # Scripts
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
 alias colocat="python3 $HOME/scripts/colocat.py"
-alias colodiff="python3 $HOME/scripts/colodiff.py"
 alias git-unsync="python3 $HOME/scripts/git-unsync.py"
 alias ynab-csv="python3 $HOME/scripts/ynab-csv.py"
 
