@@ -18,7 +18,7 @@ if not any(latest_dl in f for f in os.listdir(LOCALREPO)):
         [
             "wget",
             f"https://releases.multiviewer.app/download/109949043/multiviewer-for-f1-{latest_dl}-1.x86_64.rpm",
-            "-O",
+            "--directory-prefix",
             LOCALREPO,
         ],
         check=True,
