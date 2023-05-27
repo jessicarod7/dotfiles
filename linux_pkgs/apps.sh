@@ -6,7 +6,7 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom pandoc
+sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom pandoc qalculate qalculate-gtk
 pip install trash-cli 'trash-cli[completion]'
 
 # GNOME Extensions
@@ -62,8 +62,6 @@ sudo flatpak install --noninteractive \
     org.prismlauncher.PrismLauncher \
     org.signal.Signal \
     tech.feliciano.pocket-casts
-
-sudo flatpak override --env=TERM=xterm-256color --env=LC_MONETARY=en_CA.UTF-8 io.github.Qalculate
 
 # Pastel (with desktop color picker)
 yes | cargo install pastel

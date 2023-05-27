@@ -1,2 +1,0 @@
-#!/bin/bash
-flatpak run --command=qalc io.github.Qalculate $@ 2>/dev/null

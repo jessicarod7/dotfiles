@@ -11,6 +11,9 @@ alias ssk='kitty +kitten ssh'
 alias curln="curl -w '\n'"
 alias skim="sk -m"
 
+# General env vars
+export LC_MONETARY=en_CA.UTF-8
+
 # Scripts
 export PATH="$PATH:$HOME/scripts" # For all the scripting fun
 alias colocat="python3 $HOME/scripts/colocat.py"
