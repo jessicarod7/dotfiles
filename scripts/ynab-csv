@@ -1,3 +1,4 @@
+#!/bin/python3
 # Convert CSVs into YNAB format for import
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from datetime import datetime
