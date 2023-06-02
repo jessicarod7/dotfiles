@@ -1,7 +1,7 @@
 [Unit]
-Description=Check cargo-whatfeatures weekly
+Description=Check handlr-regex weekly
 After=network.target
-Wants=local_updchk@cargo-whatfeatures-chk.timer
+Wants=local_updchk@handler-regex.timer
 StartLimitBurst=5
 
 [Service]
