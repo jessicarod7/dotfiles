@@ -78,7 +78,7 @@ chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiaut
 
 # Other tools
 sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim
-cargo install cargo-whatfeatures
+cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
