@@ -59,6 +59,7 @@ sudo flatpak install --noninteractive \
     org.gimp.GIMP{,.Plugin.{BIMP,Fourier,Lensfun,LiquidRescale,Resynthesizer}} \
     org.gnome.design.IconLibrary \
     org.gnome.Evolution \
+    org.kde.okular \
     org.prismlauncher.PrismLauncher \
     org.signal.Signal \
     tech.feliciano.pocket-casts
