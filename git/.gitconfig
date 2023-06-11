@@ -22,3 +22,5 @@
 	st = status --short
 	rbcont = "-c core.editor=true rebase --continue"
 	recom = commit --amend --no-edit
+	spc = sparse-checkout
+
