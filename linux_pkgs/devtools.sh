@@ -28,7 +28,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 sudo dnf -y install podman podman-compose buildah skopeo
 
 # Useful Python packages
-sudo dnf -y install poetry python3-{requests,beautifulsoup4,gobject}
+sudo dnf -y install python3-{requests,beautifulsoup4,gobject}
+curl -sSL 'https://install.python-poetry.org' | python3 -
 pip install --no-input black 'black[d]'
 
 # Typescript compiler
