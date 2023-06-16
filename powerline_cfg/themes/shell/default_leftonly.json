@@ -7,15 +7,15 @@
 			},
 			{
 				"function": "powerline.segments.common.env.user",
-				"priority": 30
+				"priority": 40
 			},
 			{
 				"function": "powerline.segments.common.env.virtualenv",
-				"priority": 50
+				"priority": 30
 			},
 			{
 				"function": "powerline.segments.common.vcs.branch",
-				"priority": 40
+				"priority": 50
 			},
 			{
 				"function": "powerline.segments.shell.cwd",
