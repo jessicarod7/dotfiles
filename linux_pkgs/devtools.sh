@@ -18,7 +18,8 @@ sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
 
 # Flatpaks, RPMs, and app packaging
-sudo dnf -y install fakeroot flatpak-builder createrepo
+sudo dnf -y install flatpak-builder
+sudo dnf -y group install 'RPM Development Tools'
 
 # The most sane way to setup Ruby on Fedora (removed rust due to user installation)
 sudo dnf -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare

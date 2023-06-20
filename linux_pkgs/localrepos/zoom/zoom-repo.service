@@ -1,0 +1,8 @@
+[Unit]
+Description=Download new Zoom RPMs into a local repo
+StartLimitBurst=5
+
+[Service]
+ExecStart=/home/<USER>/scripts/zoom-repo.py
+Restart=on-failure
+RestartSec=30s

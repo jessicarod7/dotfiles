@@ -6,7 +6,7 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager zoom pandoc qalculate qalculate-gtk
+sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate qalculate-gtk
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
 
@@ -75,8 +75,11 @@ cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
 # Systemd updaters
 mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
-cp ../systemd/* multiviewer/multiviewer-repo.service multiviewer/multiviewer-repo.timer "$XDG_CONFIG_HOME/systemd/user/"
-sed -i "s/<USER>/$USER/" $XDG_CONFIG_HOME/systemd/user/*.service
+cp ../systemd/* \
+    localrepos/multiviewer/multiviewer-repo.service localrepos/multiviewer/multiviewer-repo.timer \
+    localrepos/zoom/zoom-repo.service localrepos/zoom/zoom-repo.timer \
+    "$XDG_CONFIG_HOME/systemd/user/"
+sed -i "s/<USER>/$(id -un)/" $XDG_CONFIG_HOME/systemd/user/*.service
 systemctl --user daemon-reload
 systemctl --user enable --now \
   local_updchk@handlr-regex.timer \
@@ -89,12 +92,21 @@ systemctl --user enable --now \
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
-cp multiviewer/multiviewer-repo.py ~/scripts
+cp localrepos/multiviewer/multiviewer-repo.py ~/scripts
 systemctl --user enable --now multiviewer-repo.timer
 sleep 10
-sudo cp multiviewer/multiviewer.repo /etc/yum.repos.d/
-sudo sed -i "s/<USER>/$USER/" /etc/yum.repos.d/multiviewer.repo
+sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
+sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/multiviewer.repo
 printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
 
+# Zoom
+mkdir -p "$XDG_DATA_HOME/localrepos/zoom/x86_64/"
+cp localrepos/zoom/zoom-repo.py ~/scripts
+systemctl --user enable --now zoom-repo.timer
+sleep 10
+sudo cp localrepos/zoom/zoom.repo /etc/yum.repos.d/
+sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/zoom.repo
+sudo rpm --import 'https://zoom.us/linux/download/pubkey?version=5-12-6'
+printf 'When you'\''re ready, run %s\n' '`dnf install zoom`'
 
 # Manually installed as needed: DaVinci Resolve

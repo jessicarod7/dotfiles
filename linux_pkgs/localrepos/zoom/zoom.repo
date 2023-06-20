@@ -1,0 +1,5 @@
+[zoom]
+name="Zoom"
+baseurl=/home/<USER>/.local/share/localrepos/zoom/$basearch
+gpgcheck=1
+enabled=1
