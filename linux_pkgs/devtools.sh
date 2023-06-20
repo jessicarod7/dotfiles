@@ -36,7 +36,7 @@ pip install --no-input black 'black[d]'
 sudo npm install -g typescript
 
 # Databases
-sudo dnf -y install mariadb-server sqlite2
+sudo dnf -y install mariadb-server sqlite3
 
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
 (cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
