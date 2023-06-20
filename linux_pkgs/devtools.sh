@@ -8,7 +8,7 @@ fi
 # RPM Fusion, other nonfree libraries, and first updates
 sudo dnf -y check-update
 sudo dnf -y upgrade
-sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 sudo dnf -y install fedora-workstation-repositories
 
 # "Languages" - Java, C/C++, NodeJS, Perl, Python, PHP, OpenSSL, Golang, Rust
@@ -57,7 +57,7 @@ sudo dnf -y install code
 
 # 1Password Beta https://support.1password.com/betas
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
-sudo sh -c 'echo -e "[1password-beta]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password-beta.repo'
+sudo sh -c 'echo -e "[1password]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
 sudo dnf -y check-update
 sudo dnf -y install 1password 1password-cli
 
@@ -101,7 +101,7 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync.py ../scripts/pgpcard-reload ~/scripts
+cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 
 # Manually installed to /opt as needed: JetBrains Toolbox & Co.

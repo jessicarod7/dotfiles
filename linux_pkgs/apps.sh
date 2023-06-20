@@ -6,7 +6,8 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity ffmpeg openrgb steam virt-manager zoom pandoc qalculate qalculate-gtk
+sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager zoom pandoc qalculate qalculate-gtk
+sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
 
 # GNOME Extensions
@@ -19,7 +20,6 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # - NotificationCounter@coolllsk
 # - openweather-extension@jenslody.de
 # - simple-timer@majortomvr.github.com
-# - sound-output-device-chooser@kgshank.net (currently unsupported, see kgshank/gse-sound-output-chooser#258)
 
 # gsettings modifications for RK87 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
@@ -62,7 +62,6 @@ sudo flatpak install --noninteractive \
     org.kde.okular \
     org.prismlauncher.PrismLauncher \
     org.signal.Signal \
-    tech.feliciano.pocket-casts
 
 # Pastel (with desktop color picker)
 yes | cargo install pastel
@@ -74,22 +73,25 @@ cp pastel/pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
 mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
 cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
-
 # Systemd updaters
+mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
 cp ../systemd/* multiviewer/multiviewer-repo.service multiviewer/multiviewer-repo.timer "$XDG_CONFIG_HOME/systemd/user/"
-sed -i "s/<USER>/$USER/" "$XDG_CONFIG_HOME/systemd/user/*.service"
+sed -i "s/<USER>/$USER/" $XDG_CONFIG_HOME/systemd/user/*.service
 systemctl --user daemon-reload
 systemctl --user enable --now \
-  local_updchk@rustup.timer
-  local_updchk@rbenv.timer
-  local_updchk@vimplug.timer
-  local_updchk@pastel-chk.timer
-  local_updchk@cargo-whatfeatures.timer
+  local_updchk@handlr-regex.timer \
+  local_updchk@rustup-chk.timer \
+  local_updchk@rbenv-chk.timer \
+  local_updchk@vimplug-chk.timer \
+  local_updchk@pastel-chk.timer \
+  local_updchk@poetry-chk.timer \
+  local_updchk@cargo-whatfeatures-chk.timer
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
 cp multiviewer/multiviewer-repo.py ~/scripts
 systemctl --user enable --now multiviewer-repo.timer
+sleep 10
 sudo cp multiviewer/multiviewer.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$USER/" /etc/yum.repos.d/multiviewer.repo
 printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
