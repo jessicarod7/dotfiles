@@ -91,6 +91,9 @@ gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir -p $XDG_CONFIG_HOME/tmux/plugins
+git clone git@github.com:tmux-plugins/tpm.git $XDG_CONFIG_HOME/tmux/plugins/tpm
+
 gsettings set org.gnome.desktop.default-applications.terminal exec kitty
 mkdir -p ~/.config/kitty/kitty.d
 curl -o ~/.config/kitty/kitty.d/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/master/nord.conf
