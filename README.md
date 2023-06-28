@@ -6,9 +6,9 @@ I haven't put much work into making this easy to setup, so no guarantees are mad
 
 ## Details
 
-<img alt="Screenshot of my Fedora desktop, featuring VS Code and GNOME Terminal (now replaced by kitty). VS Code is opened to cam-rod/wildfly-elytron, and GNOME Terminal shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/cam-rod_theme.png><br>
+<img alt="Screenshot of my Fedora desktop, featuring CLion and kitty. CLion is opened to cam-rod/rss-autogen-giscus, and kitty shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/cam-rod_theme.png><br>
 
-- Core editors: [VS Code](https://github.com/Microsoft/vscode/) + [IntelliJ](https://www.jetbrains.com/idea/) + [Vim](https://github.com/vim/vim)
+- Core editors: [VS Code](https://github.com/Microsoft/vscode/) + [JetBrains IDEs](https://www.jetbrains.com/) + [Vim](https://github.com/vim/vim)
 - OS/DE: [Fedora Workstation](https://getfedora.org/en/workstation/) with [GNOME](https://www.gnome.org/)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
 - Theme: [Nord](https://github.com/arcticicestudio/nord)
