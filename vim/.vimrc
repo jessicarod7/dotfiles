@@ -12,6 +12,14 @@ call plug#end()
 syntax on
 colorscheme nord
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#default#section_truncate_width = {
+    \ 'b': 65,
+    \ 'x': 55, 
+    \ 'y': 80,
+    \ 'z': 45, 
+    \ 'warning': 50,
+    \ 'error': 50,
+    \ }
 
 " For vim-sandwich
 nmap s <Nop>
