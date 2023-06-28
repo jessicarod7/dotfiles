@@ -84,7 +84,7 @@ cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
-sudo dnf -y install vim-enhanced fira-code-fonts kitty neofetch powerline-fonts
+sudo dnf -y install vim-enhanced jetbrains-mono-fonts-all kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
