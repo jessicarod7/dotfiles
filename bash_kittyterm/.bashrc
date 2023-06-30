@@ -10,6 +10,7 @@ alias lso='ls -lash --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias curln="curl -w '\n'"
 alias skim="sk -m"
+alias tarZ="tar -I'zstd -T0'"
 
 # General env vars
 export LC_MONETARY=en_CA.UTF-8
