@@ -1,0 +1,667 @@
+<application>
+  <component name="ToolWindowLayout"><![CDATA[{
+  "activeLayoutName": "Coder (Widescreen)",
+  "layouts": {
+    "Custom": {
+      "v2": [
+        {
+          "id": "Project",
+          "order": 0,
+          "contentUiType": "COMBO",
+          "weight": 0.25
+        },
+        {
+          "id": "Commit",
+          "order": 1,
+          "weight": 0.25
+        },
+        {
+          "id": "Structure",
+          "order": 2,
+          "weight": 0.25
+        },
+        {
+          "id": "Notifications",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO",
+          "weight": 0.25
+        },
+        {
+          "id": "Database",
+          "order": 1,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Gradle",
+          "order": 2,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Maven",
+          "order": 3,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Web Inspector",
+          "order": 4,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "SciView",
+          "order": 5,
+          "anchor": "RIGHT",
+          "weight": 0.1
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems",
+          "order": 1,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 2,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Terminal",
+          "order": 3,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Services",
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
+          "order": 5,
+          "anchor": "BOTTOM",
+          "weight": 0.1
+        },
+        {
+          "id": "Python Console",
+          "order": 6,
+          "anchor": "BOTTOM",
+          "weight": 0.1
+        }
+      ]
+    },
+    "Coder (Widescreen)": {
+      "v2": [
+        {
+          "id": "Space Code Reviews",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Pull Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Learn",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Project",
+          "order": 0,
+          "contentUiType": "COMBO",
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.17753907,
+          "sideWeight": 0.5392006
+        },
+        {
+          "id": "Commit",
+          "order": 1
+        },
+        {
+          "id": "Structure",
+          "order": 2,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.17753907,
+          "sideWeight": 0.4607994,
+          "isSplit": true
+        },
+        {
+          "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Terminal",
+          "order": 1,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Problems",
+          "order": 3,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Services",
+          "order": 6,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
+          "order": 7,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Console",
+          "order": 8,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "documentation.v2",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Notifications",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO"
+        },
+        {
+          "id": "Database",
+          "order": 1,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Gradle",
+          "order": 2,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Maven",
+          "order": 3,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 4,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "SciView",
+          "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Bookmarks",
+          "order": 6,
+          "anchor": "RIGHT",
+          "sideWeight": 0.42621058,
+          "isSplit": true
+        },
+        {
+          "id": "Hierarchy",
+          "order": 7,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "TODO",
+          "order": 7,
+          "anchor": "RIGHT",
+          "isSplit": true
+        }
+      ],
+      "unifiedWeights": {
+        "top": 0.33,
+        "left": 0.17753907,
+        "bottom": 0.29139316,
+        "right": 0.14980468
+      }
+    },
+    "Split-Coder (Widescreen)": {
+      "v2": [
+        {
+          "id": "Space Code Reviews",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Pull Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Learn",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Project",
+          "order": 0,
+          "contentUiType": "COMBO",
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "sideWeight": 0.5392006
+        },
+        {
+          "id": "Commit",
+          "order": 1
+        },
+        {
+          "id": "Structure",
+          "order": 3,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "sideWeight": 0.4607994,
+          "isSplit": true
+        },
+        {
+          "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Terminal",
+          "order": 1,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Problems",
+          "order": 3,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Services",
+          "order": 6,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
+          "order": 7,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Console",
+          "order": 8,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Notifications",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO"
+        },
+        {
+          "id": "Database",
+          "order": 1,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Gradle",
+          "order": 2,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Maven",
+          "order": 3,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 4,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "SciView",
+          "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Hierarchy",
+          "order": 6,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Bookmarks",
+          "order": 7,
+          "anchor": "RIGHT",
+          "sideWeight": 0.42621058,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 8,
+          "anchor": "RIGHT",
+          "isSplit": true
+        }
+      ],
+      "unifiedWeights": {
+        "top": 0.33,
+        "left": 0.22148436,
+        "bottom": 0.230124,
+        "right": 0.18398437
+      }
+    },
+    "Coder (Laptop)": {
+      "v2": [
+        {
+          "id": "Space Code Reviews",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Pull Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Learn",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Project",
+          "order": 0,
+          "contentUiType": "COMBO",
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.19184028,
+          "sideWeight": 0.5392006
+        },
+        {
+          "id": "Commit",
+          "order": 1
+        },
+        {
+          "id": "Structure",
+          "order": 3,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.19184028,
+          "sideWeight": 0.4607994,
+          "isSplit": true
+        },
+        {
+          "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Terminal",
+          "order": 1,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Problems",
+          "order": 3,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Services",
+          "order": 6,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
+          "order": 7,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Console",
+          "order": 8,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Notifications",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO"
+        },
+        {
+          "id": "Database",
+          "order": 1,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Gradle",
+          "order": 2,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Maven",
+          "order": 3,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 4,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "SciView",
+          "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Hierarchy",
+          "order": 6,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Bookmarks",
+          "order": 7,
+          "anchor": "RIGHT",
+          "sideWeight": 0.42621058,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 8,
+          "anchor": "RIGHT",
+          "isSplit": true
+        }
+      ],
+      "unifiedWeights": {
+        "top": 0.33,
+        "left": 0.19184028,
+        "bottom": 0.26953512,
+        "right": 0.26880786
+      }
+    },
+    "Split-Coder (Laptop)": {
+      "v2": [
+        {
+          "id": "Space Code Reviews",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Pull Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Learn",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Project",
+          "order": 0,
+          "contentUiType": "COMBO",
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "sideWeight": 0.5392006
+        },
+        {
+          "id": "Commit",
+          "order": 1
+        },
+        {
+          "id": "Structure",
+          "order": 3,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "sideWeight": 0.4607994,
+          "isSplit": true
+        },
+        {
+          "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Terminal",
+          "order": 1,
+          "anchor": "BOTTOM",
+          "isSplit": true
+        },
+        {
+          "id": "Problems",
+          "order": 3,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Services",
+          "order": 6,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
+          "order": 7,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Console",
+          "order": 8,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Notifications",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO"
+        },
+        {
+          "id": "Database",
+          "order": 1,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Gradle",
+          "order": 2,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Maven",
+          "order": 3,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 4,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "SciView",
+          "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Hierarchy",
+          "order": 6,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Bookmarks",
+          "order": 7,
+          "anchor": "RIGHT",
+          "sideWeight": 0.42621058,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 8,
+          "anchor": "RIGHT",
+          "isSplit": true
+        }
+      ],
+      "unifiedWeights": {
+        "top": 0.33,
+        "left": 0.27447745,
+        "bottom": 0.24975272,
+        "right": 0.2689769
+      }
+    }
+  }
+}]]></component>
+</application>

@@ -84,6 +84,10 @@ sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff 
 cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
+if [[ `stty size | awk '{print $2}'` -ge 256 ]]; then # Larger TTY font for 4K displays
+    sudo cp ./ttyfont.sh /etc/profile.d/ttyfont.sh
+fi
+
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
 sudo dnf -y install vim-enhanced jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
