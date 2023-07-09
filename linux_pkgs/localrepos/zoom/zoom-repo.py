@@ -31,7 +31,7 @@ if not any(latest_dl in f for f in os.listdir(LOCALREPO)):
         ],
         check=True,
     )
-    subprocess.run(["createrepo", LOCALREPO], check=True)
+    subprocess.run(["createrepo_c", LOCALREPO], check=True)
     print("Successfully registered to local repo. Update can be installed via DNF.")
 else:
     print(f"No updates to Zoom. Current release is {latest_dl}.")
