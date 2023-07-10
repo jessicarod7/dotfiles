@@ -43,7 +43,7 @@ if not any(latest_dl in f for f in os.listdir(LOCALREPO)):
             ],
             check=True,
         )
-        subprocess.run(["createrepo_c",  "-v", LOCALREPO], check=True)
+        subprocess.run(["createrepo_c", LOCALREPO], check=True)
         print("Successfully registered to local repo. Update can be installed via DNF.")
     else:
         print(f"Unable to retrieve RPM for {latest_dl} from multiviewer.app/download -- repo not updated")
