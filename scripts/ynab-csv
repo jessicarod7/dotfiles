@@ -56,7 +56,7 @@ match args.bank:
                     payee = row["Description"].split(',')[0]
 
                     # Format amount to numeric
-                    amount = "{:.2f}".format(float(row["Amount"].replace('$','')))
+                    amount = "{:.2f}".format(float(row["Amount"].replace('$','').replace(',','')))
 
                     newfile.writerow({"Date": new_date, "Payee": payee, "Memo": row["Description"], "Amount": amount})
     case _:
