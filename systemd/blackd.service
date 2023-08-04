@@ -1,0 +1,13 @@
+[Unit]
+Description=Run blackd
+StartLimitIntervalSec=30
+StartLimitBurst=4
+
+[Service]
+Type=exec
+ExecStart=/home/carodrig/.local/bin/blackd --bind-port 45484
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
