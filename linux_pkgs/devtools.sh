@@ -80,7 +80,8 @@ mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
 
 # Other tools
-sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot
+sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
+    setools-console policycoreutils-devel
 cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup

@@ -1,0 +1,43 @@
+policy_module(howdy_camrod, 1.0.0)
+
+type howdy_camrod_t;
+type howdy_camrod_exec_t;
+application_domain(howdy_camrod_t, howdy_camrod_exec_t)
+files_type(howdy_camrod_t)
+
+role object_r types howdy_camrod_t;
+
+# permissive howdy_camrod_t;
+
+### Base permissions ###
+
+allow howdy_camrod_t self:fifo_file manage_fifo_file_perms;
+allow howdy_camrod_t self:unix_stream_socket create_stream_socket_perms;
+domain_use_interactive_fds(howdy_camrod_t)
+files_read_etc_files(howdy_camrod_t)
+miscfiles_read_localization(howdy_camrod_t)
+
+### Required access for authentication ###
+
+require {
+    type sysctl_vm_t;
+    type v4l_device_t;
+    type xdm_t;
+    class file { getattr open read };
+    class chr_file map;
+}
+
+allow howdy_camrod_t sysctl_vm_t:file { getattr open read };
+allow howdy_camrod_t v4l_device_t:chr_file map;
+howdy_camrod_domtrans(xdm_t)
+
+# Access to disable Howdy from systemd (uncommment if needed)
+
+# require {
+#   type init_t;
+#     type abrt_t;
+#     class all_unix_stream_socket connectto;
+# }
+#
+# allow howdy_camrod_t abrt_t:all_unix_stream_socket connectto;
+# howdy_camrod_domtrans(init_t)

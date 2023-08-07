@@ -10,6 +10,10 @@ sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qal
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
 
+# Howdy
+# sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
+# sudo bash ../scripts/howdy/howdy_camrod.sh && sudo semodule -i howdy_camrod.pp
+
 # GNOME Extensions
 sudo flatpak install com.mattjakeman.ExtensionManager
 # Extensions:
