@@ -6,7 +6,7 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # RPM Fusion, other nonfree libraries, and first updates
-sudo echo 'max_parallel_downloads=10' >> /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf -y check-update
 sudo dnf -y upgrade
 sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
@@ -17,6 +17,13 @@ sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool
     gcc-c++ clang npm perl-devel python3-devel openssl-devel composer \
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+
+# PlatformIO Core
+curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+python3 get-platformio.py && rm get-platformio.py
+for pbin in pio platformio piodebuggdb; do ln -s "$HOME/.platformio/penv/bin/$pbin" "$HOME/.local/bin/$pbin"; done
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo udevadm control -R && sudo udevadm trigger
 
 # Flatpaks, RPMs, and app packaging
 sudo dnf -y install flatpak-builder
@@ -42,9 +49,6 @@ sudo dnf -y install mariadb-server sqlite3
 
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
 (cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
-
-# sendgmail
-go install -tags xdg github.com/google/gmail-oauth2-tools/go/sendgmail@latest
 
 # Google Chrome
 sudo dnf -y config-manager --set-enabled google-chrome
@@ -76,8 +80,8 @@ mkdir -p ~/.local/bin/yubikey-manager-appimage && install -D yubikey/yubikey-man
 wget -P ~/.local/bin/yubikey-manager-appimage https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage && chmod -R +x ~/.local/bin/yubikey-manager-appimage
 ln -s ~/.local/bin/yubikey-manager-appimage/yubikey-manager-qt-latest-linux.AppImage ~/.local/bin/yubikey-manager
 wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
-mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(find ~/.config -maxdepth 1 -regex '.*yubico-auth.*')") ~/.config/yubiauth
-chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c '~/.config/yubiauth/desktop_integration.sh -i'
+mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(find $HOME/.config -maxdepth 1 -regex '.*yubico-auth.*')") ~/.config/yubiauth
+chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
 sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
