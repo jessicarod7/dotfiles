@@ -83,7 +83,8 @@ cp ../systemd/* \
     localrepos/multiviewer/multiviewer-repo.service localrepos/multiviewer/multiviewer-repo.timer \
     localrepos/zoom/zoom-repo.service localrepos/zoom/zoom-repo.timer \
     "$XDG_CONFIG_HOME/systemd/user/"
-sed -i "s/<USER>/$(id -un)/" $XDG_CONFIG_HOME/systemd/user/*.service
+cp localrepos/python_scripts/update_repo.py ~/scripts/
+sed -i "s/<USER>/$(id -un)/" "$XDG_CONFIG_HOME/systemd/user/*.service"
 systemctl --user daemon-reload
 systemctl --user enable --now \
   local_updchk@handlr-regex.timer \
@@ -96,7 +97,7 @@ systemctl --user enable --now \
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
-cp localrepos/multiviewer/multiviewer-repo.py ~/scripts
+cp localrepos/python_scripts/multiviewer-repo.py ~/scripts
 systemctl --user enable --now multiviewer-repo.timer
 sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
@@ -105,7 +106,7 @@ printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
 
 # Zoom
 mkdir -p "$XDG_DATA_HOME/localrepos/zoom/x86_64/"
-cp localrepos/zoom/zoom-repo.py ~/scripts
+cp localrepos/python_scripts/zoom-repo.py ~/scripts
 systemctl --user enable --now zoom-repo.timer
 sleep 10
 sudo cp localrepos/zoom/zoom.repo /etc/yum.repos.d/

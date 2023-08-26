@@ -4,6 +4,6 @@ StartLimitBurst=5
 
 [Service]
 Type=oneshot
-ExecStart=/home/<USER>/scripts/multiviewer-repo.py
+ExecStart=/home/<USER>/scripts/multiviewer_repo.py
 Restart=on-failure
 RestartSec=30s
