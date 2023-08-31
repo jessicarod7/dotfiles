@@ -6,7 +6,7 @@
 . $HOME/scripts/xdg-base-setup.sh
 
 alias chrome=google-chrome-stable
-alias lso='ls -lash --time-style=long-iso'
+alias lso='ls -las --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias curln="curl -w '\n'"
 alias skim="sk -m"
