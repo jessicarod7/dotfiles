@@ -15,6 +15,10 @@ yes | cargo install pastel
 # sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
 # sudo bash ../scripts/howdy/howdy_camrod.sh && sudo semodule -i howdy_camrod.pp
 
+# Setup flathub-beta, prioritize default Flathub repo
+sudo flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+sudo flatpak remote-modify flathub --prio=2
+
 # GNOME Extensions
 sudo flatpak install com.mattjakeman.ExtensionManager
 # Extensions:
@@ -26,7 +30,7 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # - openweather-extension@jenslody.de
 # - simple-timer@majortomvr.github.com
 
-# gsettings modifications for RK87 keyboard and dev tool shortcuts
+# gsettings modifications for RK84 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
 gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['']"
@@ -41,10 +45,10 @@ sudo flatpak install --noninteractive \
     com.calibre_ebook.calibre \
     com.discordapp.Discord \
     com.github.finefindus.eyedropper \
-    com.github.flxzt.rnote \
     com.github.liferooter.textpieces \
     com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
+    com.github.xournalpp.xournalpp \
     com.obsproject.Studio \
     com.slack.Slack \
     com.spotify.Client \
@@ -56,7 +60,11 @@ sudo flatpak install --noninteractive \
     org.gnome.Evolution \
     org.kde.okular \
     org.prismlauncher.PrismLauncher \
-    org.signal.Signal \
+    org.signal.Signal//beta \
+
+# Setup Xournal++
+mkdir -p ~/.var/app/com.github.xournalpp.xournalpp/config/xournalpp
+cp ../xournalpp/settings.xml ~/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/settings.xml
 
 # Systemd updaters
 mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
