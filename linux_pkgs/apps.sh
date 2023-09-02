@@ -9,6 +9,7 @@ fi
 sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate qalculate-gtk
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
+yes | cargo install pastel
 
 # Howdy
 # sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
@@ -31,16 +32,6 @@ gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['AudioStop']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
-
-# ExpressVPN (see _expressvpn-upgrade.py)
-cp ./*expressvpn* ~/scripts # Convenient script to upgrade expressvpn via CLI
-sudo chmod ug+x ./*expressvpn*
-expressvpn-upgrade --install
-
-# vnStat for cool network info
-sudo dnf -y install vnstat
-sudo systemctl enable vnstat
-sudo systemctl start vnstat
 
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install --noninteractive \
@@ -66,16 +57,6 @@ sudo flatpak install --noninteractive \
     org.kde.okular \
     org.prismlauncher.PrismLauncher \
     org.signal.Signal \
-
-# Pastel (with desktop color picker)
-yes | cargo install pastel
-sudo appstreamcli put pastel/pastel.metainfo.xml
-cp pastel/pastel.desktop ~/.local/share/applications/pastel.desktop
-cp pastel/pastel-256.png ~/.local/share/icons/hicolor/256x256/apps/pastel.png
-
-# Setup Evolution toolbar
-mkdir -p ~/.var/app/org.gnome.Evolution/config/evolution/ui
-cp ./evolution-mail-reader.ui ~/.var/app/org.gnome.Evolution/config/evolution/ui
 
 # Systemd updaters
 mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
