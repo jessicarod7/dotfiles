@@ -1,6 +1,6 @@
 <application>
   <component name="ToolWindowLayout"><![CDATA[{
-  "activeLayoutName": "Coder (Laptop)",
+  "activeLayoutName": "Coder (Widescreen)",
   "layouts": {
     "Custom": {
       "v2": [
@@ -152,23 +152,22 @@
           "anchor": "BOTTOM"
         },
         {
-          "id": "Dependencies",
+          "id": "Python Console",
           "order": 5,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Dependencies",
+          "order": 6,
           "anchor": "BOTTOM",
           "isShowStripeButton": false,
           "weight": 0.2964989
         },
         {
-          "id": "Debug",
-          "order": 6,
-          "anchor": "BOTTOM",
-          "weight": 0.29139316,
-          "sideWeight": 0.50020176
-        },
-        {
-          "id": "Services",
+          "id": "CMake",
           "order": 7,
-          "anchor": "BOTTOM"
+          "anchor": "BOTTOM",
+          "weight": 0.2964989
         },
         {
           "id": "Python Packages",
@@ -177,8 +176,30 @@
           "isShowStripeButton": false
         },
         {
-          "id": "Run",
+          "id": "Endpoints",
           "order": 9,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Debug",
+          "order": 10,
+          "anchor": "BOTTOM",
+          "weight": 0.29139316,
+          "sideWeight": 0.50020176
+        },
+        {
+          "id": "Services",
+          "order": 11,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "GraphQL",
+          "order": 12,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Run",
+          "order": 13,
           "anchor": "BOTTOM",
           "weight": 0.33005106
         },
@@ -186,12 +207,6 @@
           "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false
-        },
-        {
-          "id": "Meet New UI",
-          "anchor": "RIGHT",
-          "isShowStripeButton": false,
-          "isSplit": true
         },
         {
           "id": "Notifications",
@@ -207,42 +222,71 @@
           "weight": 0.25
         },
         {
-          "id": "Gradle",
+          "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Web Inspector",
+          "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Pull Requests",
+          "id": "Cargo",
           "order": 5,
+          "anchor": "RIGHT",
+          "weight": 0.1908203
+        },
+        {
+          "id": "Web Inspector",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "SciView",
+          "order": 7,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Pull Requests",
+          "order": 8,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "isSplit": true
         },
         {
           "id": "Bookmarks",
-          "order": 6,
+          "order": 9,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "isSplit": true
         },
         {
+          "id": "Hierarchy",
+          "order": 10,
+          "anchor": "RIGHT"
+        },
+        {
           "id": "TODO",
-          "order": 7,
+          "order": 11,
           "anchor": "RIGHT",
           "weight": 0.16386719,
+          "isSplit": true
+        },
+        {
+          "id": "Symbols",
+          "order": 12,
+          "anchor": "RIGHT",
+          "weight": 0.25,
           "isSplit": true
         }
       ],
@@ -335,28 +379,57 @@
           "sideWeight": 0.50041735
         },
         {
-          "id": "Dependencies",
+          "id": "Python Console",
           "order": 5,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Dependencies",
+          "order": 6,
           "anchor": "BOTTOM",
           "isShowStripeButton": false,
           "weight": 0.2964989
         },
         {
-          "id": "Debug",
-          "order": 6,
+          "id": "CMake",
+          "order": 7,
           "anchor": "BOTTOM",
-          "weight": 0.33005106
-        },
-        {
-          "id": "Services",
-          "order": 6,
-          "anchor": "BOTTOM"
+          "weight": 0.2964989
         },
         {
           "id": "Python Packages",
           "order": 8,
           "anchor": "BOTTOM",
           "isShowStripeButton": false
+        },
+        {
+          "id": "Endpoints",
+          "order": 9,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Debug",
+          "order": 10,
+          "anchor": "BOTTOM",
+          "weight": 0.33005106,
+          "sideWeight": 0.50041735
+        },
+        {
+          "id": "Services",
+          "order": 11,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "GraphQL",
+          "order": 12,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Run",
+          "order": 13,
+          "anchor": "BOTTOM",
+          "weight": 0.2964989,
+          "sideWeight": 0.50041735
         },
         {
           "id": "documentation.v2",
@@ -384,36 +457,72 @@
           "weight": 0.25
         },
         {
-          "id": "Gradle",
+          "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Web Inspector",
+          "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Bookmarks",
+          "id": "Cargo",
           "order": 5,
+          "anchor": "RIGHT",
+          "weight": 0.1908203
+        },
+        {
+          "id": "Web Inspector",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "SciView",
+          "order": 7,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Pull Requests",
+          "order": 8,
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Bookmarks",
+          "order": 9,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "isSplit": true
         },
         {
+          "id": "Hierarchy",
+          "order": 10,
+          "anchor": "RIGHT"
+        },
+        {
           "id": "TODO",
-          "order": 6,
+          "order": 11,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.49949288,
+          "isSplit": true
+        },
+        {
+          "id": "Symbols",
+          "order": 12,
+          "anchor": "RIGHT",
+          "weight": 0.25,
           "isSplit": true
         }
       ],
