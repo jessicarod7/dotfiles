@@ -1,0 +1,15 @@
+--- clion.window.layouts.xml	2023-09-03 01:10:20.609521900 -0400
++++ clion.window.layouts.xml	2023-09-03 01:15:04.312823040 -0400
+@@ -75,6 +75,12 @@
+           "id": "Services",
+           "order": 4,
+           "anchor": "BOTTOM"
++        },
++        {
++          "id": "CMake",
++          "order": 5,
++          "anchor": "BOTTOM",
++          "weight": 0.1
+         }
+       ]
+     },

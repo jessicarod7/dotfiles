@@ -204,6 +204,12 @@
           "weight": 0.33005106
         },
         {
+          "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
           "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false
@@ -260,7 +266,6 @@
           "id": "Pull Requests",
           "order": 8,
           "anchor": "RIGHT",
-          "isShowStripeButton": false,
           "isSplit": true
         },
         {
@@ -273,7 +278,8 @@
         {
           "id": "Hierarchy",
           "order": 10,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "isSplit": true
         },
         {
           "id": "TODO",
@@ -304,10 +310,6 @@
           "isShowStripeButton": false
         },
         {
-          "id": "Pull Requests",
-          "isShowStripeButton": false
-        },
-        {
           "id": "Learn",
           "isShowStripeButton": false
         },
@@ -327,7 +329,7 @@
         },
         {
           "id": "Structure",
-          "order": 3,
+          "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
           "weight": 0.22148436,
@@ -337,9 +339,7 @@
         {
           "id": "Find",
           "anchor": "BOTTOM",
-          "isShowStripeButton": false,
-          "weight": 0.33005106,
-          "sideWeight": 0.50020176
+          "isShowStripeButton": false
         },
         {
           "id": "Dependency Checker",
@@ -495,7 +495,6 @@
           "id": "Pull Requests",
           "order": 8,
           "anchor": "RIGHT",
-          "isShowStripeButton": false,
           "isSplit": true
         },
         {
@@ -508,7 +507,8 @@
         {
           "id": "Hierarchy",
           "order": 10,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "isSplit": true
         },
         {
           "id": "TODO",
@@ -550,7 +550,7 @@
           "isActiveOnStart": true,
           "isVisible": true,
           "weight": 0.19184028,
-          "sideWeight": 0.5398089
+          "sideWeight": 0.5392006
         },
         {
           "id": "Commit",
@@ -563,7 +563,7 @@
           "isActiveOnStart": true,
           "isVisible": true,
           "weight": 0.19184028,
-          "sideWeight": 0.46019107,
+          "sideWeight": 0.4607994,
           "isSplit": true
         },
         {
@@ -578,58 +578,90 @@
         },
         {
           "id": "Version Control",
-          "order": 2,
+          "order": 0,
           "anchor": "BOTTOM",
           "isSplit": true
         },
         {
           "id": "Terminal",
-          "order": 3,
+          "order": 1,
           "anchor": "BOTTOM",
           "weight": 0.26953512,
+          "sideWeight": 0.49979824,
           "isSplit": true
         },
         {
           "id": "Build",
-          "order": 5,
+          "order": 2,
           "anchor": "BOTTOM",
           "weight": 0.26953512
         },
         {
           "id": "Problems",
-          "order": 5,
+          "order": 3,
           "anchor": "BOTTOM"
         },
         {
           "id": "Problems View",
-          "order": 6,
+          "order": 4,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Console",
+          "order": 5,
           "anchor": "BOTTOM"
         },
         {
           "id": "Dependencies",
-          "order": 7,
+          "order": 6,
           "anchor": "BOTTOM",
           "weight": 0.2964989
         },
         {
-          "id": "Debug",
+          "id": "CMake",
+          "order": 7,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Python Packages",
           "order": 8,
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Endpoints",
+          "order": 9,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Debug",
+          "order": 10,
           "anchor": "BOTTOM",
           "weight": 0.33005106
         },
         {
           "id": "Services",
-          "order": 8,
+          "order": 11,
           "anchor": "BOTTOM"
         },
         {
-          "id": "Python Packages",
-          "order": 9,
-          "anchor": "BOTTOM",
-          "isShowStripeButton": false
+          "id": "GraphQL",
+          "order": 12,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Run",
+          "order": 13,
+          "anchor": "BOTTOM"
         },
         {
           "id": "Meet New UI",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "isSplit": true
@@ -648,42 +680,71 @@
           "weight": 0.25
         },
         {
-          "id": "Gradle",
+          "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Web Inspector",
+          "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Bookmarks",
+          "id": "Cargo",
           "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "SciView",
+          "order": 7,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Pull Requests",
+          "order": 8,
+          "anchor": "RIGHT",
+          "isSplit": true
+        },
+        {
+          "id": "Bookmarks",
+          "order": 9,
           "anchor": "RIGHT",
           "weight": 0.17390046,
           "isSplit": true
         },
         {
+          "id": "Hierarchy",
+          "order": 10,
+          "anchor": "RIGHT",
+          "isSplit": true
+        },
+        {
           "id": "TODO",
-          "order": 6,
+          "order": 11,
           "anchor": "RIGHT",
           "weight": 0.19936343,
           "isSplit": true
         },
         {
-          "id": "Pull Requests",
-          "order": 7,
+          "id": "Symbols",
+          "order": 12,
           "anchor": "RIGHT",
-          "weight": 0.26880786
+          "weight": 0.25,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
@@ -710,7 +771,7 @@
           "isActiveOnStart": true,
           "isVisible": true,
           "weight": 0.27447745,
-          "sideWeight": 0.5393199
+          "sideWeight": 0.5392006
         },
         {
           "id": "Commit",
@@ -719,11 +780,11 @@
         },
         {
           "id": "Structure",
-          "order": 3,
+          "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
           "weight": 0.27447745,
-          "sideWeight": 0.46068013,
+          "sideWeight": 0.4607994,
           "isSplit": true
         },
         {
@@ -738,56 +799,92 @@
         },
         {
           "id": "Version Control",
-          "order": 2,
+          "order": 0,
           "anchor": "BOTTOM",
           "isSplit": true
         },
         {
           "id": "Terminal",
-          "order": 3,
+          "order": 1,
           "anchor": "BOTTOM",
           "weight": 0.26953512,
+          "sideWeight": 0.49958265,
           "isSplit": true
         },
         {
           "id": "Build",
-          "order": 5,
+          "order": 2,
           "anchor": "BOTTOM",
           "weight": 0.26953512
         },
         {
           "id": "Problems",
-          "order": 5,
+          "order": 3,
           "anchor": "BOTTOM"
         },
         {
           "id": "Problems View",
-          "order": 6,
+          "order": 4,
           "anchor": "BOTTOM",
-          "weight": 0.24975272
+          "weight": 0.24975272,
+          "sideWeight": 0.50041735
+        },
+        {
+          "id": "Python Console",
+          "order": 5,
+          "anchor": "BOTTOM"
         },
         {
           "id": "Dependencies",
+          "order": 6,
+          "anchor": "BOTTOM",
+          "weight": 0.2964989
+        },
+        {
+          "id": "CMake",
           "order": 7,
           "anchor": "BOTTOM",
           "weight": 0.2964989
         },
         {
-          "id": "Debug",
+          "id": "Python Packages",
           "order": 8,
           "anchor": "BOTTOM",
-          "weight": 0.33005106
+          "isShowStripeButton": false
         },
         {
-          "id": "Services",
-          "order": 8,
+          "id": "Endpoints",
+          "order": 9,
           "anchor": "BOTTOM"
         },
         {
-          "id": "Python Packages",
-          "order": 9,
+          "id": "Debug",
+          "order": 10,
           "anchor": "BOTTOM",
-          "isShowStripeButton": false
+          "weight": 0.33005106,
+          "sideWeight": 0.50041735
+        },
+        {
+          "id": "Services",
+          "order": 11,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "GraphQL",
+          "order": 12,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "documentation.v2",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Run",
+          "order": 13,
+          "anchor": "BOTTOM",
+          "sideWeight": 0.50041735
         },
         {
           "id": "documentation.v2",
@@ -806,7 +903,8 @@
           "order": 0,
           "anchor": "RIGHT",
           "contentUiType": "COMBO",
-          "weight": 0.25
+          "weight": 0.25,
+          "sideWeight": 0.5005071
         },
         {
           "id": "Database",
@@ -815,42 +913,71 @@
           "weight": 0.25
         },
         {
-          "id": "Gradle",
+          "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
-          "weight": 0.2689769
+          "weight": 0.25
         },
         {
-          "id": "Web Inspector",
+          "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.25
         },
         {
-          "id": "Bookmarks",
+          "id": "Cargo",
           "order": 5,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Web Inspector",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "SciView",
+          "order": 7,
+          "anchor": "RIGHT"
+        },
+        {
+          "id": "Pull Requests",
+          "order": 8,
+          "anchor": "RIGHT",
+          "weight": 0.26880786
+        },
+        {
+          "id": "Bookmarks",
+          "order": 9,
           "anchor": "RIGHT",
           "weight": 0.17390046,
           "isSplit": true
         },
         {
+          "id": "Hierarchy",
+          "order": 10,
+          "anchor": "RIGHT",
+          "isSplit": true
+        },
+        {
           "id": "TODO",
-          "order": 6,
+          "order": 11,
           "anchor": "RIGHT",
           "weight": 0.19936343,
           "isSplit": true
         },
         {
-          "id": "Pull Requests",
-          "order": 7,
+          "id": "Symbols",
+          "order": 12,
           "anchor": "RIGHT",
-          "weight": 0.26880786
+          "weight": 0.25,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
