@@ -1,0 +1,286 @@
+{
+  "$schema": "./setups.schema.json",
+  "version": 1,
+  "setups": [
+    {
+      "id": "67377fa6-ca1c-48be-bdf6-107c65f1186d",
+      "insertedAt": "2023-08-27T13:34:56.528Z",
+      "name": "Race Day (1440p Primary)",
+      "displays": [
+        {
+          "id": 3,
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 1440
+          },
+          "workArea": {
+            "x": 0,
+            "y": 32,
+            "width": 2560,
+            "height": 1408
+          },
+          "scaleFactor": 1,
+          "rotation": 0,
+          "touchSupport": "unknown"
+        }
+      ],
+      "windows": [
+        {
+          "id": 4,
+          "type": "f1tv.player",
+          "state": {
+            "streamData": {
+              "title": "F1 LIVE",
+              "contentId": "1000006788",
+              "meetingKey": "1217",
+              "sessionKey": "9149",
+              "channelId": 1033,
+              "type": "additional"
+            },
+            "playerState": {
+              "muted": false,
+              "volume": 100
+            }
+          },
+          "windowState": {
+            "bounds": {
+              "x": 0,
+              "y": 32,
+              "width": 1703,
+              "height": 962
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 3,
+            "maintainAspectRatio": true
+          }
+        },
+        {
+          "id": 5,
+          "type": "f1.live-timing.index",
+          "state": {
+            "activeLiveTimingLayoutId": 0
+          },
+          "windowState": {
+            "bounds": {
+              "x": 1701,
+              "y": 69,
+              "width": 859,
+              "height": 1371
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 3,
+            "maintainAspectRatio": false
+          }
+        },
+        {
+          "id": 6,
+          "type": "f1tv.player",
+          "state": {
+            "streamData": {
+              "title": "TRACKER",
+              "contentId": "1000006788",
+              "meetingKey": "1217",
+              "sessionKey": "9149",
+              "channelId": 1003,
+              "type": "additional"
+            },
+            "playerState": {
+              "muted": true,
+              "volume": 100
+            }
+          },
+          "windowState": {
+            "bounds": {
+              "x": 0,
+              "y": 990,
+              "width": 1702,
+              "height": 450
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 3,
+            "maintainAspectRatio": false
+          }
+        }
+      ],
+      "version": 1,
+      "updatedAt": "2023-08-27T13:34:56.528Z"
+    },
+    {
+      "id": "df41ad5e-1282-4fa2-9702-3e0b733a3709",
+      "insertedAt": "2023-09-03T14:11:22.016Z",
+      "name": "Race Day (1080p Secondary)",
+      "displays": [
+        {
+          "id": 1,
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "workArea": {
+            "x": 0,
+            "y": 32,
+            "width": 1920,
+            "height": 1048
+          },
+          "scaleFactor": 1,
+          "rotation": 0,
+          "touchSupport": "unknown"
+        },
+        {
+          "id": 2,
+          "bounds": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "workArea": {
+            "x": 1920,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "scaleFactor": 1,
+          "rotation": 0,
+          "touchSupport": "unknown"
+        }
+      ],
+      "windows": [
+        {
+          "id": 3,
+          "type": "f1.live-timing.index",
+          "state": {
+            "activeLiveTimingLayoutId": 0
+          },
+          "windowState": {
+            "bounds": {
+              "x": 3197,
+              "y": 37,
+              "width": 643,
+              "height": 1043
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 2,
+            "maintainAspectRatio": false
+          }
+        },
+        {
+          "id": 4,
+          "type": "f1tv.player",
+          "state": {
+            "streamData": {
+              "title": "TRACKER",
+              "contentId": "1000006798",
+              "meetingKey": "1218",
+              "sessionKey": "9157",
+              "channelId": 1003,
+              "type": "additional"
+            },
+            "playerState": {
+              "muted": true,
+              "volume": 100
+            }
+          },
+          "windowState": {
+            "bounds": {
+              "x": 1920,
+              "y": 719,
+              "width": 639,
+              "height": 361
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 2,
+            "maintainAspectRatio": true
+          }
+        },
+        {
+          "id": 6,
+          "type": "f1.live-timing.race-control",
+          "state": {
+            "activeLiveTimingLayoutId": 0
+          },
+          "windowState": {
+            "bounds": {
+              "x": 2560,
+              "y": 720,
+              "width": 300,
+              "height": 360
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 2,
+            "maintainAspectRatio": false
+          }
+        },
+        {
+          "id": 5,
+          "type": "f1.live-timing.radio-transcriptions",
+          "state": {
+            "activeLiveTimingLayoutId": 0
+          },
+          "windowState": {
+            "bounds": {
+              "x": 2861,
+              "y": 721,
+              "width": 340,
+              "height": 359
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 2,
+            "maintainAspectRatio": false
+          }
+        },
+        {
+          "id": 2,
+          "type": "f1tv.player",
+          "state": {
+            "streamData": {
+              "title": "F1 LIVE",
+              "contentId": "1000006788",
+              "meetingKey": "1217",
+              "sessionKey": "9149",
+              "channelId": 1033,
+              "type": "additional"
+            },
+            "playerState": {
+              "muted": false,
+              "volume": 100
+            }
+          },
+          "windowState": {
+            "bounds": {
+              "x": 1920,
+              "y": 0,
+              "width": 1278,
+              "height": 722
+            },
+            "isMaximized": false,
+            "isFullScreen": false,
+            "isAlwaysOnTop": false,
+            "displayId": 2,
+            "maintainAspectRatio": true
+          }
+        }
+      ],
+      "version": 1,
+      "updatedAt": "2023-09-03T14:11:22.016Z"
+    }
+  ]
+}
