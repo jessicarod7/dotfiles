@@ -12,7 +12,7 @@ call plug#end()
 syntax on
 colorscheme nord
 " For Windows
-" set termguicolors 1
+" set termguicolors
 let g:airline_powerline_fonts = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
