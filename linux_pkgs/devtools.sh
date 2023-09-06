@@ -85,7 +85,7 @@ chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yub
 
 # Other tools
 sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
-    setools-console policycoreutils-devel
+    setools-console policycoreutils-devel 'dnf-command(versionlock)'
 cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
