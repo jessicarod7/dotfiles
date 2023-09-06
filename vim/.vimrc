@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'nordtheme/vim'
 Plug 'fladson/vim-kitty'
 Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-sleuth'

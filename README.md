@@ -11,7 +11,7 @@ I haven't put much work into making this easy to setup, so no guarantees are mad
 - Core editors: [VS Code](https://github.com/Microsoft/vscode/) + [JetBrains IDEs](https://www.jetbrains.com/) + [Vim](https://github.com/vim/vim)
 - OS/DE: [Fedora Workstation](https://getfedora.org/en/workstation/) with [GNOME](https://www.gnome.org/)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
-- Theme: [Nord](https://github.com/arcticicestudio/nord)
+- Theme: [Nord](https://github.com/nordtheme/nord)
     - Enhancements: [Powerline](https://github.com/powerline/powerline), [vim-airline](https://github.com/vim-airline/vim-airline)
 - Font: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
 
