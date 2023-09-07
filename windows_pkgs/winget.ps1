@@ -1,7 +1,7 @@
 # Run from an administrator pwsh.exe (requires `winget install Microsoft.PowerShell`)
 winget install --verbose --accept-package-agreements --accept-source-agreements --disable-interactivity `
 Microsoft.VCRedist.2015+.x64 `
-Google.Chrome `
+Google.Chrome Obsidian.Obsidian `
 AgileBits.1Password.Beta Twilio.Authy Yubico.Authenticator `
 Git.Git GitHub.cli GnuPG.GnuPG `
 python3 Rustlang.Rustup `
