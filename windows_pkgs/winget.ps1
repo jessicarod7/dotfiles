@@ -1,4 +1,5 @@
 # Run from an administrator pwsh.exe (requires `winget install Microsoft.PowerShell`)
+winget settings --enable InstallerHashOverride
 winget install --verbose --accept-package-agreements --accept-source-agreements --disable-interactivity `
 Microsoft.VCRedist.2015+.x64 `
 Google.Chrome Obsidian.Obsidian `
@@ -7,7 +8,10 @@ Git.Git GitHub.cli GnuPG.GnuPG `
 python3 Rustlang.Rustup `
 Microsoft.VisualStudioCode JetBrains.Toolbox vim.vim `
 Discord.Discord OpenWhisperSystems.Signal.Beta SlackTechnologies.Slack.Beta `
-REALiX.HWiNFO Microsoft.PowerToys Mozilla.Firefox Qalculate.Qalculate Spotify.Spotify Xournal++.Xournal++ Yubico.Authenticator 9NXQXXLFST89
-<# 9NXQXXLFST89 is Disney+ #>
+Intel.IntelDriverAndSupportAssistant Microsoft.PowerToys Mozilla.Firefox REALiX.HWiNFO Qalculate.Qalculate Spotify.Spotify Xournal++.Xournal++ `
+9NXQXXLFST89 9PCDBQX582BZ 9NKSQGP7F2NH
+<# 9NXQXXLFST89 is Disney+, PCDBQX582BZ is Pocket Casts, 9NKSQGP7F2NH is WhatsApp #>
 
 winget install --verbose --accept-package-agreements --accept-source-agreements --disable-interactivity --include-unknown AirVPN.Eddie
+
+# Note that Google.Chrome, Spotify.Spotify, and AgileBits.1Password.Beta are likely to fail somehow

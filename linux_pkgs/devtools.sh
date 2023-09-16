@@ -7,7 +7,7 @@ fi
 
 # RPM Fusion, other nonfree libraries, and first updates
 echo 'max_parallel_downloads=15' | sudo tee -a /etc/dnf/dnf.conf
-sudo dnf -y check-update
+sudo dnf makecache
 sudo dnf -y upgrade
 sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 sudo dnf -y install fedora-workstation-repositories
@@ -52,25 +52,35 @@ sudo dnf -y install mariadb-server sqlite3
 
 # Google Chrome
 sudo dnf -y config-manager --set-enabled google-chrome
-sudo dnf -y check-update
+sudo dnf makecache
 sudo dnf -y install google-chrome-stable
 
 # VS Code https://code.visualstudio.com/docs/setup/linux
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-sudo dnf -y check-update
+sudo dnf makecache
 sudo dnf -y install code
+
+# PowerShell
+curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/microsoft-rhel8.repo
+sudo sed -i 's/name=.*$/name=microsoft-prod-rhel8/' /etc/yum.repos.d/microsoft-rhel8.repo
+sudo sed -i 's/\[packages.*\]$/[microsoft-prod-rhel8]/' /etc/yum.repos.d/microsoft-rhel8.repo
+curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/microsoft-rhel9.repo
+sudo sed -i 's/name=.*$/name=microsoft-prod-rhel9/' /etc/yum.repos.d/microsoft-rhel9.repo
+sudo sed -i 's/\[packages.*\]$/[microsoft-prod-rhel9]/' /etc/yum.repos.d/microsoft-rhel9.repo
+sudo dnf makecache
+sudo dnf install powershell
 
 # 1Password Beta https://support.1password.com/betas
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 sudo sh -c 'echo -e "[1password]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
-sudo dnf -y check-update
+sudo dnf makecache
 sudo dnf -y install 1password 1password-cli
 
 # NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022
 unset distribution
-sudo dnf -y check-update
+sudo dnf makecache
 sudo dnf -y install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
@@ -85,7 +95,7 @@ chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yub
 
 # Other tools
 sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
-    setools-console policycoreutils-devel 'dnf-command(versionlock)'
+    setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck
 cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
