@@ -4,7 +4,7 @@ Host github.com github
 	IdentityFile ~/.ssh/<keyfile>.pub
 	IdentitiesOnly yes
 
-Host envs
+Host envs.net envs
 	HostName envs.net
 	User camrod
 	IdentityFile ~/.ssh/<keyfile>.pub
@@ -14,6 +14,14 @@ Host envs
 
 Host ug*
 	HostName %h.eecg.utoronto.ca
+	SetEnv TERM=xterm-256color
+	User <UTORid>
+	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentitiesOnly yes
+
+Host remote.ecf.utoronto.ca ecf
+	HostName remote.ecf.utoronto.ca
+	SetEnv TERM=xterm-256color
 	User <UTORid>
 	IdentityFile ~/.ssh/<keyfile>.pub
 	IdentitiesOnly yes
