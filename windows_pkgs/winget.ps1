@@ -5,8 +5,7 @@ Microsoft.VCRedist.2015+.x64 `
 Google.Chrome Obsidian.Obsidian `
 AgileBits.1Password.Beta Twilio.Authy Yubico.Authenticator `
 Git.Git GitHub.cli GnuPG.GnuPG `
-python3 Rustlang.Rustup `
-Microsoft.VisualStudioCode JetBrains.Toolbox vim.vim `
+Rustlang.Rustup Microsoft.VisualStudioCode JetBrains.Toolbox vim.vim `
 Discord.Discord OpenWhisperSystems.Signal.Beta SlackTechnologies.Slack.Beta `
 Intel.IntelDriverAndSupportAssistant Microsoft.PowerToys Mozilla.Firefox REALiX.HWiNFO Qalculate.Qalculate Spotify.Spotify Xournal++.Xournal++ `
 9NXQXXLFST89 9PCDBQX582BZ 9NKSQGP7F2NH
