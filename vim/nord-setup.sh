@@ -14,5 +14,5 @@ popd
 
 # Powerline (https://www.reddit.com/r/powerline/comments/3o1qlf/tips_and_tricks_trim_directory_names_for_long/)
 mkdir -p ~/.config/powerline
-cp -r ../powerline_cfg ~/.config/powerline
+cp -r ../powerline_cfg/* ~/.config/powerline
 

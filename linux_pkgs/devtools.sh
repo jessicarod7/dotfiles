@@ -16,7 +16,8 @@ sudo dnf -y install fedora-workstation-repositories
 sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
     gcc-c++ clang npm perl-devel python3-devel openssl-devel composer \
     golang
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
+mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
 
 # PlatformIO Core
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
@@ -39,7 +40,7 @@ sudo dnf -y install podman podman-compose buildah skopeo
 # Useful Python packages
 sudo dnf -y install python3-{requests,beautifulsoup4,gobject}
 curl -sSL 'https://install.python-poetry.org' | python3 -
-pip install --no-input black 'black[d]'
+pip install --no-input black 'black[d]' selenium webdriver_manager
 
 # Typescript compiler
 sudo npm install -g typescript
@@ -48,6 +49,7 @@ sudo npm install -g typescript
 sudo dnf -y install mariadb-server sqlite3
 
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
+mkdir -p ~/.config/autostart
 (cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
 
 # Google Chrome
@@ -69,7 +71,7 @@ curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.
 sudo sed -i 's/name=.*$/name=microsoft-prod-rhel9/' /etc/yum.repos.d/microsoft-rhel9.repo
 sudo sed -i 's/\[packages.*\]$/[microsoft-prod-rhel9]/' /etc/yum.repos.d/microsoft-rhel9.repo
 sudo dnf makecache
-sudo dnf install powershell
+sudo dnf -y install powershell
 
 # 1Password Beta https://support.1password.com/betas
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
@@ -89,14 +91,13 @@ sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg yub
 mkdir -p ~/.local/bin/yubikey-manager-appimage && install -D yubikey/yubikey-manager.desktop ~/.local/share/applications/ && install -D yubikey/ykman.svg ~/.local/share/icons/hicolor/scalable/apps/ykman.svg
 wget -P ~/.local/bin/yubikey-manager-appimage https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-linux.AppImage && chmod -R +x ~/.local/bin/yubikey-manager-appimage
 ln -s ~/.local/bin/yubikey-manager-appimage/yubikey-manager-qt-latest-linux.AppImage ~/.local/bin/yubikey-manager
-wget https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
+wget -O yubico-authenticator-latest-linux.tar.gz https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz  && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
 mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(find $HOME/.config -maxdepth 1 -regex '.*yubico-auth.*')") ~/.config/yubiauth
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
 sudo dnf -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
     setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat
-cargo install cargo-whatfeatures handlr-regex
 
 # Environment setup
 if [[ `stty size | awk '{print $2}'` -ge 256 ]]; then # Larger TTY font for 4K displays

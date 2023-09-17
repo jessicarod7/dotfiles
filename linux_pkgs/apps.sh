@@ -9,7 +9,7 @@ fi
 sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate qalculate-gtk
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
-yes | cargo install pastel
+yes | cargo install pastel cargo-whatfeatures handlr-regex
 
 # Howdy
 # sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
@@ -19,7 +19,7 @@ yes | cargo install pastel
 sudo flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 sudo flatpak remote-modify flathub --prio=2
 
-# GNOME Extensions
+# GNOME Extensions (Flatpak installs require interactions for runtimes, etc.)
 sudo flatpak install com.mattjakeman.ExtensionManager
 # Extensions:
 # - appindicatorsupport@rgcjonas.gmail.com
@@ -38,7 +38,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['AudioStop
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
 
 # Flatpaks (slight brace expansion abuse)
-sudo flatpak install --noninteractive \
+sudo flatpak install \
     cc.arduino.IDE2 \
     com.authy.Authy \
     com.belmoussaoui.Decoder \
@@ -60,8 +60,8 @@ sudo flatpak install --noninteractive \
     org.gnome.design.IconLibrary \
     org.gnome.Evolution \
     org.kde.okular \
-    org.prismlauncher.PrismLauncher \
-    org.signal.Signal//beta \
+    org.prismlauncher.PrismLauncher
+sudo flatpak install flathub-beta org.signal.Signal
 
 # Setup Xournal++
 mkdir -p ~/.var/app/com.github.xournalpp.xournalpp/config/xournalpp
@@ -74,7 +74,10 @@ cp ../systemd/* \
     localrepos/zoom/zoom-repo.service localrepos/zoom/zoom-repo.timer \
     "$XDG_CONFIG_HOME/systemd/user/"
 cp localrepos/python_scripts/update_repo.py ~/scripts/
-sed -i "s/<USER>/$(id -un)/" "$XDG_CONFIG_HOME/systemd/user/*.service"
+for systemd_file in $(fd '\.service$' $XDG_CONFIG_HOME/systemd/user/
+); do
+    sed -i "s/<USER>/$(id -un)/" $systemd_file
+done
 systemctl --user daemon-reload
 systemctl --user enable --now \
   local_updchk@handlr-regex.timer \
@@ -87,21 +90,23 @@ systemctl --user enable --now \
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
-cp localrepos/python_scripts/multiviewer-repo.py ~/scripts
+cp localrepos/python_scripts/multiviewer_repo.py ~/scripts
 systemctl --user enable --now multiviewer-repo.timer
 sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/multiviewer.repo
+sudo dnf makecache
 printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
 
 # Zoom
 mkdir -p "$XDG_DATA_HOME/localrepos/zoom/x86_64/"
-cp localrepos/python_scripts/zoom-repo.py ~/scripts
+cp localrepos/python_scripts/zoom_repo.py ~/scripts
 systemctl --user enable --now zoom-repo.timer
 sleep 10
 sudo cp localrepos/zoom/zoom.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/zoom.repo
 sudo rpm --import 'https://zoom.us/linux/download/pubkey?version=5-12-6'
+sudo dnf makecache
 printf 'When you'\''re ready, run %s\n' '`dnf install zoom`'
 
 # Manually installed as needed: DaVinci Resolve
