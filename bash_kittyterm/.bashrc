@@ -33,7 +33,7 @@ gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 # Java home and the PATH
 export JAVA_HOME=/usr/lib/jvm/java
 export PATH="$PATH:$HOME/.poetry/bin"
-export PATH="$PATH:/opt/jetbrains/scripts"
+export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
 export PATH="$PATH:/opt/zeal/bin"
 
 # XDG base directories

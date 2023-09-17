@@ -9,4 +9,4 @@ export PATH="$PATH:$GOPATH/bin"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --reload gpg-agent
 
-export PATH="$PATH:/opt/jetbrains/scripts"
+export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
