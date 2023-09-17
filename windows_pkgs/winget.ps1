@@ -6,6 +6,7 @@ Google.Chrome Obsidian.Obsidian `
 AgileBits.1Password.Beta Twilio.Authy Yubico.Authenticator `
 Git.Git GitHub.cli GnuPG.GnuPG `
 Rustlang.Rustup Microsoft.VisualStudioCode JetBrains.Toolbox vim.vim `
+BurntSushi.ripgrep.MSVC sharkdp.fd `
 Discord.Discord OpenWhisperSystems.Signal.Beta SlackTechnologies.Slack.Beta `
 Intel.IntelDriverAndSupportAssistant Microsoft.PowerToys Mozilla.Firefox REALiX.HWiNFO Qalculate.Qalculate Spotify.Spotify Xournal++.Xournal++ `
 9NXQXXLFST89 9PCDBQX582BZ 9NKSQGP7F2NH
