@@ -28,7 +28,6 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # - improvedosk@nick-shmyrev.dev (see nick-shmyrev/improved-osk-gnome-ext#30)
 # - NotificationCounter@coolllsk
 # - openweather-extension@jenslody.de
-# - simple-timer@majortomvr.github.com
 
 # gsettings modifications for RK84 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
