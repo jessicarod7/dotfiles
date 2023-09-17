@@ -6,7 +6,7 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate qalculate-gtk
+sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
 yes | cargo install pastel cargo-whatfeatures handlr-regex
