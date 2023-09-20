@@ -39,7 +39,7 @@ export PATH="$PATH:/opt/zeal/bin"
 # XDG base directories
 # .m2 is a symlink to $XDG_DATA_HOME/maven - what could possibly go wrong?
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
-export CARGO_HOME="$XDG_DATA_HOME/cargo" && "$XDG_DATA_HOME/cargo"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
 . "$CARGO_HOME/env"
 export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
