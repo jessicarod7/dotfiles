@@ -25,7 +25,8 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # - appindicatorsupport@rgcjonas.gmail.com
 # - clipboard-history@alexsaveau.dev
 # - expandable-notifications@kaan.g.inam.org
-# - improvedosk@nick-shmyrev.dev (see nick-shmyrev/improved-osk-gnome-ext#30)
+# - gjsosk@vishram1123.com
+# - gnome-shell-screenshot@ttl.de (requires `dnf install gnome-screenshot`)
 # - NotificationCounter@coolllsk
 # - openweather-extension@jenslody.de
 
