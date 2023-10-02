@@ -1,0 +1,21 @@
+# Spacing (including leading colon):
+# 12|10|24|16|...
+# (2 space indents)|16|14|...
+#
+# Menu items
+menu_item   :main     :Open Browser           :nickel_browser :modal
+menu_item   :main     :Update Book List       :nickel_misc    :rescan_books_full
+menu_item   :main     :Reconnect over USB     :nickel_misc    :force_usb_connection
+menu_item   :main     :Reboot Device          :power          :reboot
+# Library overflow options
+menu_item   :library  :Update Book List       :nickel_misc    :rescan_books_full
+# Reader overflow items
+menu_item   :reader   :Open Browser           :nickel_browser :modal
+menu_item   :reader   :Open Pocket            :nickel_open    :library:pocket
+menu_item   :reader   :Toggle Screenshots     :nickel_setting :toggle:screenshots
+  chain_success   :dbg_toast    :Screenshots toggled.
+menu_item   :reader   :Toggle Wifi            :nickel_wifi    :toggle
+  chain_success   :dbg_toast    :Wifi toggled.
+# Browser overflow items
+menu_item   :browser  :Open Pocket            :nickel_open    :library:pocket
+menu_item   :browser  :Quit                   :nickel_misc    :home
