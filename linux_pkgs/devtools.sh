@@ -18,6 +18,8 @@ sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
 mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
+. "$CARGO_HOME/env"
+rustup component add rust-src rust-analyzer
 
 # PlatformIO Core
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
