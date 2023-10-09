@@ -128,7 +128,9 @@ cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kit
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ~/scripts
+cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ../scripts/doi-handler/doi-handler ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
+cp ../scripts/doi-handler/doi-handler.desktop $XDG_DATA_HOME/applications/
+xdg-mime default doi-handler.desktop x-scheme-handler/doi
 
 # Manually installed to /opt as needed: JetBrains Toolbox & Co.

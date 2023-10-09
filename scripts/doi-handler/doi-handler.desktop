@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DOI Handler
+Comment=Handles those cute little "doi:" URIs
+Exec=/home/camrod/scripts/doi-handler %u
+#NoDisplay=true
+Categories=Utility;
+Type=Application
+Keywords=DOI;
+MimeType=x-scheme-handler/doi;

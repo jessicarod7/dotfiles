@@ -1,0 +1,5 @@
+#!/bin/bash
+DOI=$(echo $1 | awk '{printf "https://doi.org/%s",$2;}' FS=':')
+if [[ -n $DOI ]]; then
+	xdg-open $DOI &
+fi
