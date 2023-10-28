@@ -4,6 +4,7 @@
 	signingKey = <subkey>!
 [core]
 	editor = vim
+	symlinks = true
 	# editor = code --wait
 	# sshCommand = "C:/Windows/System32/OpenSSH/ssh.exe"
 [pull]
