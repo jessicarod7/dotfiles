@@ -14,7 +14,7 @@ sudo dnf -y install fedora-workstation-repositories
 
 # "Languages" - Java, C/C++, NodeJS, Perl, Python, PHP, OpenSSL, Golang, Rust
 sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
-    gcc-c++ clang npm perl-devel python3-devel openssl-devel composer \
+    gcc-c++ clang-devel npm perl-devel python3-devel openssl-devel composer \
     golang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
 mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
