@@ -20,8 +20,8 @@ export PATH="$PATH:$HOME/scripts" # For all the scripting fun
 alias colocat="python3 $HOME/scripts/colocat.py"
 
 # Editors and terminal emulators
-export EDITOR='/usr/bin/vim -e'
-export VISUAL=/usr/bin/vim
+export EDITOR='/bin/vim -e'
+export VISUAL=/bin/vim
 export KITTY_CUSTOM="$XDG_CONFIG_HOME/kitty/kitty.d"
 
 # YubiFriends(TM)
@@ -31,7 +31,7 @@ gpgconf --launch gpg-agent
 gpg-connect-agent 'updatestartuptty' /bye >/dev/null
 
 # Java home and the PATH
-export JAVA_HOME=/usr/lib/jvm/java
+export JAVA_HOME=/lib/jvm/java
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
 export PATH="$PATH:/opt/zeal/bin"
