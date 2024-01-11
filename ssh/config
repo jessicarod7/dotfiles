@@ -1,3 +1,4 @@
+# SetEnv TERM lines are only needed for systems without kitty-terminfo
 Host github.com github
 	User git
 	HostName github.com
@@ -28,3 +29,26 @@ Host remote.ecf.utoronto.ca ecf
 
 Host ug*vnc
 	LocalForward 5904 localhost:5904
+	
+Host cslab
+    HostName teach.cs.utoronto.ca
+    User <UTORid>
+    SetEnv TERM=xterm-256color
+    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentitiesOnly yes
+
+Host cslab-rdp1
+    HostName rdp1.teach.cs.toronto.edu
+    LocalForward 3388 localhost:3389
+    User <UTORid>
+    SetEnv TERM=xterm-256color
+    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentitiesOnly yes
+    
+Host cslab-rdp2
+    HostName rdp2.teach.cs.toronto.edu
+    LocalForward 3388 localhost:3389
+    User <UTORid>
+    SetEnv TERM=xterm-256color
+    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentitiesOnly yes

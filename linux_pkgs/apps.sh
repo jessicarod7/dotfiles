@@ -6,8 +6,8 @@ if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
-sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf5 -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
+sudo dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
 yes | cargo install pastel cargo-whatfeatures handlr-regex
 
@@ -96,8 +96,8 @@ systemctl --user enable --now multiviewer-repo.timer
 sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/multiviewer.repo
-sudo dnf makecache
-printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
+sudo dnf5 makecache
+printf 'When you'\''re ready, run %s\n' '`dnf5 install multiviewer-for-f1`'
 
 # Zoom
 mkdir -p "$XDG_DATA_HOME/localrepos/zoom/x86_64/"
@@ -107,7 +107,7 @@ sleep 10
 sudo cp localrepos/zoom/zoom.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/zoom.repo
 sudo rpm --import 'https://zoom.us/linux/download/pubkey?version=5-12-6'
-sudo dnf makecache
-printf 'When you'\''re ready, run %s\n' '`dnf install zoom`'
+sudo dnf5 makecache
+printf 'When you'\''re ready, run %s\n' '`dnf5 install zoom`'
 
 # Manually installed as needed: DaVinci Resolve
