@@ -35,6 +35,7 @@ export JAVA_HOME=/lib/jvm/java
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
 export PATH="$PATH:/opt/zeal/bin"
+export PATH="$PATH:/opt/MATLAB/current/bin"
 
 # XDG base directories
 # .m2 is a symlink to $XDG_DATA_HOME/maven - what could possibly go wrong?
