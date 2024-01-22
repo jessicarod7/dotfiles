@@ -24,11 +24,13 @@ sudo flatpak install com.mattjakeman.ExtensionManager
 # Extensions:
 # - appindicatorsupport@rgcjonas.gmail.com
 # - clipboard-history@alexsaveau.dev
+# - enhancedosk@cass00.github.io
 # - expandable-notifications@kaan.g.inam.org
-# - gjsosk@vishram1123.com
+# - [DISABLED] gjsosk@vishram1123.com
 # - gnome-shell-screenshot@ttl.de (requires `dnf install gnome-screenshot`)
 # - NotificationCounter@coolllsk
-# - openweather-extension@jenslody.de
+# - openweather-extension@penguin-teal.github.io
+# - windowsgestures@extension.amarullz.com
 
 # gsettings modifications for RK84 keyboard and dev tool shortcuts
 gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Shift><Super>F10']"
