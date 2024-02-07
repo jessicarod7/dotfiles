@@ -31,7 +31,7 @@ Host ug*vnc
 	LocalForward 5904 localhost:5904
 	
 Host cslab
-    HostName teach.cs.utoronto.ca
+    HostName dbserv.teach.cs.utoronto.ca
     User <UTORid>
     SetEnv TERM=xterm-256color
     IdentityFile ~/.ssh/<keyfile>.pub
