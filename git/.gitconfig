@@ -24,4 +24,5 @@
 	rbcont = "-c core.editor=true rebase --continue"
 	recom = commit --amend --no-edit
 	spc = sparse-checkout
-
+	ls-ignored = ls-files -o -i --exclude-standard --directory
+	ls-ignored-files = ls-files -o -i --exclude-standard
