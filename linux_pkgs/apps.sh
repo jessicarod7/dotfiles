@@ -9,7 +9,8 @@ fi
 sudo dnf5 -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
 sudo dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
-yes | cargo install pastel cargo-whatfeatures handlr-regex
+yes | cargo install cargo-update pastel cargo-whatfeatures handlr-regex mdbook
+go install github.com/maksimov/epoch@latest
 
 # Howdy
 # sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
@@ -87,9 +88,8 @@ systemctl --user enable --now \
   local_updchk@rustup-chk.timer \
   local_updchk@rbenv-chk.timer \
   local_updchk@vimplug-chk.timer \
-  local_updchk@pastel-chk.timer \
   local_updchk@poetry-chk.timer \
-  local_updchk@cargo-whatfeatures-chk.timer
+  local_updchk@cargo-update-chk.timer
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"

@@ -1,0 +1,12 @@
+[Unit]
+Description=Check for update to Cargo binaries weekly
+After=network.target
+Wants=local_updchk@cargo-update-chk.timer
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/home/<USER>/.local/share/cargo/bin/cargo install-update -a
+# Configures under what conditions the unit will be restarted.
+Restart=on-failure
+RestartSec=30
