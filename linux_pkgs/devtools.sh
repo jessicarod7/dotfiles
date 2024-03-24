@@ -102,7 +102,7 @@ mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config && ln -s $(realpath "$(
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
-sudo dnf5 -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff skim setroubleshoot \
+sudo dnf5 -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff fzf setroubleshoot \
     setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat
 
 # Environment setup

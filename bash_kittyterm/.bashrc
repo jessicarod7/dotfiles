@@ -9,7 +9,6 @@ alias chrome=google-chrome-stable
 alias lso='ls -las --time-style=long-iso'
 alias ssk='kitty +kitten ssh'
 alias curln="curl -w '\n'"
-alias skim="sk -m"
 alias tarZ="tar -I'zstd -T0'"
 
 # General env vars
