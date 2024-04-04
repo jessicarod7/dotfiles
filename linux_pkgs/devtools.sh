@@ -45,7 +45,8 @@ sudo dnf5 -y install podman podman-compose buildah skopeo
 
 # Useful Python packages
 sudo dnf5 -y install python3-{requests,beautifulsoup4,gobject}
-curl -sSL 'https://install.python-poetry.org' | python3 -
+cargo install --git https://github.com/astral-sh/rye rye
+rye self completion -s bash > ~/.local/share/bash-completion/completions/rye
 pip install --no-input black 'black[d]' selenium webdriver_manager
 
 # Typescript compiler
