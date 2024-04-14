@@ -1,2 +1,2 @@
-[alias]
-dcov = 'rustdoc --all-targets -- -Z unstable-options --show-coverage'
+[expand]
+theme = "nord"

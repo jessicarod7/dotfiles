@@ -60,5 +60,5 @@ if [ -f `which powerline-daemon` ]; then
 fi
 
 # Neofetch
-neofetch  --title_fqdn on --distro_shorthand on --refresh_rate on --gtk2 off --gtk3 off --memory_percent on # --gpu_type dedicated
+neofetch  --title_fqdn on --distro_shorthand on --refresh_rate on --gtk2 off --gtk3 off --memory_percent on --disable packages # --gpu_type dedicated
 ### [ EOF ]

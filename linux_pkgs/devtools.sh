@@ -19,6 +19,7 @@ sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtoo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
 mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
 . "$CARGO_HOME/env"
+cp ../rust/config.toml $CARGO_HOME/config.toml
 rustup component add rust-src rust-analyzer
 
 # PlatformIO Core

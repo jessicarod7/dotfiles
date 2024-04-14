@@ -9,7 +9,7 @@ fi
 sudo dnf5 -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
 sudo dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
 pip install trash-cli 'trash-cli[completion]'
-yes | cargo install cargo-update pastel cargo-whatfeatures handlr-regex mdbook
+yes | cargo install cargo-update pastel cargo-whatfeatures handlr-regex mdbook cargo-expand
 go install github.com/maksimov/epoch@latest
 
 # Howdy
