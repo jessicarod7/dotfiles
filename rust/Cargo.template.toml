@@ -1,6 +1,6 @@
 [package]
 # Useful fields: name, version, authors, description, edition, license, repository
-# For publishing: categories, documentation, homepage, exclude, keywords, readme
+# For publishing: categories, documentation, homepage, include, keywords, readme
 
 # Use #[cfg(docsrs)] for targeting, unstable features
 # To document required features: #![cfg_attr(docsrs, feature(doc_cfg), feature(doc_auto_cfg), feature(doc_cfg_hide))],

@@ -8,7 +8,7 @@ Git.Git GitHub.cli GnuPG.GnuPG `
 Rustlang.Rustup Microsoft.VisualStudioCode JetBrains.Toolbox vim.vim `
 BurntSushi.ripgrep.MSVC sharkdp.fd `
 Discord.Discord OpenWhisperSystems.Signal.Beta SlackTechnologies.Slack.Beta `
-Intel.IntelDriverAndSupportAssistant Microsoft.PowerToys Mozilla.Firefox REALiX.HWiNFO Qalculate.Qalculate Spotify.Spotify Xournal++.Xournal++ `
+Intel.IntelDriverAndSupportAssistant Microsoft.PowerToys Mozilla.Firefox REALiX.HWiNFO Qalculate.Qalculate Spotify.Spotify `
 9NXQXXLFST89 9PCDBQX582BZ 9NKSQGP7F2NH
 <# 9NXQXXLFST89 is Disney+, PCDBQX582BZ is Pocket Casts, 9NKSQGP7F2NH is WhatsApp #>
 

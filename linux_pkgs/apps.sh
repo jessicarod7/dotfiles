@@ -20,15 +20,10 @@ go install github.com/maksimov/epoch@latest
 sudo flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 sudo flatpak remote-modify flathub --prio=2
 
-# GNOME Extensions (Flatpak installs require interactions for runtimes, etc.)
-sudo flatpak install com.mattjakeman.ExtensionManager
 # Extensions:
 # - appindicatorsupport@rgcjonas.gmail.com
 # - clipboard-history@alexsaveau.dev
 # - enhancedosk@cass00.github.io
-# - expandable-notifications@kaan.g.inam.org
-# - [DISABLED] gjsosk@vishram1123.com
-# - gnome-shell-screenshot@ttl.de (requires `dnf install gnome-screenshot`)
 # - NotificationCounter@coolllsk
 # - openweather-extension@penguin-teal.github.io
 # - windowsgestures@extension.amarullz.com
@@ -52,7 +47,6 @@ sudo flatpak install \
     com.github.liferooter.textpieces \
     com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
-    com.github.xournalpp.xournalpp \
     com.obsproject.Studio \
     com.slack.Slack \
     com.spotify.Client \
@@ -63,13 +57,15 @@ sudo flatpak install \
     org.gnome.seahorse.Application \
     org.gnome.design.IconLibrary \
     org.gnome.Evolution \
+    org.kde.kwrite \
     org.kde.okular \
     org.prismlauncher.PrismLauncher
 sudo flatpak install flathub-beta org.signal.Signal
 
-# Setup Xournal++
-mkdir -p ~/.var/app/com.github.xournalpp.xournalpp/config/xournalpp
-cp ../xournalpp/settings.xml ~/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/settings.xml
+# Setup KWrite
+mkdir -p $HOME/.var/app/org.kde.kwrite/config/KDE
+cp ../kwrite/kwriterc $HOME/.var/app/org.kde.kwrite/config/kwriterc
+cp ../kwrite/KDE/Sonnet.conf $HOME/.var/app/org.kde.kwrite/config/KDE/Sonnet.conf
 
 # Systemd updaters
 mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
