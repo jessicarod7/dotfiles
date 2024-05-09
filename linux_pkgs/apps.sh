@@ -34,6 +34,7 @@ gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Super>Down']"
 gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "['']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['AudioStop']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
+gsettings set org.gnome.software packaging-format-preference "['flatpak:flathub', 'flatpak:flathub-beta', 'flatpak:fedora', 'flatpak:fedora-testing', 'rpm']"
 
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
@@ -44,12 +45,14 @@ sudo flatpak install \
     com.discordapp.Discord \
     com.github.finefindus.eyedropper \
     com.github.flxzt.rnote \
+    com.github.jeromerobert.pdfarranger \
     com.github.liferooter.textpieces \
     com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
     com.obsproject.Studio \
     com.slack.Slack \
     com.spotify.Client \
+    de.philippun1.turtle \
     io.github.Qalculate \
     io.github.trigg.discover_overlay \
     md.obsidian.Obsidian \
@@ -108,4 +111,9 @@ sudo rpm --import 'https://zoom.us/linux/download/pubkey?version=5-12-6'
 sudo dnf5 makecache
 printf 'When you'\''re ready, run %s\n' '`dnf5 install zoom`'
 
-# Manually installed as needed: DaVinci Resolve
+# Turtle (Git in file manager)
+sudo dnf5 -y install python-pygit2 nautilus-python meld
+git clone https://gitlab.gnome.org/philippun1/turtle.git $HOME/Documents/turtle
+pushd $HOME/Documents/turtle
+sudo python install.py install --flatpak
+popd
