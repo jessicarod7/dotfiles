@@ -1,0 +1,12 @@
+[Unit]
+Description=Nightly Rust updates
+
+[Timer]
+OnCalendar=04:30
+OnStartupSec=65s
+AccuracySec=10s
+RandomizedDelaySec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

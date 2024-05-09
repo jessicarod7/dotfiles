@@ -1,7 +1,6 @@
 [Unit]
-Description=Check rustup weekly
+Description=Update Rust toolchains
 After=network.target
-Wants=local_updchk@rustup-chk.timer
 StartLimitBurst=5
 
 [Service]
