@@ -1,3 +1,4 @@
+#!/bin/bash
 if [[ -z "${XDG_CONFIG_HOME}" ]]; then
 	export XDG_CONFIG_HOME="$HOME/.config"
 fi
@@ -10,3 +11,6 @@ fi
 if [[ -z "${XDG_STATE_HOME}" ]]; then
 	export XDG_STATE_HOME="$HOME/.local/state"
 fi
+
+# Also setup scripts folder
+export PATH="$PATH:$HOME/scripts"

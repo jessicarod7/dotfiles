@@ -1,4 +1,4 @@
-. $HOME/scripts/xdg-base-setup.sh
+. "$HOME"/scripts/xdg-base-setup.sh
 
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
@@ -6,7 +6,8 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK
 gpgconf --reload gpg-agent
 
 export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
