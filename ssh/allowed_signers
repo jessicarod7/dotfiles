@@ -1,4 +1,5 @@
 <personal_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKQ7yy4W4xtbx8zv2ZkIdRBhcVcYG4O+d/2/cxy51B+c
 <personal_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBc/GX+jVu80w0vjPcya+taB/LE+frADuIgEHCtkqtda
 <legacy_personal_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGYqjhOgRxO8fExr6WjfaKt4XRfvifQWCuFBw/ggG6d7
-<redhat_work_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyZ/EJHsk6Up5sHKz49ebmDhXjWTrOk19mdCL9rmgaH
+<redhat_intern_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyZ/EJHsk6Up5sHKz49ebmDhXjWTrOk19mdCL9rmgaH
+<redhat_return_email> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF1uyZ55qznuI9QjQZVwt50bL6lqd3J6Daf60R2Vab3r

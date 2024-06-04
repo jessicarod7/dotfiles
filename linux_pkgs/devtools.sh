@@ -20,7 +20,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual
 mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
 . "$CARGO_HOME/env"
 cp ../rust/config.toml "$CARGO_HOME"/config.toml
+rustup toolchain install nightly
 rustup component add rust-src rust-analyzer
+rustup component add --toolchain nightly miri rust-src rust-analyzer
 
 # PlatformIO Core
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py

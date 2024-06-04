@@ -2,13 +2,13 @@
 Host github.com github
 	User git
 	HostName github.com
-	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentityFile ~/.ssh/<keyfile>
 	IdentitiesOnly yes
 
 Host envs.net envs
 	HostName envs.net
 	User camrod
-	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentityFile ~/.ssh/<keyfile>
 	IdentitiesOnly yes
 	RemoteForward /run/user/<remote_uid>/gnupg/S.gpg-agent /run/user/<local_uid>/gnupg/S.gpg-agent.extra
 	RemoteForward /run/user/<remote_uid>/gnupg/S.gpg-agent.ssh /run/user/<local_uid>/gnupg/S.gpg-agent.ssh
@@ -17,14 +17,14 @@ Host ug*
 	HostName %h.eecg.utoronto.ca
 	SetEnv TERM=xterm-256color
 	User <UTORid>
-	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentityFile ~/.ssh/<keyfile>
 	IdentitiesOnly yes
 
 Host remote.ecf.utoronto.ca ecf
 	HostName remote.ecf.utoronto.ca
 	SetEnv TERM=xterm-256color
 	User <UTORid>
-	IdentityFile ~/.ssh/<keyfile>.pub
+	IdentityFile ~/.ssh/<keyfile>
 	IdentitiesOnly yes
 
 Host ug*vnc
@@ -34,7 +34,7 @@ Host cslab
     HostName dbsrv.teach.cs.utoronto.ca
     User <UTORid>
     SetEnv TERM=xterm-256color
-    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentityFile ~/.ssh/<keyfile>
     IdentitiesOnly yes
 
 Host cslab-rdp1
@@ -42,7 +42,7 @@ Host cslab-rdp1
     LocalForward 3388 localhost:3389
     User <UTORid>
     SetEnv TERM=xterm-256color
-    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentityFile ~/.ssh/<keyfile>
     IdentitiesOnly yes
     
 Host cslab-rdp2
@@ -50,5 +50,5 @@ Host cslab-rdp2
     LocalForward 3388 localhost:3389
     User <UTORid>
     SetEnv TERM=xterm-256color
-    IdentityFile ~/.ssh/<keyfile>.pub
+    IdentityFile ~/.ssh/<keyfile>
     IdentitiesOnly yes
