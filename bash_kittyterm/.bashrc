@@ -4,8 +4,6 @@
 
 # General exports need to run first
 . "$HOME"/scripts/xdg-base-setup.sh
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-. "$CARGO_HOME/env"
 
 ### "User specific aliases and functions" block
 

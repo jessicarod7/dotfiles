@@ -5,17 +5,28 @@ if [[ ! $(dirname "$(pwd)") =~ "/linux_pkgs" ]]; then
     exit 1
 fi
 
-# RPM Fusion, other nonfree libraries, and first updates
+# RPM Fusion, other nonfree libraries, first updates, core packages
 echo 'max_parallel_downloads=15' | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf5 makecache
 sudo dnf5 -y upgrade
-sudo dnf5 -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
-sudo dnf5 -y install fedora-workstation-repositories
+sudo dnf5 -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+ "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" \
+ fedora-workstation-repositories
+sudo dnf5 -y install vim-enhanced ripgrep fd-find
 
-# "Languages" - Java, C/C++, NodeJS, Perl, Python, PHP, OpenSSL, Golang, Rust
+## Initial environment modifications (further manual edits to ~/.bashrc will be required later)
+mkdir ~/.bashrc.d ~/scripts
+fd -E '*yubikey.sh' . ../bash_kittyterm/bashrc.d/ -X cp {} ~/.bashrc.d
+cp ../bash_kittyterm/xdg-base-setup.sh ~/scripts
+source "$HOME"/.bashrc
+source "$HOME"/scripts/xdg-base-setup.sh
+
+# "Languages" - Java, C/C++, NodeJS, Perl, system Python, PHP, OpenSSL, Golang, SQLite
 sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
-    gcc-c++ clang-devel npm perl-devel python3-devel python3-virtualenv openssl-devel composer
+    gcc-c++ clang-devel npm perl-devel python3-devel openssl-devel composer sqlite3
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
+
+## Languages - Rust
 # shellcheck disable=SC2016
 mv ~/.cargo ~/.local/share/cargo && sed -i 's/$HOME\/.cargo/$CARGO_HOME/' ~/.local/share/cargo/env
 . "$CARGO_HOME/env"
@@ -23,6 +34,21 @@ cp ../rust/config.toml "$CARGO_HOME"/config.toml
 rustup toolchain install nightly
 rustup component add rust-src rust-analyzer
 rustup component add --toolchain nightly miri rust-src rust-analyzer
+
+## Languages - user Python and packages
+curl -LsSf https://astral.sh/uv/install.sh | bash
+curl -sSf https://rye.astral.sh/get | bash
+rye self completion -s bash > ~/.local/share/bash-completion/completions/rye
+source "$HOME/.bashrc"
+sudo dnf5 -y install python3-{requests,beautifulsoup4,gobject} # Used by the localrepos, but want to fix this at some poiont
+pip install --no-input selenium webdriver_manager
+
+## Languages - The most sane way to setup Ruby on Fedora
+sudo dnf5 -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+
+## Languages - TypeScript
+sudo npm install -g typescript
 
 # PlatformIO Core
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
@@ -39,24 +65,8 @@ sudo dnf5 builddep kernel kernel-devel
 sudo dnf5 -y install flatpak-builder
 sudo dnf5 -y group install 'RPM Development Tools'
 
-# The most sane way to setup Ruby on Fedora (removed rust due to user installation)
-sudo dnf5 -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-
 # Container stuff
 sudo dnf5 -y install podman podman-compose buildah skopeo
-
-# Useful Python packages
-sudo dnf5 -y install python3-{requests,beautifulsoup4,gobject}
-cargo install --git https://github.com/astral-sh/rye rye
-rye self completion -s bash > ~/.local/share/bash-completion/completions/rye
-pip install --no-input black 'black[d]' selenium webdriver_manager
-
-# Typescript compiler
-sudo npm install -g typescript
-
-# Databases
-sudo dnf5 -y install mariadb-server sqlite3
 
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
 mkdir -p ~/.config/autostart
@@ -105,7 +115,7 @@ fi
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
-sudo dnf5 -y install gh dconf-editor screen nmap xeyes ripgrep fd-find colordiff fzf setroubleshoot \
+sudo dnf5 -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot \
     setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat
 
 # Environment setup
@@ -114,7 +124,7 @@ if [[ $(stty size | awk '{print $2}') -ge 256 ]]; then # Larger TTY font for 4K 
 fi
 
 yes | pip install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
-sudo dnf5 -y install vim-enhanced jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
+sudo dnf5 -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
@@ -133,9 +143,8 @@ EOF
 cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kitty/kitty.d/
 
 mkdir ~/develop # Root level folder for all coding stuff
-mkdir ~/scripts # Added to PATH
 mkdir ~/.config/procps
-cp ../bash_kittyterm/xdg-base-setup.sh ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ../scripts/doi-handler/doi-handler ~/scripts
+cp ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ../scripts/doi-handler/doi-handler ~/scripts
 cp ../bash_kittyterm/toprc ~/.config/procps/toprc
 cp ../scripts/doi-handler/doi-handler.desktop "$XDG_DATA_HOME"/applications/
 xdg-mime default doi-handler.desktop x-scheme-handler/doi
