@@ -8,7 +8,7 @@ fi
 # Other apps I use
 sudo dnf5 -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
 sudo dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
-pip install trash-cli 'trash-cli[completion]'
+uv tool install trash-cli 'trash-cli[completion]'
 for cmd in trash-empty trash-list trash-restore trash-put trash; do
   $cmd --print-completion bash | tee "$XDG_DATA_HOME/bash-completion/completions/$cmd";
 done

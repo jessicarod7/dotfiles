@@ -11,14 +11,16 @@
 [ -z "$PS1" ] && return
 
 # Powerline
-export POWERLINE=~/.config/powerline
-if [[ ! -e $(which powerline-daemon) ]]; then
+POWERLINE_REPO_ROOT=$(fd -at d site-packages "$XDG_DATA_HOME/uv/tools/powerline-status")
+export POWERLINE_REPO_ROOT
+if [[ -e $(which powerline-daemon) ]] && [[ -n "$POWERLINE_REPO_ROOT" ]]; then
+  export POWERLINE="$HOME/.config/powerline"
 	powerline-daemon -q
 	# shellcheck disable=SC2034
 	POWERLINE_BASH_CONTINUATION=1
 	# shellcheck disable=SC2034
 	POWERLINE_BASH_SELECT=1
-	. "$HOME"/.local/lib/python3.11/site-packages/powerline/bindings/bash/powerline.sh
+	. "$POWERLINE_REPO_ROOT/powerline/bindings/bash/powerline.sh"
 fi
 
 # Neofetch
