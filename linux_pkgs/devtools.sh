@@ -21,9 +21,9 @@ cp ../bash_kittyterm/xdg-base-setup.sh ~/scripts
 source "$HOME"/.bashrc
 source "$HOME"/scripts/xdg-base-setup.sh
 
-# "Languages" - Java, C/C++, NodeJS, Perl, system Python, PHP, OpenSSL, Golang, SQLite
+# "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, Golang, SQLite
 sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
-    gcc-c++ clang-devel npm perl-devel python3-devel openssl-devel composer sqlite3
+    gcc-c++ clang-devel perl-devel python3-devel openssl-devel composer sqlite3
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
 
 ## Languages - Rust
@@ -34,6 +34,11 @@ cp ../rust/config.toml "$CARGO_HOME"/config.toml
 rustup toolchain install nightly
 rustup component add rust-src rust-analyzer
 rustup component add --toolchain nightly miri rust-src rust-analyzer
+
+## Languages - NodeJS
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source "$HOME/.bashrc"
+nvm install node
 
 ## Languages - user Python and packages
 curl -LsSf https://astral.sh/uv/install.sh | bash
