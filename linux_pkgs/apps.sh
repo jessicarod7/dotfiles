@@ -13,7 +13,7 @@ for cmd in trash-empty trash-list trash-restore trash-put trash; do
   $cmd --print-completion bash | tee "$XDG_DATA_HOME/bash-completion/completions/$cmd";
 done
 
-yes | cargo install cargo-update pastel cargo-whatfeatures handlr-regex mdbook cargo-expand
+yes | cargo install cargo-update pastel cargo-whatfeatures handlr-regex mdbook cargo-expand evcxr_repl
 go install github.com/maksimov/epoch@latest
 
 # Howdy
