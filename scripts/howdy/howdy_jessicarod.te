@@ -1,0 +1,43 @@
+policy_module(howdy_jessicarod, 1.0.0)
+
+type howdy_jessicarod_t;
+type howdy_jessicarod_exec_t;
+application_domain(howdy_jessicarod_t, howdy_jessicarod_exec_t)
+files_type(howdy_jessicarod_t)
+
+role object_r types howdy_jessicarod_t;
+
+# permissive howdy_jessicarod_t;
+
+### Base permissions ###
+
+allow howdy_jessicarod_t self:fifo_file manage_fifo_file_perms;
+allow howdy_jessicarod_t self:unix_stream_socket create_stream_socket_perms;
+domain_use_interactive_fds(howdy_jessicarod_t)
+files_read_etc_files(howdy_jessicarod_t)
+miscfiles_read_localization(howdy_jessicarod_t)
+
+### Required access for authentication ###
+
+require {
+    type sysctl_vm_t;
+    type v4l_device_t;
+    type xdm_t;
+    class file { getattr open read };
+    class chr_file map;
+}
+
+allow howdy_jessicarod_t sysctl_vm_t:file { getattr open read };
+allow howdy_jessicarod_t v4l_device_t:chr_file map;
+howdy_jessicarod_domtrans(xdm_t)
+
+# Access to disable Howdy from systemd (uncommment if needed)
+
+# require {
+#   type init_t;
+#     type abrt_t;
+#     class all_unix_stream_socket connectto;
+# }
+#
+# allow howdy_jessicarod_t abrt_t:all_unix_stream_socket connectto;
+# howdy_jessicarod_domtrans(init_t)

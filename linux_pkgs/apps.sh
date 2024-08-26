@@ -18,7 +18,7 @@ go install github.com/maksimov/epoch@latest
 
 # Howdy
 # sudo dnf -y enable principis/howdy && sudo dnf -y install howdy
-# sudo bash ../scripts/howdy/howdy_camrod.sh && sudo semodule -i howdy_camrod.pp
+# sudo bash ../scripts/howdy/howdy_jessicarod.sh && sudo semodule -i howdy_jessicarod.pp
 
 # Setup flathub-beta, prioritize default Flathub repo
 sudo flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo

@@ -1,4 +1,4 @@
-# Cam's Dotfiles
+# Jessica's Dotfiles
 
 This has existed in a number of different formats (USB stick, Google Drive, private Gist), but it seemed time to finally sort this out properly.
 
@@ -6,7 +6,7 @@ I haven't put much work into making this easy to setup, so no guarantees are mad
 
 ## Details
 
-<img alt="Screenshot of my Fedora desktop, featuring CLion and kitty. CLion is opened to cam-rod/rss-autogen-giscus, and kitty shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/cam-rod_theme.png><br>
+<img alt="Screenshot of my Fedora desktop, featuring CLion and kitty. CLion is opened to rss_autogen_giscus, and kitty shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/theme.png><br>
 
 - Core editors: [VS Code](https://github.com/Microsoft/vscode/) + [JetBrains IDEs](https://www.jetbrains.com/) + [Vim](https://github.com/vim/vim)
 - OS/DE: [Fedora Workstation](https://getfedora.org/en/workstation/) with [GNOME](https://www.gnome.org/)

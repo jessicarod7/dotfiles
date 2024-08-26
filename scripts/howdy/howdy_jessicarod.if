@@ -1,0 +1,62 @@
+
+## <summary>policy for howdy_jessicarod</summary>
+
+########################################
+## <summary>
+##	Execute howdy_jessicarod_exec_t in the howdy_jessicarod domain.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`howdy_jessicarod_domtrans',`
+	gen_require(`
+		type howdy_jessicarod_t, howdy_jessicarod_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, howdy_jessicarod_exec_t, howdy_jessicarod_t)
+')
+
+######################################
+## <summary>
+##	Execute howdy_jessicarod in the caller domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`howdy_jessicarod_exec',`
+	gen_require(`
+		type howdy_jessicarod_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	can_exec($1, howdy_jessicarod_exec_t)
+')
+
+########################################
+## <summary>
+##	Execute howdy_jessicarod in the howdy_jessicarod domain, with
+##  access to signals
+## </summary>
+## <param name="domain">
+##	<summary>
+##	User domain for the current role
+##	</summary>
+## </param>
+#
+interface(`howdy_jessicarod_run_signals',`
+	gen_require(`
+		type howdy_jessicarod_t;
+	')
+
+	howdy_jessicarod_domtrans($1)
+
+	ps_process_pattern($1, howdy_jessicarod_t)
+	allow $1 howdy_jessicarod_t:process { signull signal sigkill };
+')
