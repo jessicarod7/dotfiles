@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run from this directory
-if [[ ! "$(dirname $(pwd))" =~ "/linux_pkgs" ]]; then
+if [[ ! $(dirname "$PWD") =~ "/linux_pkgs" ]]; then
     echo "Please run this script from within the \`linux_pkgs\` directory"
     exit 1
 fi
@@ -70,9 +70,9 @@ sudo flatpak install \
 sudo flatpak install flathub-beta org.signal.Signal
 
 # Setup KWrite
-mkdir -p $HOME/.var/app/org.kde.kwrite/config/KDE
-cp ../kwrite/kwriterc $HOME/.var/app/org.kde.kwrite/config/kwriterc
-cp ../kwrite/KDE/Sonnet.conf $HOME/.var/app/org.kde.kwrite/config/KDE/Sonnet.conf
+mkdir -p "$HOME/.var/app/org.kde.kwrite/config/KDE"
+cp ../kwrite/kwriterc "$HOME/.var/app/org.kde.kwrite/config/kwriterc"
+cp ../kwrite/KDE/Sonnet.conf "$HOME/.var/app/org.kde.kwrite/config/KDE/Sonnet.conf"
 
 # Systemd updaters
 mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
@@ -81,9 +81,9 @@ cp ../systemd/* \
     localrepos/zoom/zoom-repo.service localrepos/zoom/zoom-repo.timer \
     "$XDG_CONFIG_HOME/systemd/user/"
 cp localrepos/python_scripts/update_repo.py ~/scripts/
-for systemd_file in $(fd '\.service$' $XDG_CONFIG_HOME/systemd/user/
+for systemd_file in $(fd '\.service$' "$XDG_CONFIG_HOME/systemd/user/"
 ); do
-    sed -i "s/<USER>/$(id -un)/" $systemd_file
+    sed -i "s/<USER>/$(id -un)/" "$systemd_file"
 done
 systemctl --user daemon-reload
 systemctl --user enable --now \
@@ -102,6 +102,7 @@ sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/multiviewer.repo
 sudo dnf5 makecache
+# shellcheck disable=SC2016
 printf 'When you'\''re ready, run %s\n' '`dnf5 install multiviewer-for-f1`'
 
 # Zoom
@@ -113,11 +114,16 @@ sudo cp localrepos/zoom/zoom.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/zoom.repo
 sudo rpm --import 'https://zoom.us/linux/download/pubkey?version=5-12-6'
 sudo dnf5 makecache
+# shellcheck disable=SC2016
 printf 'When you'\''re ready, run %s\n' '`dnf5 install zoom`'
 
 # Turtle (Git in file manager)
 sudo dnf5 -y install python-pygit2 nautilus-python meld
-git clone https://gitlab.gnome.org/philippun1/turtle.git $HOME/Documents/turtle
-pushd $HOME/Documents/turtle
+git clone https://gitlab.gnome.org/philippun1/turtle.git "$HOME/Documents/turtle"
+pushd "$HOME/Documents/turtle" || exit
 sudo python install.py install --flatpak
-popd
+popd || exit
+
+# Add support for Stadia controller
+sudo cp ./70-stadiacontroller-flash.rules /etc/udev/rules.d
+sudo udevadm control --reload-rules && sudo udevadm trigger

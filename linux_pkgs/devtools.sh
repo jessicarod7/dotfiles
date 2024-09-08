@@ -18,8 +18,8 @@ sudo dnf5 -y install vim-enhanced ripgrep fd-find
 mkdir ~/.bashrc.d ~/scripts
 fd -E '*yubikey.sh' . ../bash_kittyterm/bashrc.d/ -X cp {} ~/.bashrc.d
 cp ../bash_kittyterm/xdg-base-setup.sh ~/scripts
-source "$HOME"/.bashrc
-source "$HOME"/scripts/xdg-base-setup.sh
+source "$HOME/.bashrc"
+source "$HOME/scripts/xdg-base-setup.sh"
 
 # "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, Golang, SQLite
 sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
