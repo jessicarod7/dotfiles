@@ -26,11 +26,13 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.16425781,
           "sideWeight": 0.5392376
         },
         {
           "id": "Commit",
           "order": 1,
+          "weight": 0.16425781,
           "sideWeight": 0.5392376
         },
         {
@@ -38,6 +40,7 @@
           "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.16425781,
           "sideWeight": 0.4607624,
           "isSplit": true
         },
@@ -75,6 +78,7 @@
           "id": "Version Control",
           "order": 0,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -82,6 +86,7 @@
           "id": "Terminal",
           "order": 1,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -94,12 +99,14 @@
           "id": "Problems",
           "order": 3,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.50041735
         },
         {
           "id": "Problems View",
           "order": 4,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.50041735
         },
         {
@@ -111,6 +118,7 @@
           "id": "Dependencies",
           "order": 6,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.50041735,
           "isShowStripeButton": false
         },
@@ -134,6 +142,7 @@
           "id": "Debug",
           "order": 10,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.50041735
         },
         {
@@ -150,6 +159,7 @@
           "id": "Run",
           "order": 13,
           "anchor": "BOTTOM",
+          "weight": 0.2964989,
           "sideWeight": 0.50041735
         },
         {
@@ -172,6 +182,7 @@
           "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
@@ -196,12 +207,14 @@
           "order": 0,
           "anchor": "RIGHT",
           "contentUiType": "COMBO",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Database",
           "order": 1,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
@@ -209,54 +222,63 @@
           "order": 1,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Cargo",
           "order": 5,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "make",
           "order": 6,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "Web Inspector",
           "order": 7,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "SciView",
           "order": 8,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
           "id": "X.509 Cert Buddy",
           "order": 9,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
@@ -264,6 +286,7 @@
           "order": 10,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.14980468,
           "sideWeight": 0.4994929
         },
         {
@@ -271,6 +294,7 @@
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.14980468,
           "sideWeight": 0.4994929
         },
         {
@@ -278,6 +302,7 @@
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.14980468,
           "sideWeight": 0.4994929
         },
         {
@@ -285,6 +310,7 @@
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.14980468,
           "sideWeight": 0.4994929
         },
         {
@@ -292,6 +318,7 @@
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.14980468,
           "sideWeight": 0.4994929
         },
         {
@@ -333,11 +360,13 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.22148708,
           "sideWeight": 0.5392376
         },
         {
           "id": "Commit",
           "order": 1,
+          "weight": 0.22148708,
           "sideWeight": 0.5392376
         },
         {
@@ -345,6 +374,7 @@
           "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.22148708,
           "sideWeight": 0.4607624,
           "isSplit": true
         },
@@ -382,6 +412,7 @@
           "id": "Version Control",
           "order": 0,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -389,6 +420,7 @@
           "id": "Terminal",
           "order": 1,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -401,12 +433,14 @@
           "id": "Problems",
           "order": 3,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.50041735
         },
         {
           "id": "Problems View",
           "order": 4,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.50041735
         },
         {
@@ -418,6 +452,7 @@
           "id": "Dependencies",
           "order": 6,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.50041735,
           "isShowStripeButton": false
         },
@@ -441,6 +476,7 @@
           "id": "Debug",
           "order": 10,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.50041735
         },
         {
@@ -457,6 +493,7 @@
           "id": "Run",
           "order": 13,
           "anchor": "BOTTOM",
+          "weight": 0.230124,
           "sideWeight": 0.50041735
         },
         {
@@ -479,6 +516,7 @@
           "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
@@ -503,12 +541,14 @@
           "order": 0,
           "anchor": "RIGHT",
           "contentUiType": "COMBO",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Database",
           "order": 1,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
@@ -516,54 +556,63 @@
           "order": 1,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Cargo",
           "order": 5,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "make",
           "order": 6,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "Web Inspector",
           "order": 7,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "SciView",
           "order": 8,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
           "id": "X.509 Cert Buddy",
           "order": 9,
           "anchor": "RIGHT",
+          "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
@@ -571,6 +620,7 @@
           "order": 10,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.18398437,
           "sideWeight": 0.4994929
         },
         {
@@ -578,6 +628,7 @@
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.18398437,
           "sideWeight": 0.4994929
         },
         {
@@ -585,6 +636,7 @@
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.18398437,
           "sideWeight": 0.4994929
         },
         {
@@ -592,6 +644,7 @@
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.18398437,
           "sideWeight": 0.4994929
         },
         {
@@ -599,6 +652,7 @@
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.18398437,
           "sideWeight": 0.4994929
         },
         {
@@ -640,11 +694,13 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.19192708,
           "sideWeight": 0.5392376
         },
         {
           "id": "Commit",
           "order": 1,
+          "weight": 0.19192708,
           "sideWeight": 0.5392376
         },
         {
@@ -652,6 +708,7 @@
           "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.19192708,
           "sideWeight": 0.4607624,
           "isSplit": true
         },
@@ -689,6 +746,7 @@
           "id": "Version Control",
           "order": 0,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -696,6 +754,7 @@
           "id": "Terminal",
           "order": 1,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -708,12 +767,14 @@
           "id": "Problems",
           "order": 3,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.50041735
         },
         {
           "id": "Problems View",
           "order": 4,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.50041735
         },
         {
@@ -725,6 +786,7 @@
           "id": "Dependencies",
           "order": 6,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.50041735,
           "isShowStripeButton": false
         },
@@ -748,6 +810,7 @@
           "id": "Debug",
           "order": 10,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.50041735
         },
         {
@@ -764,6 +827,7 @@
           "id": "Run",
           "order": 13,
           "anchor": "BOTTOM",
+          "weight": 0.26953512,
           "sideWeight": 0.50041735
         },
         {
@@ -786,6 +850,7 @@
           "id": "documentation.v2",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
@@ -810,12 +875,14 @@
           "order": 0,
           "anchor": "RIGHT",
           "contentUiType": "COMBO",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Database",
           "order": 1,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
@@ -823,54 +890,63 @@
           "order": 1,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Cargo",
           "order": 5,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "make",
           "order": 6,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "Web Inspector",
           "order": 7,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "SciView",
           "order": 8,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
           "id": "X.509 Cert Buddy",
           "order": 9,
           "anchor": "RIGHT",
+          "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
@@ -878,6 +954,7 @@
           "order": 10,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26880786,
           "sideWeight": 0.4994929
         },
         {
@@ -885,6 +962,7 @@
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26880786,
           "sideWeight": 0.4994929
         },
         {
@@ -892,6 +970,7 @@
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26880786,
           "sideWeight": 0.4994929
         },
         {
@@ -899,6 +978,7 @@
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26880786,
           "sideWeight": 0.4994929
         },
         {
@@ -906,6 +986,7 @@
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26880786,
           "sideWeight": 0.4994929
         },
         {
@@ -947,11 +1028,13 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.27459678,
           "sideWeight": 0.5392376
         },
         {
           "id": "Commit",
           "order": 1,
+          "weight": 0.27459678,
           "sideWeight": 0.5392376
         },
         {
@@ -959,6 +1042,7 @@
           "order": 2,
           "isActiveOnStart": true,
           "isVisible": true,
+          "weight": 0.27459678,
           "sideWeight": 0.4607624,
           "isSplit": true
         },
@@ -996,6 +1080,7 @@
           "id": "Version Control",
           "order": 0,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -1003,6 +1088,7 @@
           "id": "Terminal",
           "order": 1,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.49958265,
           "isSplit": true
         },
@@ -1015,12 +1101,14 @@
           "id": "Problems",
           "order": 3,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.50041735
         },
         {
           "id": "Problems View",
           "order": 4,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.50041735
         },
         {
@@ -1032,6 +1120,7 @@
           "id": "Dependencies",
           "order": 6,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.50041735,
           "isShowStripeButton": false
         },
@@ -1055,6 +1144,7 @@
           "id": "Debug",
           "order": 10,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.50041735
         },
         {
@@ -1071,6 +1161,7 @@
           "id": "Run",
           "order": 13,
           "anchor": "BOTTOM",
+          "weight": 0.24975272,
           "sideWeight": 0.50041735
         },
         {
@@ -1117,12 +1208,14 @@
           "order": 0,
           "anchor": "RIGHT",
           "contentUiType": "COMBO",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Database",
           "order": 1,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
@@ -1130,54 +1223,63 @@
           "order": 1,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Libraries",
           "order": 2,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Maven",
           "order": 4,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Cargo",
           "order": 5,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "make",
           "order": 6,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "Web Inspector",
           "order": 7,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "SciView",
           "order": 8,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
           "id": "X.509 Cert Buddy",
           "order": 9,
           "anchor": "RIGHT",
+          "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
@@ -1185,6 +1287,7 @@
           "order": 10,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26895162,
           "sideWeight": 0.4994929
         },
         {
@@ -1192,6 +1295,7 @@
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26895162,
           "sideWeight": 0.4994929
         },
         {
@@ -1199,6 +1303,7 @@
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26895162,
           "sideWeight": 0.4994929
         },
         {
@@ -1206,6 +1311,7 @@
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26895162,
           "sideWeight": 0.4994929
         },
         {
@@ -1213,6 +1319,7 @@
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
+          "weight": 0.26895162,
           "sideWeight": 0.4994929
         },
         {
