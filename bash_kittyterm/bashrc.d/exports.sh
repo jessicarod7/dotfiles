@@ -1,8 +1,6 @@
 #!/bin/bash
 # PATH exports
-export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
-export PATH="$PATH:/opt/zeal/bin"
 export PATH="$PATH:/opt/MATLAB/current/bin"
 
 # Dev and other exports
@@ -17,3 +15,6 @@ export GOPATH="$XDG_DATA_HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export RYE_HOME="$XDG_CONFIG_HOME/rye"
 eval "$($HOME/.rbenv/bin/rbenv init - bash)"
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

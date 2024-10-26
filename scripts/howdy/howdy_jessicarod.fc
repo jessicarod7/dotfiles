@@ -1,2 +1,0 @@
-/lib64/security/howdy(/.*)?     --      gen_context(system_u:object_r:howdy_jessicarod_t,s0)
-/lib64/security/howdy/cli.py    --      gen_context(system_u:object_r:howdy_jessicarod_exec_t,s0)

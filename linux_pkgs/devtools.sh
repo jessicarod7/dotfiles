@@ -21,7 +21,7 @@ cp ../bash_kittyterm/xdg-base-setup.sh ~/scripts
 source "$HOME/.bashrc"
 source "$HOME/scripts/xdg-base-setup.sh"
 
-# "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, Golang, SQLite
+# "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, SQLite
 sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
     gcc-c++ clang-devel perl-devel python3-devel openssl-devel composer sqlite3
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
@@ -42,8 +42,6 @@ nvm install node
 
 ## Languages - user Python and packages
 curl -LsSf https://astral.sh/uv/install.sh | bash
-curl -sSf https://rye.astral.sh/get | bash
-rye self completion -s bash > ~/.local/share/bash-completion/completions/rye
 source "$HOME/.bashrc"
 sudo dnf5 -y install python3-{requests,beautifulsoup4,gobject} # Used by the localrepos, but want to fix this at some poiont
 pip install --no-input selenium webdriver_manager
@@ -53,7 +51,14 @@ sudo dnf5 -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-dev
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 
 ## Languages - TypeScript
-sudo npm install -g typescript
+npm install typescript
+
+## Languages - Objectively the shittiest installation method belongs to Go. It doesn't get
+## to use the latest version because of it
+curl -fsSL -o go1.23.2.linux-amd64.tar.gz https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
+rm go1.23.2.linux-amd64.tar.gz
+source "$HOME/.bashrc"
 
 # PlatformIO Core
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
