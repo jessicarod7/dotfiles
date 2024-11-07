@@ -7,12 +7,12 @@ fi
 
 # RPM Fusion, other nonfree libraries, first updates, core packages
 echo 'max_parallel_downloads=15' | sudo tee -a /etc/dnf/dnf.conf
-sudo dnf5 makecache
-sudo dnf5 -y upgrade
-sudo dnf5 -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+sudo dnf makecache
+sudo dnf -y upgrade
+sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
  "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" \
  fedora-workstation-repositories
-sudo dnf5 -y install vim-enhanced ripgrep fd-find
+sudo dnf -y install vim-enhanced ripgrep fd-find
 
 ## Initial environment modifications (further manual edits to ~/.bashrc will be required later)
 mkdir ~/.bashrc.d ~/scripts
@@ -22,7 +22,7 @@ source "$HOME/.bashrc"
 source "$HOME/scripts/xdg-base-setup.sh"
 
 # "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, SQLite
-sudo dnf5 -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
+sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
     gcc-c++ clang-devel perl-devel python3-devel openssl-devel composer sqlite3
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Requires manual intervention
 
@@ -43,11 +43,11 @@ nvm install node
 ## Languages - user Python and packages
 curl -LsSf https://astral.sh/uv/install.sh | bash
 source "$HOME/.bashrc"
-sudo dnf5 -y install python3-{requests,beautifulsoup4,gobject} # Used by the localrepos, but want to fix this at some poiont
+sudo dnf -y install python3-{requests,beautifulsoup4,gobject} # Used by the localrepos, but want to fix this at some poiont
 pip install --no-input selenium webdriver_manager
 
 ## Languages - The most sane way to setup Ruby on Fedora
-sudo dnf5 -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
+sudo dnf -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 
 ## Languages - TypeScript
@@ -68,30 +68,30 @@ curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/
 sudo udevadm control -R && sudo udevadm trigger
 
 # Kernel dev
-sudo dnf5 install kernel-devel fedpkg fedora-packager ncurses-devel pesign grubby
-sudo dnf5 builddep kernel kernel-devel
+sudo dnf install kernel-devel fedpkg fedora-packager ncurses-devel pesign grubby
+sudo dnf builddep kernel kernel-devel
 
 # Flatpaks, RPMs, and app packaging
-sudo dnf5 -y install flatpak-builder
-sudo dnf5 -y group install 'RPM Development Tools'
+sudo dnf -y install flatpak-builder
+sudo dnf -y group install 'RPM Development Tools'
 
 # Container stuff
-sudo dnf5 -y install podman podman-compose buildah skopeo
+sudo dnf -y install podman podman-compose buildah skopeo
 
 # Disable gnome-keyring-ssh (thanks https://askubuntu.com/a/607563 and https://askubuntu.com/a/585212)
 mkdir -p ~/.config/autostart
 (cat /etc/xdg/autostart/gnome-keyring-ssh.desktop; echo Hidden=true) > ~/.config/autostart/gnome-keyring-ssh.desktop
 
 # Google Chrome
-sudo dnf5 -y config-manager --set-enabled google-chrome
-sudo dnf5 makecache
-sudo dnf5 -y install google-chrome-stable
+sudo dnf -y config-manager --set-enabled google-chrome
+sudo dnf makecache
+sudo dnf -y install google-chrome-stable
 
 # VS Code https://code.visualstudio.com/docs/setup/linux
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-sudo dnf5 makecache
-sudo dnf5 -y install code
+sudo dnf makecache
+sudo dnf -y install code
 
 # PowerShell
 curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/microsoft-rhel8.repo
@@ -100,24 +100,24 @@ sudo sed -i 's/\[packages.*\]$/[microsoft-prod-rhel8]/' /etc/yum.repos.d/microso
 curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/microsoft-rhel9.repo
 sudo sed -i 's/name=.*$/name=microsoft-prod-rhel9/' /etc/yum.repos.d/microsoft-rhel9.repo
 sudo sed -i 's/\[packages.*\]$/[microsoft-prod-rhel9]/' /etc/yum.repos.d/microsoft-rhel9.repo
-sudo dnf5 makecache
-sudo dnf5 -y install powershell
+sudo dnf makecache
+sudo dnf -y install powershell
 
 # 1Password Beta https://support.1password.com/betas
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 sudo sh -c 'echo -e "[1password]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
-sudo dnf5 makecache
-sudo dnf5 -y install 1password 1password-cli
+sudo dnf makecache
+sudo dnf -y install 1password 1password-cli
 
 # NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022
 unset distribution
-sudo dnf5 makecache
-sudo dnf5 -y install nvidia-container-toolkit
+sudo dnf makecache
+sudo dnf -y install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
 # YubiKey Manager, Personalization Tool, Authenticator, PAM
-sudo dnf5 -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg yubikey-manager
+sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg yubikey-manager
 wget -O yubico-authenticator-latest-linux.tar.gz https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz  && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
 if mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config; then
   find "$HOME"/.config -maxdepth 1 -regex '.*yubico-auth.*' -exec bash -c 'ln -s $(realpath $1) ~/.config/yubiauth' -- {} \;
@@ -125,7 +125,7 @@ fi
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
-sudo dnf5 -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot \
+sudo dnf -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot \
     setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat
 
 # Environment setup
@@ -134,7 +134,7 @@ if [[ $(stty size | awk '{print $2}') -ge 256 ]]; then # Larger TTY font for 4K 
 fi
 
 uv tool install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
-sudo dnf5 -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
+sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 

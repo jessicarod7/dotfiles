@@ -6,8 +6,8 @@ if [[ ! $(dirname "$PWD") =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf5 -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
-sudo dnf5 -y swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
+sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
 uv tool install 'trash-cli[completion]'
 for cmd in trash-empty trash-list trash-restore trash-put trash; do
   $cmd --print-completion bash | tee "$XDG_DATA_HOME/bash-completion/completions/$cmd";
@@ -92,12 +92,12 @@ systemctl --user enable --now multiviewer-repo.timer
 sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
 sudo sed -i "s/<USER>/$(id -un)/" /etc/yum.repos.d/multiviewer.repo
-sudo dnf5 makecache
+sudo dnf makecache
 # shellcheck disable=SC2016
-printf 'When you'\''re ready, run %s\n' '`dnf5 install multiviewer-for-f1`'
+printf 'When you'\''re ready, run %s\n' '`dnf install multiviewer-for-f1`'
 
 # Turtle (Git in file manager)
-sudo dnf5 -y install python-pygit2 nautilus-python meld
+sudo dnf -y install python-pygit2 nautilus-python meld
 git clone https://gitlab.gnome.org/philippun1/turtle.git "$HOME/Documents/turtle"
 pushd "$HOME/Documents/turtle" || exit
 sudo python install.py install --flatpak
