@@ -20,3 +20,4 @@ I haven't put much work into making this easy to setup, so no guarantees are mad
 - Files are sorted by program or related topics
 - Commented out lines are intended for Windows systems unless otherwise stated
 - Linux commands assume Fedora distro
+- (Personal) Set `gpg.program` for this repo to `g_o_pp`
