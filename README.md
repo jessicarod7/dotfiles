@@ -2,7 +2,7 @@
 
 This has existed in a number of different formats (USB stick, Google Drive, private Gist), but it seemed time to finally sort this out properly.
 
-I haven't put much work into making this easy to setup, so no guarantees are made. If you start with [devtools.sh](./linux_pkgs/devtools.sh), then the other scripts in [linux_pkgs](./linux_pkgs/) --> [bash_kittyterm](./bash_kittyterm/) directory --> [vim](./vim/) directory, it _should_ be mostly functional.
+I haven't put much work into making this easy to setup, so no guarantees are made. If you start with [devtools.sh](./linux_pkgs/devtools.sh), then the other scripts in [linux_pkgs](./linux_pkgs) --> [bash_kittyterm](./bash_kittyterm) directory --> [vim](./vim) directory, it _should_ be mostly functional.
 
 ## Details
 
@@ -20,4 +20,4 @@ I haven't put much work into making this easy to setup, so no guarantees are mad
 - Files are sorted by program or related topics
 - Commented out lines are intended for Windows systems unless otherwise stated
 - Linux commands assume Fedora distro
-- (Personal) Set `gpg.program` for this repo to `g_o_pp`
+- (Personal) Set `gpg.program` for this repo to [`gpg_op_passphrase`](./scripts/gpg_op_passphrase)

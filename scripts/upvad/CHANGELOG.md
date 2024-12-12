@@ -4,6 +4,12 @@ Follows [SemVer](https://semver.org/spec/v2.0.0.html) and [Keep A Changelog](htt
 
 ## Unreleased
 
+## [0.2.1] - 2024-12-12
+
+## Fixed
+
+- Replaced `package.about` with `package.description` in Cargo.toml
+
 ## [0.2.0] - 2023-04-11
 
 ### Added
