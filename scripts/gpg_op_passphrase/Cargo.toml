@@ -2,8 +2,8 @@
 name = "gpg_op_passphrase"
 version = "0.1.1"
 authors = ["Jessica Rodriguez <dev@jessicarod.com>"]
-description = "A funky GPG wrapper to save me some time with entering my passphrase for Git commands, securely"
 edition = "2021"
+description = "A funky GPG wrapper to save me some time with entering my passphrase for Git commands, securely"
 
 [dependencies]
 clap = { version = "4.5.20", features = ["derive"] }
