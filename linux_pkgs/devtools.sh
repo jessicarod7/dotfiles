@@ -146,11 +146,11 @@ git clone git@github.com:tmux-plugins/tpm.git "$XDG_CONFIG_HOME"/tmux/plugins/tp
 
 gsettings set org.gnome.desktop.default-applications.terminal exec kitty
 mkdir -p ~/.config/kitty/kitty.d
-curl -o ~/.config/kitty/kitty.d/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/master/nord.conf
 cat <<EOF > ~/.config/kitty/kitty.conf
 globinclude kitty.d/**/*.conf
 EOF
 cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kitty/kitty.d/
+kitty +kitten themes --reload-in=all Catppuccin-Macchiato
 
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/.config/procps
