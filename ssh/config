@@ -6,6 +6,13 @@ Host github.com github
 	IdentityFile ~/.ssh/<keyfile>
 	IdentitiesOnly yes
 
+Host gitlab.com gitlab
+	User git
+	HostName gitlab.com
+	IdentityAgent ~/.1password/agent.sock
+	IdentityFile ~/.ssh/<keyfile>
+	IdentitiesOnly yes
+
 Host envs.net envs
 	HostName envs.net
 	User <USER>
