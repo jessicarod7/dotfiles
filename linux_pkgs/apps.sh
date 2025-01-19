@@ -13,7 +13,14 @@ for cmd in trash-empty trash-list trash-restore trash-put trash; do
   $cmd --print-completion bash | tee "$XDG_DATA_HOME/bash-completion/completions/$cmd";
 done
 
-yes | cargo install cargo-update cargo-expand evcxr_repl cargo-audit cynic-cli cargo-msrv
+LOCKED_CARGO_BINARIES=(evcxr_repl cargo-audit cynic-cli cargo-msrv)
+cargo install --keep-going cargo-update cargo-expand cynic-cli
+cargo install --keep-going --locked "${LOCKED_CARGO_BINARIES[@]}"
+for b in "${LOCKED_CARGO_BINARIES[@]}"; do
+  cargo install-update-config --enforce-lock "$b"
+done
+unset LOCKED_CARGO_BINARIES
+
 go install github.com/maksimov/epoch@latest
 
 # Setup flathub-beta, prioritize default Flathub repo
