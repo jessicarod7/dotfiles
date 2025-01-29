@@ -125,8 +125,8 @@ fi
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
-sudo dnf -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot \
-    setools-console policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat
+sudo dnf -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot setools-console \
+  policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat jq wl-clipboard
 
 # Environment setup
 if [[ $(stty size | awk '{print $2}') -ge 256 ]]; then # Larger TTY font for 4K displays
@@ -134,6 +134,7 @@ if [[ $(stty size | awk '{print $2}') -ge 256 ]]; then # Larger TTY font for 4K 
 fi
 
 uv tool install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
+uv tool install yq
 sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
