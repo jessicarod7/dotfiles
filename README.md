@@ -29,9 +29,9 @@ The remaining directories are meant to be copied in or used as needed.
 - Core editors: [IntelliJ IDEA](https://www.jetbrains.com/)[^1] + [KWrite](https://apps.kde.org/kwrite/) + [Vim](https://www.vim.org/)
 - Notes and journalling: [Obsidian](https://obsidian.md/)
 - OS/DE: [Fedora Workstation](https://fedoraproject.org/workstation/) with [GNOME](https://www.gnome.org/)
-- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/) + [Bash](https://www.gnu.org/software/bash/)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/) + [fish](https://github.com/IlanCosman/tide) (fallback to [Bash](https://www.gnu.org/software/bash/))
 - Themes: [Nord](https://www.nordtheme.com/) + [Catppuccin's Macchiato flavour](https://catppuccin.com/)
-    - Enhancements: [Powerline](https://github.com/powerline/powerline) (Bash), [vim-airline](https://github.com/vim-airline/vim-airline) (Vim)
+    - Enhancements: [tide](https://github.com/IlanCosman/tide) (fish), [vim-airline](https://github.com/vim-airline/vim-airline) (Vim), [Powerline](https://github.com/powerline/powerline) (Bash)
 - Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ## Repo Notes
