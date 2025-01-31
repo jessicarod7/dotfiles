@@ -41,6 +41,11 @@ rustup toolchain install nightly
 rustup component add rust-src rust-analyzer
 rustup component add --toolchain nightly miri rust-src rust-analyzer
 
+mkdir -p ~/.local/share/bash-completion/completions
+rustup completions bash rustup > ~/.local/share/bash-completion/completions/rustup
+rustup completions bash cargo > ~/.local/share/bash-completion/completions/cargo
+rustup completions fish rustup > ~/.config/fish/completions/rustup.fish
+
 ## Languages - NodeJS
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source "$HOME/.bashrc"
@@ -131,7 +136,7 @@ fi
 chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yubiauth/desktop_integration.sh -i"
 
 # Other tools
-sudo dnf -y install gh dconf-editor nmap xeyes colordiff fzf setroubleshoot setools-console \
+sudo dnf -y install gh dconf-editor nmap xeyes fzf setroubleshoot setools-console \
   policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat jq wl-clipboard
 
 # Environment setup

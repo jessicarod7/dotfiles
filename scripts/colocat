@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # vim: set expandtab:
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
