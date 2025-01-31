@@ -14,6 +14,12 @@ sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-re
  fedora-workstation-repositories
 sudo dnf -y install vim-enhanced ripgrep fd-find
 
+## Fish shell
+sudo dnf -y install fish
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
+# Run this command interactively in fish after installing JetBrains Mono Nerd Font: fisher install IlanCosman/tide@v6
+# > Lean, True color, No time, One line, Compact, Many icons, No transient prompt
+
 ## Initial environment modifications (further manual edits to ~/.bashrc will be required later)
 mkdir ~/.bashrc.d ~/scripts
 fd -E '*yubikey.sh' . ../bash_kittyterm/bashrc.d/ -X cp {} ~/.bashrc.d
