@@ -1,6 +1,6 @@
 abbr -a lso ls -las --time-style=long-iso
 abbr -a curln curl -w '\n'
-abbr -a tarZ -r 'tar[Zz]' tar -I'zstd -T0'
+abbr -a tarZ -r 'tar[Zz]' tar -I'"zstd -T0"'
 abbr -a rsyncopy rsync -avz --info=progress2
 abbr -a colordiff diff -u --color
 
