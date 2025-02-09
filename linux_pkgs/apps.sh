@@ -14,7 +14,7 @@ for cmd in trash-empty trash-list trash-restore trash-put trash; do
 done
 
 LOCKED_CARGO_BINARIES=(evcxr_repl cargo-audit cynic-cli cargo-msrv)
-cargo install --keep-going cargo-update cargo-expand cynic-cli
+cargo install --keep-going cargo-update cargo-expand
 cargo install --keep-going --locked "${LOCKED_CARGO_BINARIES[@]}"
 for b in "${LOCKED_CARGO_BINARIES[@]}"; do
   cargo install-update-config --enforce-lock "$b"

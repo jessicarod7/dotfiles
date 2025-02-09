@@ -8,6 +8,9 @@ Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
+" Fish shell
+set shell=/usr/bin/fish
+
 " Theming
 syntax on
 colorscheme nord

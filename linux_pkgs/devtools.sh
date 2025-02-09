@@ -19,6 +19,7 @@ sudo dnf -y install fish
 fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
 # Run this command interactively in fish after installing JetBrains Mono Nerd Font: fisher install IlanCosman/tide@v6
 # > Lean, True color, No time, One line, Compact, Many icons, No transient prompt
+# Remove \x1ekubectl from tide_right_prompt_items in ~/.config/fish/fish_variables (https://github.com/IlanCosman/tide/issues/508#issuecomment-2439816095)
 
 ## Initial environment modifications (further manual edits to ~/.bashrc will be required later)
 mkdir ~/.bashrc.d ~/scripts
