@@ -1,0 +1,18 @@
+[package]
+name = "multiviewer_repo"
+authors = ["Jessica Rodriguez <dev@jessicarod.com>"]
+version = "0.1.0"
+edition = "2024"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+clap = { version = "4.5.32", features = ["derive"] }
+jiff = { version = "0.2.4", features = ["serde"] }
+reqwest = { version = "0.12.14", features = ["json", "blocking"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+url = { version = "2.5.4", features = ["serde"] }
+versions = { version = "7.0.0", features = ["serde"] }

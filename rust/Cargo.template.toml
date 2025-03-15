@@ -2,13 +2,21 @@
 # Useful fields: name, version, authors, description, edition, license, repository
 # For publishing: categories, documentation, homepage, include, keywords, readme
 
-# Use #[cfg(docsrs)] for targeting, unstable features
-# To document required features: #![cfg_attr(docsrs, feature(doc_cfg), feature(doc_auto_cfg), feature(doc_cfg_hide))],
-# paired with #[cfg(any(doc, feature = "extra-feat"))]
-# Also keep an eye on https://doc.rust-lang.org/nightly/rustdoc/scraped-examples.html for the future
-
 [lints.clippy]
 missing_docs_in_private_items = "warn"
 
 [lints.rust]
 missing_docs = "warn"
+
+# Use #[cfg(docsrs)] for targeting, unstable features
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+# To document required features (https://github.com/rust-lang/rust/issues/43781, https://github.com/rust-lang/rfcs/pull/3631)
+# `#![cfg_attr(docsrs, feature(doc_auto_cfg))]`
+# Override feature documenting with:
+# ```rust
+# #![cfg_attr(docsrs, feature(doc_cfg))]
+# #[doc(cfg(windows)]
+# ```
+# Also keep an eye on https://doc.rust-lang.org/nightly/rustdoc/scraped-examples.html for the future

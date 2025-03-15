@@ -3,6 +3,6 @@ Description=Download new Multiviewer for F1 RPMs into a local repo
 StartLimitBurst=5
 
 [Service]
-ExecStart=/home/<USER>/scripts/multiviewer_repo.py
+ExecStart=/home/<USER>/.local/share/cargo/bin/multiviewer_repo
 Restart=on-failure
 RestartSec=30s

@@ -82,7 +82,6 @@ mkdir -p "$XDG_CONFIG_HOME/systemd/user/"
 cp ../systemd/* \
     localrepos/multiviewer/multiviewer-repo.service localrepos/multiviewer/multiviewer-repo.timer \
     "$XDG_CONFIG_HOME/systemd/user/"
-cp localrepos/python_scripts/update_repo.py ~/scripts/
 for systemd_file in $(fd '\.service$' "$XDG_CONFIG_HOME/systemd/user/"
 ); do
     sed -i "s/<USER>/$(id -un)/" "$systemd_file"
@@ -94,7 +93,7 @@ systemctl --user enable --now \
 
 # Multiviewer
 mkdir -p "$XDG_DATA_HOME/localrepos/multiviewer/x86_64/"
-cp localrepos/python_scripts/multiviewer_repo.py ~/scripts
+cargo install --path localrepos/crates/multiviewer_repo
 systemctl --user enable --now multiviewer-repo.timer
 sleep 10
 sudo cp localrepos/multiviewer/multiviewer.repo /etc/yum.repos.d/
