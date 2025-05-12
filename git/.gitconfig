@@ -29,3 +29,7 @@
 	shns = show --name-status
 	vc = -c gpg.program=gpg-sq verify-commit
 	vt = -c gpg.program=gpg.sq tag -v
+[sendemail]
+	confirm = always
+[credential]
+	helper = libsecret

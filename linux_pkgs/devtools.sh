@@ -12,7 +12,7 @@ sudo dnf -y upgrade
 sudo dnf -y install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
  "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" \
  fedora-workstation-repositories
-sudo dnf -y install vim-enhanced ripgrep fd-find
+sudo dnf -y install vim-enhanced git git-email git-credential-libsecret ripgrep fd-find
 
 ## Fish shell
 sudo dnf -y install fish
