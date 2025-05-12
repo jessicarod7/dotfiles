@@ -27,3 +27,5 @@
 	ls-ignored = ls-files -o -i --exclude-standard --directory
 	ls-ignored-files = ls-files -o -i --exclude-standard
 	shns = show --name-status
+	vc = -c gpg.program=gpg-sq verify-commit
+	vt = -c gpg.program=gpg.sq tag -v

@@ -8,7 +8,21 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Backup and Sync History",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Persistence",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Robo tasks",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "ORM",
           "isShowStripeButton": false,
           "isSplit": true
         },
@@ -55,7 +69,37 @@
           "isShowStripeButton": false
         },
         {
+          "id": "hadoop-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HfCacheToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "KafkaToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "EmrToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "FlinkToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "DataprocToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -65,7 +109,22 @@
           "isShowStripeButton": false
         },
         {
+          "id": "zeppelin-shell-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "File Transfer",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HiveToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "GlueToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -163,8 +222,14 @@
           "sideWeight": 0.50041735
         },
         {
-          "id": "Language Servers",
+          "id": "Semantic Tokens Inspector",
           "order": 14,
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Language Servers",
+          "order": 15,
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -197,6 +262,12 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Jupyter Variables",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
           "id": "Meet New UI",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
@@ -219,7 +290,7 @@
         },
         {
           "id": "AIAssistant",
-          "order": 1,
+          "order": 2,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "weight": 0.14980468,
@@ -227,105 +298,110 @@
         },
         {
           "id": "Libraries",
-          "order": 2,
-          "anchor": "RIGHT",
-          "weight": 0.14980468,
-          "sideWeight": 0.5005071
-        },
-        {
-          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Cargo",
+          "id": "Maven",
           "order": 5,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "make",
+          "id": "Cargo",
           "order": 6,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Web Inspector",
+          "id": "make",
           "order": 7,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "SciView",
+          "id": "Web Inspector",
           "order": 8,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "SciView",
           "order": 9,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "X.509 Cert Buddy",
           "order": 10,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.14980468,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
+        },
+        {
+          "id": "Pull Requests",
+          "order": 11,
+          "anchor": "RIGHT",
+          "weight": 0.14980468,
+          "sideWeight": 0.4994929,
+          "isSplit": true
         },
         {
           "id": "Merge Requests",
-          "order": 11,
+          "order": 12,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.14980468,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.4994929,
+          "isSplit": true
         },
         {
           "id": "Bookmarks",
-          "order": 12,
+          "order": 13,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.14980468,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.4994929,
+          "isSplit": true
         },
         {
           "id": "Hierarchy",
-          "order": 13,
+          "order": 14,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.14980468,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.4994929,
+          "isSplit": true
         },
         {
           "id": "TODO",
-          "order": 14,
+          "order": 15,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.14980468,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.4994929,
+          "isSplit": true
         },
         {
           "id": "Symbols",
-          "order": 15,
+          "order": 16,
           "anchor": "RIGHT",
           "isSplit": true
+        },
+        {
+          "id": "BigDataToolWindow",
+          "order": 17,
+          "anchor": "RIGHT"
         }
       ],
       "unifiedWeights": {
@@ -342,7 +418,21 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Backup and Sync History",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Persistence",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Robo tasks",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "ORM",
           "isShowStripeButton": false,
           "isSplit": true
         },
@@ -389,7 +479,37 @@
           "isShowStripeButton": false
         },
         {
+          "id": "hadoop-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HfCacheToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "KafkaToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "EmrToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "FlinkToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "DataprocToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -399,7 +519,22 @@
           "isShowStripeButton": false
         },
         {
+          "id": "zeppelin-shell-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "File Transfer",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HiveToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "GlueToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -497,8 +632,14 @@
           "sideWeight": 0.50041735
         },
         {
-          "id": "Language Servers",
+          "id": "Semantic Tokens Inspector",
           "order": 14,
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Language Servers",
+          "order": 15,
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -531,6 +672,12 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Jupyter Variables",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
           "id": "Meet New UI",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
@@ -553,7 +700,7 @@
         },
         {
           "id": "AIAssistant",
-          "order": 1,
+          "order": 2,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "weight": 0.18398437,
@@ -561,70 +708,62 @@
         },
         {
           "id": "Libraries",
-          "order": 2,
-          "anchor": "RIGHT",
-          "weight": 0.18398437,
-          "sideWeight": 0.5005071
-        },
-        {
-          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Cargo",
+          "id": "Maven",
           "order": 5,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "make",
+          "id": "Cargo",
           "order": 6,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Web Inspector",
+          "id": "make",
           "order": 7,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "SciView",
+          "id": "Web Inspector",
           "order": 8,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "SciView",
           "order": 9,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "X.509 Cert Buddy",
           "order": 10,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.18398437,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -632,7 +771,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Bookmarks",
+          "id": "Merge Requests",
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -640,7 +779,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Hierarchy",
+          "id": "Bookmarks",
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -648,7 +787,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "TODO",
+          "id": "Hierarchy",
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -656,10 +795,23 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Symbols",
+          "id": "TODO",
           "order": 15,
           "anchor": "RIGHT",
+          "isSplit": true,
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929
+        },
+        {
+          "id": "Symbols",
+          "order": 16,
+          "anchor": "RIGHT",
           "isSplit": true
+        },
+        {
+          "id": "BigDataToolWindow",
+          "order": 17,
+          "anchor": "RIGHT"
         }
       ],
       "unifiedWeights": {
@@ -676,7 +828,21 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Backup and Sync History",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Persistence",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Robo tasks",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "ORM",
           "isShowStripeButton": false,
           "isSplit": true
         },
@@ -723,7 +889,37 @@
           "isShowStripeButton": false
         },
         {
+          "id": "hadoop-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HfCacheToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "KafkaToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "EmrToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "FlinkToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "DataprocToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -733,7 +929,22 @@
           "isShowStripeButton": false
         },
         {
+          "id": "zeppelin-shell-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "File Transfer",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HiveToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "GlueToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -831,8 +1042,14 @@
           "sideWeight": 0.50041735
         },
         {
-          "id": "Language Servers",
+          "id": "Semantic Tokens Inspector",
           "order": 14,
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Language Servers",
+          "order": 15,
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -865,6 +1082,12 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Jupyter Variables",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
           "id": "Meet New UI",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
@@ -887,7 +1110,7 @@
         },
         {
           "id": "AIAssistant",
-          "order": 1,
+          "order": 2,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "weight": 0.26880786,
@@ -895,70 +1118,62 @@
         },
         {
           "id": "Libraries",
-          "order": 2,
-          "anchor": "RIGHT",
-          "weight": 0.26880786,
-          "sideWeight": 0.5005071
-        },
-        {
-          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Cargo",
+          "id": "Maven",
           "order": 5,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "make",
+          "id": "Cargo",
           "order": 6,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Web Inspector",
+          "id": "make",
           "order": 7,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "SciView",
+          "id": "Web Inspector",
           "order": 8,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "SciView",
           "order": 9,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "X.509 Cert Buddy",
           "order": 10,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26880786,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -966,7 +1181,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Bookmarks",
+          "id": "Merge Requests",
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -974,7 +1189,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Hierarchy",
+          "id": "Bookmarks",
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -982,7 +1197,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "TODO",
+          "id": "Hierarchy",
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -990,10 +1205,23 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Symbols",
+          "id": "TODO",
           "order": 15,
           "anchor": "RIGHT",
+          "isSplit": true,
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929
+        },
+        {
+          "id": "Symbols",
+          "order": 16,
+          "anchor": "RIGHT",
           "isSplit": true
+        },
+        {
+          "id": "BigDataToolWindow",
+          "order": 17,
+          "anchor": "RIGHT"
         }
       ],
       "unifiedWeights": {
@@ -1010,7 +1238,21 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Backup and Sync History",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Persistence",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Robo tasks",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "ORM",
           "isShowStripeButton": false,
           "isSplit": true
         },
@@ -1057,7 +1299,37 @@
           "isShowStripeButton": false
         },
         {
+          "id": "hadoop-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HfCacheToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "KafkaToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "EmrToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Dependency Checker",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "FlinkToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "DataprocToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -1067,7 +1339,22 @@
           "isShowStripeButton": false
         },
         {
+          "id": "zeppelin-shell-toolwindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
           "id": "File Transfer",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "HiveToolWindow",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "GlueToolWindow",
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -1165,8 +1452,14 @@
           "sideWeight": 0.50041735
         },
         {
-          "id": "Language Servers",
+          "id": "Semantic Tokens Inspector",
           "order": 14,
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Language Servers",
+          "order": 15,
           "anchor": "BOTTOM",
           "isShowStripeButton": false
         },
@@ -1198,6 +1491,12 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Jupyter Variables",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
           "id": "Meet New UI",
           "anchor": "RIGHT",
           "isShowStripeButton": false,
@@ -1220,7 +1519,7 @@
         },
         {
           "id": "AIAssistant",
-          "order": 1,
+          "order": 2,
           "anchor": "RIGHT",
           "isShowStripeButton": false,
           "weight": 0.26895162,
@@ -1228,70 +1527,62 @@
         },
         {
           "id": "Libraries",
-          "order": 2,
-          "anchor": "RIGHT",
-          "weight": 0.26895162,
-          "sideWeight": 0.5005071
-        },
-        {
-          "id": "Gradle",
           "order": 3,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Maven",
+          "id": "Gradle",
           "order": 4,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Cargo",
+          "id": "Maven",
           "order": 5,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "make",
+          "id": "Cargo",
           "order": 6,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Web Inspector",
+          "id": "make",
           "order": 7,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "SciView",
+          "id": "Web Inspector",
           "order": 8,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "SciView",
           "order": 9,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "X.509 Cert Buddy",
           "order": 10,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26895162,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 11,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -1299,7 +1590,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Bookmarks",
+          "id": "Merge Requests",
           "order": 12,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -1307,7 +1598,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Hierarchy",
+          "id": "Bookmarks",
           "order": 13,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -1315,7 +1606,7 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "TODO",
+          "id": "Hierarchy",
           "order": 14,
           "anchor": "RIGHT",
           "isSplit": true,
@@ -1323,10 +1614,23 @@
           "sideWeight": 0.4994929
         },
         {
-          "id": "Symbols",
+          "id": "TODO",
           "order": 15,
           "anchor": "RIGHT",
+          "isSplit": true,
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929
+        },
+        {
+          "id": "Symbols",
+          "order": 16,
+          "anchor": "RIGHT",
           "isSplit": true
+        },
+        {
+          "id": "BigDataToolWindow",
+          "order": 17,
+          "anchor": "RIGHT"
         }
       ],
       "unifiedWeights": {

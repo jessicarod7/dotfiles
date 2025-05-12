@@ -79,8 +79,11 @@ for pbin in pio platformio piodebuggdb; do ln -s "$HOME/.platformio/penv/bin/$pb
 curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
 sudo udevadm control -R && sudo udevadm trigger
 
+# Sequoia-PGP - main CLI and chameleon
+sudo dnf -y install sequoia-chameleon-gnupg sequoia-sq
+
 # Kernel dev
-sudo dnf install kernel-devel fedpkg fedora-packager ncurses-devel pesign grubby
+sudo dnf -y install kernel-devel fedpkg fedora-packager ncurses-devel pesign grubby
 sudo dnf builddep kernel kernel-devel
 
 # Flatpaks, RPMs, and app packaging
