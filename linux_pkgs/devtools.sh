@@ -150,7 +150,7 @@ fi
 
 uv tool install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
 uv tool install yq
-sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty neofetch powerline-fonts
+sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty hyfetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
