@@ -168,6 +168,8 @@ EOF
 cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kitty/kitty.d/
 kitty +kitten themes --reload-in=all Catppuccin-Macchiato
 
+cp hyfetch.json "$XDG_CONFIG_HOME"/hyfetch.json
+
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/.config/procps
 cp ../scripts/colocat.py ../scripts/git-unsync ../scripts/pgpcard-reload ../scripts/doi-handler/doi-handler ~/scripts
