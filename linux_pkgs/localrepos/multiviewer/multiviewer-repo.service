@@ -3,6 +3,6 @@ Description=Download new Multiviewer for F1 RPMs into a local repo
 StartLimitBurst=5
 
 [Service]
-ExecStart=/home/<USER>/.local/share/cargo/bin/multiviewer_repo
+ExecStart=/home/<USER>/.local/share/cargo/bin/multiviewer_repo linux_rpm "/home/<USER>/.local/share/localrepos/multiviewer/x86_64/"
 Restart=on-failure
 RestartSec=30s
