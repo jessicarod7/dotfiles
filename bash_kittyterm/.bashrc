@@ -23,7 +23,6 @@ if [[ -e $(which powerline-daemon) ]] && [[ -n "$POWERLINE_REPO_ROOT" ]]; then
 	. "$POWERLINE_REPO_ROOT/powerline/bindings/bash/powerline.sh"
 fi
 
-# Neofetch
-neofetch  --title_fqdn on --distro_shorthand on --refresh_rate on --gtk2 off --gtk3 off \
---memory_percent on --disable packages # --gpu_type dedicated
+# Hyfetch
+hyfetch
 ### [ EOF ]
