@@ -30,6 +30,7 @@ sudo flatpak remote-modify flathub --prio=2
 # Extensions:
 # - appindicatorsupport@rgcjonas.gmail.com
 # - clipboard-history@alexsaveau.dev
+# - emoji-copy@felipeftn
 # - enhancedosk@cass00.github.io
 # - NotificationCounter@coolllsk
 # - openweather-extension@penguin-teal.github.io
