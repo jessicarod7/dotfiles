@@ -1,0 +1,7 @@
+<State>
+  <highlightingPatterns />
+  <parsingPatterns>
+    <LogParsingPattern name="Android Event Log" pattern="^(\d{2}-\d{2} [\d:.]+) (\s*[\w-.]+) (\s*\d+) (\s*\d+) ([A-Z]) (\S+) (.+)$" timePattern="MM-dd HH:mm:ss.SSS" linePattern="^\d{2}-\d{2}" timeId="0" severityId="4" categoryId="5" uuid="172d31c9-0c75-4788-889b-fc5ebcca3a9b" />
+  </parsingPatterns>
+  <settingsVersion>13</settingsVersion>
+</State>
