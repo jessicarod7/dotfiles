@@ -346,22 +346,21 @@
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "BigDataToolWindow",
           "order": 10,
           "anchor": "RIGHT",
           "weight": 0.14980468,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "JSONPathEvaluate",
           "order": 11,
           "anchor": "RIGHT",
           "weight": 0.14980468,
-          "sideWeight": 0.4994929,
-          "isSplit": true
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 12,
           "anchor": "RIGHT",
           "weight": 0.14980468,
@@ -369,7 +368,7 @@
           "isSplit": true
         },
         {
-          "id": "Bookmarks",
+          "id": "Merge Requests",
           "order": 13,
           "anchor": "RIGHT",
           "weight": 0.14980468,
@@ -377,7 +376,7 @@
           "isSplit": true
         },
         {
-          "id": "Hierarchy",
+          "id": "Bookmarks",
           "order": 14,
           "anchor": "RIGHT",
           "weight": 0.14980468,
@@ -385,7 +384,7 @@
           "isSplit": true
         },
         {
-          "id": "TODO",
+          "id": "Hierarchy",
           "order": 15,
           "anchor": "RIGHT",
           "weight": 0.14980468,
@@ -393,15 +392,20 @@
           "isSplit": true
         },
         {
-          "id": "Symbols",
+          "id": "TODO",
           "order": 16,
           "anchor": "RIGHT",
+          "weight": 0.14980468,
+          "sideWeight": 0.4994929,
           "isSplit": true
         },
         {
-          "id": "BigDataToolWindow",
+          "id": "Symbols",
           "order": 17,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "weight": 0.14980468,
+          "sideWeight": 0.4994929,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
@@ -756,62 +760,66 @@
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "BigDataToolWindow",
           "order": 10,
           "anchor": "RIGHT",
           "weight": 0.18398437,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "JSONPathEvaluate",
           "order": 11,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.18398437,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 12,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.18398437,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Bookmarks",
-          "order": 13,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.18398437,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Hierarchy",
-          "order": 14,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.18398437,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "TODO",
-          "order": 15,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.18398437,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Symbols",
-          "order": 16,
-          "anchor": "RIGHT",
+          "sideWeight": 0.4994929,
           "isSplit": true
         },
         {
-          "id": "BigDataToolWindow",
+          "id": "Merge Requests",
+          "order": 13,
+          "anchor": "RIGHT",
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Bookmarks",
+          "order": 14,
+          "anchor": "RIGHT",
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Hierarchy",
+          "order": 15,
+          "anchor": "RIGHT",
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 16,
+          "anchor": "RIGHT",
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Symbols",
           "order": 17,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "weight": 0.18398437,
+          "sideWeight": 0.4994929,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
@@ -1166,62 +1174,66 @@
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "BigDataToolWindow",
           "order": 10,
           "anchor": "RIGHT",
           "weight": 0.26880786,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "JSONPathEvaluate",
           "order": 11,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26880786,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 12,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26880786,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Bookmarks",
-          "order": 13,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26880786,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Hierarchy",
-          "order": 14,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26880786,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "TODO",
-          "order": 15,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26880786,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Symbols",
-          "order": 16,
-          "anchor": "RIGHT",
+          "sideWeight": 0.4994929,
           "isSplit": true
         },
         {
-          "id": "BigDataToolWindow",
+          "id": "Merge Requests",
+          "order": 13,
+          "anchor": "RIGHT",
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Bookmarks",
+          "order": 14,
+          "anchor": "RIGHT",
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Hierarchy",
+          "order": 15,
+          "anchor": "RIGHT",
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 16,
+          "anchor": "RIGHT",
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Symbols",
           "order": 17,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "weight": 0.26880786,
+          "sideWeight": 0.4994929,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
@@ -1575,62 +1587,66 @@
           "sideWeight": 0.5005071
         },
         {
-          "id": "X.509 Cert Buddy",
+          "id": "BigDataToolWindow",
           "order": 10,
           "anchor": "RIGHT",
           "weight": 0.26895162,
           "sideWeight": 0.5005071
         },
         {
-          "id": "Pull Requests",
+          "id": "JSONPathEvaluate",
           "order": 11,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26895162,
-          "sideWeight": 0.4994929
+          "sideWeight": 0.5005071
         },
         {
-          "id": "Merge Requests",
+          "id": "Pull Requests",
           "order": 12,
           "anchor": "RIGHT",
-          "isSplit": true,
           "weight": 0.26895162,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Bookmarks",
-          "order": 13,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26895162,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Hierarchy",
-          "order": 14,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26895162,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "TODO",
-          "order": 15,
-          "anchor": "RIGHT",
-          "isSplit": true,
-          "weight": 0.26895162,
-          "sideWeight": 0.4994929
-        },
-        {
-          "id": "Symbols",
-          "order": 16,
-          "anchor": "RIGHT",
+          "sideWeight": 0.4994929,
           "isSplit": true
         },
         {
-          "id": "BigDataToolWindow",
+          "id": "Merge Requests",
+          "order": 13,
+          "anchor": "RIGHT",
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Bookmarks",
+          "order": 14,
+          "anchor": "RIGHT",
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Hierarchy",
+          "order": 15,
+          "anchor": "RIGHT",
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "TODO",
+          "order": 16,
+          "anchor": "RIGHT",
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929,
+          "isSplit": true
+        },
+        {
+          "id": "Symbols",
           "order": 17,
-          "anchor": "RIGHT"
+          "anchor": "RIGHT",
+          "weight": 0.26895162,
+          "sideWeight": 0.4994929,
+          "isSplit": true
         }
       ],
       "unifiedWeights": {
