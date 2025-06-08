@@ -150,7 +150,7 @@ fi
 
 uv tool install git+ssh://git@github.com/powerline/powerline.git@develop # pip is out of date, see powerline#2116
 uv tool install yq
-sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty hyfetch powerline-fonts
+sudo dnf -y install jetbrains-mono-fonts-all linux-libertine-biolinum-fonts kitty hyfetch fastfetch powerline-fonts
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
 gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
 
@@ -168,7 +168,8 @@ EOF
 cp ../bash_kittyterm/click.oga ../bash_kittyterm/kitty-custom.conf ~/.config/kitty/kitty.d/
 kitty +kitten themes --reload-in=all Catppuccin-Macchiato
 
-cp hyfetch.json "$XDG_CONFIG_HOME"/hyfetch.json
+mkdir -p "$XDG_CONFIG_HOME"/fastfetch/
+cp fastfetch.config.jsonc "$XDG_CONFIG_HOME"/fastfetch/config.jsonc
 
 mkdir ~/develop # Root level folder for all coding stuff
 mkdir ~/.config/procps

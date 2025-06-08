@@ -1,3 +1,0 @@
-[submodule "scripts/ynab_csv"]
-	path = scripts/ynab_csv
-	url = git@github.com:jessicarod7/ynab_csv.git
