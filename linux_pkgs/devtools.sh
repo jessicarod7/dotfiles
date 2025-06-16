@@ -48,9 +48,8 @@ rustup completions bash cargo > ~/.local/share/bash-completion/completions/cargo
 rustup completions fish rustup > ~/.config/fish/completions/rustup.fish
 
 ## Languages - NodeJS
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source "$HOME/.bashrc"
-nvm install node
+fish -c fisher install jorgebucaran/nvm.fish
+fish -c nvm install latest
 
 ## Languages - user Python and packages
 curl -LsSf https://astral.sh/uv/install.sh | bash
