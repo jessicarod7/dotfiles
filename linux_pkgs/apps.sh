@@ -34,6 +34,7 @@ sudo flatpak remote-modify flathub --prio=2
 # - enhancedosk@cass00.github.io
 # - NotificationCounter@coolllsk
 # - openweather-extension@penguin-teal.github.io
+# - pip-on-top@rafostar.github.com
 # - windowsgestures@extension.amarullz.com
 
 # gsettings modifications for RK84 keyboard and dev tool shortcuts
