@@ -60,6 +60,7 @@ pip install --no-input selenium webdriver_manager
 ## Languages - The most sane way to setup Ruby on Fedora
 sudo dnf -y install gcc patch make bzip2 openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel perl-FindBin perl-File-Compare
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+git clone git@github.com:jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset
 
 ## Languages - TypeScript
 npm install typescript
@@ -122,6 +123,7 @@ sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 sudo sh -c 'echo -e "[1password]\nname=1Password Beta Channel\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
 sudo dnf makecache
 sudo dnf -y install 1password 1password-cli
+sudo sysctl -w kernel.yama.ptrace_scope=1 | sudo tee -a /etc/sysctl.d/99-ptrace-scope.conf # Uploading files, see https://support.1password.com/linux-ptrace-scope-issue/
 
 # NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022
