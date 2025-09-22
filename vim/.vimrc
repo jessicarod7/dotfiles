@@ -33,6 +33,6 @@ let g:airline#extensions#default#section_truncate_width = {
 nmap s <Nop>
 xmap s <Nop>
 
-" Python
-autocmd FileType python setlocal shiftwidth=4 expandtab
+" Fish shell
+autocmd FileType fish setlocal shiftwidth=4 softtabstop=4 expandtab
 
