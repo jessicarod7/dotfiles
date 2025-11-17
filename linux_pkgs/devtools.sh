@@ -27,7 +27,7 @@ fd -E '*yubikey.sh' . ../bash_kittyterm/bashrc.d/ -X cp {} ~/.bashrc.d
 cp ../bash_kittyterm/xdg-base-setup.sh ~/scripts
 source "$HOME/.bashrc"
 source "$HOME/scripts/xdg-base-setup.sh"
-sudo localectl set-locale LANG=en_CA.UTF-8 LANGUAGE=en_CA:en_US:en:C
+sudo localectl set-locale LANG=en_CA.UTF-8
 
 # "Languages" - Java, C/C++, Perl, system Python, PHP, OpenSSL, SQLite
 sudo dnf -y install java-latest-openjdk-devel maven cmake meson binutils libtool gcc \
