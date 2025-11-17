@@ -133,8 +133,8 @@ sudo dnf makecache
 sudo dnf -y install nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml # rootless
 
-# YubiKey Manager, Personalization Tool, Authenticator, PAM
-sudo dnf -y install yubikey-personalization-gui pam_yubico pam-u2f pamu2fcfg yubikey-manager
+# YubiKey Manager, Authenticator
+sudo dnf -y install yubikey-manager
 wget -O yubico-authenticator-latest-linux.tar.gz https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-latest-linux.tar.gz  && tar -xzf yubico-authenticator-latest-linux.tar.gz && rm -f yubico-authenticator-latest-linux.tar.gz
 if mv "$(find . -maxdepth 1 -regex '.*yubico.*')" ~/.config; then
   find "$HOME"/.config -maxdepth 1 -regex '.*yubico-auth.*' -exec bash -c 'ln -s $(realpath $1) ~/.config/yubiauth' -- {} \;
