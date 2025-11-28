@@ -44,6 +44,15 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['AudioStop
 gsettings set org.gnome.settings-daemon.plugins.media-keys stop-static "['']"
 gsettings set org.gnome.software packaging-format-preference "['flatpak:flathub', 'flatpak:flathub-beta', 'flatpak:fedora', 'flatpak:fedora-testing', 'rpm']"
 
+# keyd modifications to get a working Ins key
+sudo dnf -y copr enable alternateved/keyd
+sudo dnf -y install keyd
+sudo systemctl enable --now keyd.service
+sudo usermod -aG keyd "<USER>"
+sudo mkdir -p /etc/keyd
+sudo cp ./keyd-base.conf /etc/keyd/base.conf # don't forget to specify keyboard id
+sudo keyd reload
+
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
     cc.arduino.IDE2 \
