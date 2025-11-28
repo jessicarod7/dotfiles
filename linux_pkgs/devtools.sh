@@ -125,6 +125,8 @@ sudo sh -c 'echo -e "[1password]\nname=1Password Beta Channel\nbaseurl=https://d
 sudo dnf makecache
 sudo dnf -y install 1password 1password-cli
 sudo sysctl -w kernel.yama.ptrace_scope=1 | sudo tee -a /etc/sysctl.d/99-ptrace-scope.conf # Uploading files, see https://support.1password.com/linux-ptrace-scope-issue/
+mkdir -p "$XDG_CONFIG_HOME"/1Password/ssh/
+cp ./1password-agent.toml "$XDG_CONFIG_HOME"/1Password/ssh/
 
 # NVIDIA Container Toolkit https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
 curl -s -L https://nvidia.github.io/libnvidia-container/rhel9.0/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo # As of November 2022

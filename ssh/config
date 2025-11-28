@@ -1,4 +1,4 @@
-# SetEnv TERM lines are only needed for systems without kitty-terminfo
+# Remove IdentityAgent lines on Windows
 Host github.com github
 	User git
 	HostName github.com
@@ -22,7 +22,6 @@ Host envs.net envs
 
 Host ug*
 	HostName %h.eecg.utoronto.ca
-	SetEnv TERM=xterm-256color
 	User <UTORid>
 	IdentityAgent ~/.1password/agent.sock
 	IdentityFile ~/.ssh/<keyfile>
@@ -30,7 +29,6 @@ Host ug*
 
 Host remote.ecf.utoronto.ca ecf
 	HostName remote.ecf.utoronto.ca
-	SetEnv TERM=xterm-256color
 	User <UTORid>
 	IdentityAgent ~/.1password/agent.sock
 	IdentityFile ~/.ssh/<keyfile>

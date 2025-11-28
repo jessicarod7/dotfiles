@@ -30,4 +30,4 @@
 [sendemail]
 	confirm = always
 [credential]
-	helper = libsecret
+	helper = libsecret # Remove this line on Windows
