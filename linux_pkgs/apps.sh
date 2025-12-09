@@ -47,11 +47,10 @@ gsettings set org.gnome.software packaging-format-preference "['flatpak:flathub'
 # keyd modifications to get a working Ins key
 sudo dnf -y copr enable alternateved/keyd
 sudo dnf -y install keyd
-sudo systemctl enable --now keyd.service
 sudo usermod -aG keyd "<USER>"
 sudo mkdir -p /etc/keyd
 sudo cp ./keyd-base.conf /etc/keyd/base.conf # don't forget to specify keyboard id
-sudo keyd reload
+sudo systemctl enable --now keyd.service
 
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
