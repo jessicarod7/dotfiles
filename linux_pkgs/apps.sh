@@ -6,12 +6,8 @@ if [[ ! $(dirname "$PWD") =~ "/linux_pkgs" ]]; then
 fi
 
 # Other apps I use
-sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate
+sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate trash-cli
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
-uv tool install 'trash-cli[completion]'
-for cmd in trash-empty trash-list trash-restore trash-put trash; do
-  $cmd --print-completion bash | tee "$XDG_DATA_HOME/bash-completion/completions/$cmd";
-done
 
 LOCKED_CARGO_BINARIES=(evcxr_repl cargo-audit cynic-cli cargo-msrv)
 cargo install --keep-going cargo-update cargo-expand envsh
