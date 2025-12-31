@@ -50,6 +50,7 @@ sudo systemctl enable --now keyd.service
 
 # Flatpaks (slight brace expansion abuse)
 sudo flatpak install \
+    be.alexandervanhee.gradia \
     cc.arduino.IDE2 \
     com.authy.Authy \
     com.belmoussaoui.Decoder \
@@ -59,7 +60,6 @@ sudo flatpak install \
     com.github.flxzt.rnote \
     com.github.jeromerobert.pdfarranger \
     com.github.liferooter.textpieces \
-    com.github.maoschanz.drawing \
     com.github.tchx84.Flatseal \
     com.obsproject.Studio \
     com.slack.Slack \
