@@ -1,4 +1,4 @@
 [expand]
-theme = "nord"
+theme = "Catppuccin Macchiato"
 [net]
 git-fetch-with-cli = true # Remove if ssh defaults to using 1Password agent (ex. Windows)

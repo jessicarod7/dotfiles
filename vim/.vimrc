@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'nordtheme/vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'fladson/vim-kitty'
 Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-sleuth'
@@ -13,13 +13,9 @@ set shell=/usr/bin/fish
 
 " Theming
 syntax on
-colorscheme nord
-" For Windows
-" set termguicolors
+set termguicolors
+colorscheme catppuccin_macchiato
 let g:airline_powerline_fonts = 1
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
 let g:airline#extensions#default#section_truncate_width = {
     \ 'b': 65,
     \ 'x': 55,
