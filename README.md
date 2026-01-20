@@ -23,14 +23,14 @@ The remaining directories are meant to be copied in or used as needed.
 
 ## My style
 
-<img alt="Screenshot of my Fedora desktop, featuring IntelliJ and kitty. IntelliJ, with the Catpuccin Macchiato theme, is opened to gpg_op_passphrase. kitty, with the Nord theme, shows neofetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/theme.png><br>
+<img alt="Screenshot of my Fedora desktop, featuring IntelliJ and kitty. IntelliJ, with the Catppuccin Macchiato theme, is opened to gpg_op_passphrase. kitty, also with the Catppuccin Macchiato theme, shows hyfetch." style="max-width: 100%; height: auto; display: block; margin: 0px auto;" src=./assets/theme.png><br>
 
-- Core editors: [IntelliJ IDEA](https://www.jetbrains.com/)[^1] + [KWrite](https://apps.kde.org/kwrite/) + [Vim](https://www.vim.org/)
+- Core editors: [IntelliJ IDEA Ultimate](https://www.jetbrains.com/)[^1] + [KWrite](https://apps.kde.org/kwrite/) + [Vim](https://www.vim.org/)
 - Notes and journalling: [Obsidian](https://obsidian.md/)
 - OS/DE: [Fedora Workstation](https://fedoraproject.org/workstation/) with [GNOME](https://www.gnome.org/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/) + [fish](https://github.com/IlanCosman/tide)
 - Theme: [Catppuccin (Macchiato)](https://catppuccin.com/)
-    - Enhancements: [tide](https://github.com/IlanCosman/tide) (fish), [vim-airline](https://github.com/vim-airline/vim-airline) (Vim), [Powerline](https://github.com/powerline/powerline) (Bash)
+    - Enhancements: [tide](https://github.com/IlanCosman/tide) (fish), [vim-airline](https://github.com/vim-airline/vim-airline) (Vim)
 - Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ## Repo Notes
@@ -38,6 +38,5 @@ The remaining directories are meant to be copied in or used as needed.
 - Files are sorted by program or related topics
 - Commented out lines are intended for Windows systems unless otherwise stated
 - Linux commands assume Fedora distro
-- (Personal) Set `gpg.program` for this repo to [`gpg_op_passphrase`](./scripts/gpg_op_passphrase)
 
-[^1]: With _all_ of the extensions. For those few times I'm writing C/C++, I use CLion.
+[^1]: with _all_ of the extensions
