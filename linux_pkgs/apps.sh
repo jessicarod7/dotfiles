@@ -8,6 +8,7 @@ fi
 # Other apps I use
 sudo dnf -y install dconf-editor duplicity openrgb steam virt-manager pandoc qalculate trash-cli
 sudo dnf -y swap ffmpeg-free ffmpeg --allowerasing
+cargo install --git ssh://git@github.com/kavishdevar/librepods --branch linux/rust librepods
 
 LOCKED_CARGO_BINARIES=(evcxr_repl cargo-audit cynic-cli cargo-msrv)
 cargo install --keep-going cargo-update cargo-expand envsh

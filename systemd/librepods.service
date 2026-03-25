@@ -1,0 +1,14 @@
+[Unit]
+Description=librepods
+After=bluetooth.target
+StartLimitBurst=3
+StopPropagatedFrom=bluetooth.target
+
+[Service]
+Type=exec
+ExecStart=/home/<USER>/.local/share/cargo/bin/librepods
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=bluetooth.target
