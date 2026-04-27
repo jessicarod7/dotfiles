@@ -146,6 +146,7 @@ chmod +x ~/.config/yubiauth/desktop_integration.sh && bash -c "$HOME/.config/yub
 # Other tools
 sudo dnf -y install gh dconf-editor nmap xeyes fzf setroubleshoot setools-console \
   policycoreutils-devel 'dnf-command(versionlock)' shellcheck sysstat jq wl-clipboard
+gh config set telemetry disabled
 
 # Environment setup
 if [[ $(stty size | awk '{print $2}') -ge 256 ]]; then # Larger TTY font for 4K displays
