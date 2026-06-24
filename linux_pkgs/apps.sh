@@ -76,7 +76,27 @@ sudo flatpak install \
     org.kde.kwrite \
     org.kde.okular \
     org.prismlauncher.PrismLauncher
-sudo flatpak install flathub-beta org.signal.Signal
+
+# Install Signal AppImage (last updated 2026-06-24)
+curl https://updates.signal.org/static/desktop/appimage.asc | sq cert import
+# if verified, run sq pki link add --cert=<cert_goes_here> --userid="Signal Messenger, LLC <support@signal.org>"
+curl -L -o "$HOME/.local/bin/signal-desktop.AppImage" --create-dirs https://updates.signal.org/desktop/signal-desktop.AppImage
+curl -L -O https://updates.signal.org/desktop/signal-desktop.AppImage.gpg
+sq verify --signature-file signal-desktop.AppImage.gpg "$HOME/.local/bin/signal-desktop.AppImage"
+rm signal-desktop.AppImage.gpg
+# verify signer, and then complete standard setup (https://support.signal.org/hc/en-us/articles/360008216551-Installing-Signal#install_desktop)
+chmod +x "$HOME/.local/bin/signal-desktop.AppImage"
+cp signal-appimage.desktop "$XDG_DATA_HOME/applications/signal-appimage.desktop"
+update-desktop-database "$XDG_DATA_HOME/applications/"
+# Optionally add polkit policies to enable local backups, plaintext exports, and view the Secure Backups recovery key
+pushd "$HOME/Downloads/"
+git clone git@github.com:signalapp/Signal-Desktop
+pushd Signal-Desktop/build/policy-templates && ls ## check which policies you'd like to enable
+sudo mkdir -p /etc/polkit-1/actions/ && sudo cp ./* /etc/polkit-1/actions
+sudo systemctl reload polkit.service
+popd && popd
+rm -rf "$HOME/Downloads/Signal-Desktop"
+"$HOME/.local/bin/signal-desktop.AppImage"
 
 # Setup KWrite
 mkdir -p "$HOME/.var/app/org.kde.kwrite/config/KDE"
